@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * NonPartneredSmallParcelDataOutput Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information returned by Amazon about a Small Parcel shipment by a carrier that has not partnered with Amazon.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'package_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList',    ];
+        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -190,7 +190,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess
     /**
      * Gets package_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList
      */
     public function getPackageList()
     {
@@ -200,7 +200,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess
     /**
      * Sets package_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList $package_list package_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList $package_list package_list
      *
      * @return $this
      */

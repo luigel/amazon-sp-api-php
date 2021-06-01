@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FeesEstimateError Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An unexpected error occurred during this operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FeesEstimateError implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class FeesEstimateError implements ModelInterface, ArrayAccess
         'type' => 'string',
 'code' => 'string',
 'message' => 'string',
-'detail' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail',    ];
+'detail' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -289,7 +289,7 @@ class FeesEstimateError implements ModelInterface, ArrayAccess
     /**
      * Gets detail.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail
      */
     public function getDetail()
     {
@@ -299,7 +299,7 @@ class FeesEstimateError implements ModelInterface, ArrayAccess
     /**
      * Sets detail.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail $detail detail
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateErrorDetail $detail detail
      *
      * @return $this
      */

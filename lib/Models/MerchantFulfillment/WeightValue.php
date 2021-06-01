@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * WeightValue Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The weight value.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class WeightValue implements ModelInterface, ArrayAccess
 {

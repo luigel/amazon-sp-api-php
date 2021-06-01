@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OfferCountType Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The total number of offers for the specified condition and fulfillment channel.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OfferCountType implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class OfferCountType implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'condition' => 'string',
-'fulfillment_channel' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType',
+'fulfillment_channel' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType',
 'offer_count' => 'int',    ];
 
     /**
@@ -222,7 +222,7 @@ class OfferCountType implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_channel.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType
      */
     public function getFulfillmentChannel()
     {
@@ -232,7 +232,7 @@ class OfferCountType implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_channel.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType $fulfillment_channel fulfillment_channel
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\FulfillmentChannelType $fulfillment_channel fulfillment_channel
      *
      * @return $this
      */

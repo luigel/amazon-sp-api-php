@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Authorization;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Authorization;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetAuthorizationCodeResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the GetAuthorizationCode operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Authorization\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Authorization\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Authorization\AuthorizationCode $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Authorization\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Authorization\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetAuthorizationCodeResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Authorization\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Authorization\ErrorList $errors errors
      *
      * @return $this
      */

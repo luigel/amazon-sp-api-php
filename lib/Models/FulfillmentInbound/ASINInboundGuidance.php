@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ASINInboundGuidance Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Reasons why a given ASIN is not recommended for shipment to Amazon&#x27;s fulfillment network.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ASINInboundGuidance implements ModelInterface, ArrayAccess
 {
@@ -47,8 +47,8 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'inbound_guidance' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance',
-'guidance_reason_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList',    ];
+'inbound_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance',
+'guidance_reason_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -229,7 +229,7 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess
     /**
      * Gets inbound_guidance.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance
      */
     public function getInboundGuidance()
     {
@@ -239,7 +239,7 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess
     /**
      * Sets inbound_guidance.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance $inbound_guidance inbound_guidance
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance $inbound_guidance inbound_guidance
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess
     /**
      * Gets guidance_reason_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList
      */
     public function getGuidanceReasonList()
     {
@@ -263,7 +263,7 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess
     /**
      * Sets guidance_reason_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList $guidance_reason_list guidance_reason_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList $guidance_reason_list guidance_reason_list
      *
      * @return $this
      */

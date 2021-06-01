@@ -2,7 +2,7 @@
 /**
  * ShippingApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,21 +13,21 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Request;
@@ -35,7 +35,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * ShippingApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ShippingApi
 {
@@ -77,9 +77,9 @@ class ShippingApi
      * @param string $shipment_id shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse
      */
     public function cancelShipment($shipment_id)
     {
@@ -94,9 +94,9 @@ class ShippingApi
      * @param string $shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelShipmentWithHttpInfo($shipment_id)
     {
@@ -178,12 +178,12 @@ class ShippingApi
     /**
      * Operation createShipment.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse
      */
     public function createShipment($body)
     {
@@ -195,12 +195,12 @@ class ShippingApi
     /**
      * Operation createShipmentWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createShipmentWithHttpInfo($body)
     {
@@ -212,7 +212,7 @@ class ShippingApi
     /**
      * Operation createShipmentAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -231,7 +231,7 @@ class ShippingApi
     /**
      * Operation createShipmentAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -247,7 +247,7 @@ class ShippingApi
     /**
      * Create request for operation 'createShipment'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -274,9 +274,9 @@ class ShippingApi
      * Operation getAccount.
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse
      */
     public function getAccount()
     {
@@ -289,9 +289,9 @@ class ShippingApi
      * Operation getAccountWithHttpInfo.
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountWithHttpInfo()
     {
@@ -353,12 +353,12 @@ class ShippingApi
     /**
      * Operation getRates.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse
      */
     public function getRates($body)
     {
@@ -370,12 +370,12 @@ class ShippingApi
     /**
      * Operation getRatesWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRatesWithHttpInfo($body)
     {
@@ -387,7 +387,7 @@ class ShippingApi
     /**
      * Operation getRatesAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -406,7 +406,7 @@ class ShippingApi
     /**
      * Operation getRatesAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -422,7 +422,7 @@ class ShippingApi
     /**
      * Create request for operation 'getRates'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -451,9 +451,9 @@ class ShippingApi
      * @param string $shipment_id shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse
      */
     public function getShipment($shipment_id)
     {
@@ -468,9 +468,9 @@ class ShippingApi
      * @param string $shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShipmentWithHttpInfo($shipment_id)
     {
@@ -555,9 +555,9 @@ class ShippingApi
      * @param string $tracking_id tracking_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse
      */
     public function getTrackingInformation($tracking_id)
     {
@@ -572,9 +572,9 @@ class ShippingApi
      * @param string $tracking_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTrackingInformationWithHttpInfo($tracking_id)
     {
@@ -656,13 +656,13 @@ class ShippingApi
     /**
      * Operation purchaseLabels.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        body (required)
      * @param string                                                                  $shipment_id shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse
      */
     public function purchaseLabels($body, $shipment_id)
     {
@@ -674,13 +674,13 @@ class ShippingApi
     /**
      * Operation purchaseLabelsWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
      * @param string                                                                  $shipment_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function purchaseLabelsWithHttpInfo($body, $shipment_id)
     {
@@ -692,7 +692,7 @@ class ShippingApi
     /**
      * Operation purchaseLabelsAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
      * @param string                                                                  $shipment_id (required)
      *
      * @throws \InvalidArgumentException
@@ -712,7 +712,7 @@ class ShippingApi
     /**
      * Operation purchaseLabelsAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
      * @param string                                                                  $shipment_id (required)
      *
      * @throws \InvalidArgumentException
@@ -729,7 +729,7 @@ class ShippingApi
     /**
      * Create request for operation 'purchaseLabels'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
      * @param string                                                                  $shipment_id (required)
      *
      * @throws \InvalidArgumentException
@@ -769,12 +769,12 @@ class ShippingApi
     /**
      * Operation purchaseShipment.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse
      */
     public function purchaseShipment($body)
     {
@@ -786,12 +786,12 @@ class ShippingApi
     /**
      * Operation purchaseShipmentWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function purchaseShipmentWithHttpInfo($body)
     {
@@ -803,7 +803,7 @@ class ShippingApi
     /**
      * Operation purchaseShipmentAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -822,7 +822,7 @@ class ShippingApi
     /**
      * Operation purchaseShipmentAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -838,7 +838,7 @@ class ShippingApi
     /**
      * Create request for operation 'purchaseShipment'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -864,14 +864,14 @@ class ShippingApi
     /**
      * Operation retrieveShippingLabel.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        body (required)
      * @param string                                                                         $shipment_id shipment_id (required)
      * @param string                                                                         $tracking_id tracking_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse
      */
     public function retrieveShippingLabel($body, $shipment_id, $tracking_id)
     {
@@ -883,14 +883,14 @@ class ShippingApi
     /**
      * Operation retrieveShippingLabelWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
      * @param string                                                                         $shipment_id (required)
      * @param string                                                                         $tracking_id (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveShippingLabelWithHttpInfo($body, $shipment_id, $tracking_id)
     {
@@ -902,7 +902,7 @@ class ShippingApi
     /**
      * Operation retrieveShippingLabelAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
      * @param string                                                                         $shipment_id (required)
      * @param string                                                                         $tracking_id (required)
      *
@@ -923,7 +923,7 @@ class ShippingApi
     /**
      * Operation retrieveShippingLabelAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
      * @param string                                                                         $shipment_id (required)
      * @param string                                                                         $tracking_id (required)
      *
@@ -941,7 +941,7 @@ class ShippingApi
     /**
      * Create request for operation 'retrieveShippingLabel'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
      * @param string                                                                         $shipment_id (required)
      * @param string                                                                         $tracking_id (required)
      *

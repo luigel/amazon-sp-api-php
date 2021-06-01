@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InboundShipmentItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information for an inbound shipment. Submitted with a call to the createInboundShipment or updateInboundShipment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InboundShipmentItem implements ModelInterface, ArrayAccess
 {
@@ -49,11 +49,11 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
         'shipment_id' => 'string',
 'seller_sku' => 'string',
 'fulfillment_network_sku' => 'string',
-'quantity_shipped' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'quantity_received' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'quantity_in_case' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'release_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'prep_details_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
+'quantity_shipped' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'quantity_received' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'quantity_in_case' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'release_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
+'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -307,7 +307,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_shipped.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
      */
     public function getQuantityShipped()
     {
@@ -317,7 +317,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_shipped.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_shipped quantity_shipped
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_shipped quantity_shipped
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_received.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
      */
     public function getQuantityReceived()
     {
@@ -341,7 +341,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_received.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_received quantity_received
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_received quantity_received
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_in_case.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
      */
     public function getQuantityInCase()
     {
@@ -365,7 +365,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_in_case.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_in_case quantity_in_case
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_in_case quantity_in_case
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets release_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
      */
     public function getReleaseDate()
     {
@@ -389,7 +389,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets release_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $release_date release_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $release_date release_date
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets prep_details_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList
      */
     public function getPrepDetailsList()
     {
@@ -413,7 +413,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets prep_details_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList $prep_details_list prep_details_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList $prep_details_list prep_details_list
      *
      * @return $this
      */

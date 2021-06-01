@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PurchaseShipmentResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the purchaseShipment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PurchaseShipmentResult implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId',
-'service_rate' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate',
-'label_results' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList',    ];
+        'shipment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId',
+'service_rate' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate',
+'label_results' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -208,7 +208,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId
      */
     public function getShipmentId()
     {
@@ -218,7 +218,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId $shipment_id shipment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId $shipment_id shipment_id
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Gets service_rate.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate
      */
     public function getServiceRate()
     {
@@ -242,7 +242,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Sets service_rate.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate $service_rate service_rate
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceRate $service_rate service_rate
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Gets label_results.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList
      */
     public function getLabelResults()
     {
@@ -266,7 +266,7 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Sets label_results.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList $label_results label_results
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelResultList $label_results label_results
      *
      * @return $this
      */

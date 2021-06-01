@@ -2,7 +2,7 @@
 /**
  * ServiceApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,17 +13,17 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Request;
@@ -31,7 +31,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * ServiceApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ServiceApi
 {
@@ -69,13 +69,13 @@ class ServiceApi
     /**
      * Operation addAppointmentForServiceJobByServiceJobId.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
      * @param string                                                                  $service_job_id An Amazon defined service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse
      */
     public function addAppointmentForServiceJobByServiceJobId($body, $service_job_id)
     {
@@ -87,13 +87,13 @@ class ServiceApi
     /**
      * Operation addAppointmentForServiceJobByServiceJobIdWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
      * @param string                                                                  $service_job_id An Amazon defined service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAppointmentForServiceJobByServiceJobIdWithHttpInfo($body, $service_job_id)
     {
@@ -105,7 +105,7 @@ class ServiceApi
     /**
      * Operation addAppointmentForServiceJobByServiceJobIdAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
      * @param string                                                                  $service_job_id An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
@@ -125,7 +125,7 @@ class ServiceApi
     /**
      * Operation addAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
      * @param string                                                                  $service_job_id An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
@@ -142,7 +142,7 @@ class ServiceApi
     /**
      * Create request for operation 'addAppointmentForServiceJobByServiceJobId'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AddAppointmentRequest $body           Add appointment operation input details. (required)
      * @param string                                                                  $service_job_id An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
@@ -185,10 +185,10 @@ class ServiceApi
      * @param string $service_job_id           An Amazon defined service job identifier. (required)
      * @param string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse
      */
     public function cancelServiceJobByServiceJobId($service_job_id, $cancellation_reason_code)
     {
@@ -203,10 +203,10 @@ class ServiceApi
      * @param string $service_job_id           An Amazon defined service job identifier. (required)
      * @param string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\CancelServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelServiceJobByServiceJobIdWithHttpInfo($service_job_id, $cancellation_reason_code)
     {
@@ -302,10 +302,10 @@ class ServiceApi
      *
      * @param string $service_job_id An Amazon defined service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse
      */
     public function completeServiceJobByServiceJobId($service_job_id)
     {
@@ -319,10 +319,10 @@ class ServiceApi
      *
      * @param string $service_job_id An Amazon defined service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\CompleteServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function completeServiceJobByServiceJobIdWithHttpInfo($service_job_id)
     {
@@ -397,10 +397,10 @@ class ServiceApi
      *
      * @param string $service_job_id A service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse
      */
     public function getServiceJobByServiceJobId($service_job_id)
     {
@@ -414,10 +414,10 @@ class ServiceApi
      *
      * @param string $service_job_id A service job identifier. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getServiceJobByServiceJobIdWithHttpInfo($service_job_id)
     {
@@ -456,7 +456,7 @@ class ServiceApi
      */
     public function getServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobByServiceJobIdResponse';
         $request = $this->getServiceJobByServiceJobIdRequest($service_job_id);
 
         return $this->sendRequestAsync($request, GetServiceJobByServiceJobIdResponse::class);
@@ -514,10 +514,10 @@ class ServiceApi
      * @param string   $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      * @param string   $schedule_end_date   A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse
      */
     public function getServiceJobs($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = '20', $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
     {
@@ -543,10 +543,10 @@ class ServiceApi
      * @param string   $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      * @param string   $schedule_end_date   A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\GetServiceJobsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getServiceJobsWithHttpInfo($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = '20', $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
     {
@@ -717,14 +717,14 @@ class ServiceApi
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobId.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
      * @param string                                                                         $service_job_id An Amazon defined service job identifier. (required)
      * @param string                                                                         $appointment_id An existing appointment identifier for the Service Job. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse
      */
     public function rescheduleAppointmentForServiceJobByServiceJobId($body, $service_job_id, $appointment_id)
     {
@@ -736,14 +736,14 @@ class ServiceApi
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
      * @param string                                                                         $service_job_id An Amazon defined service job identifier. (required)
      * @param string                                                                         $appointment_id An existing appointment identifier for the Service Job. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Services\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo($body, $service_job_id, $appointment_id)
     {
@@ -755,7 +755,7 @@ class ServiceApi
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobIdAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
      * @param string                                                                         $service_job_id An Amazon defined service job identifier. (required)
      * @param string                                                                         $appointment_id An existing appointment identifier for the Service Job. (required)
      *
@@ -776,7 +776,7 @@ class ServiceApi
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
      * @param string                                                                         $service_job_id An Amazon defined service job identifier. (required)
      * @param string                                                                         $appointment_id An existing appointment identifier for the Service Job. (required)
      *
@@ -794,7 +794,7 @@ class ServiceApi
     /**
      * Create request for operation 'rescheduleAppointmentForServiceJobByServiceJobId'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\RescheduleAppointmentRequest $body           Reschedule appointment operation input details. (required)
      * @param string                                                                         $service_job_id An Amazon defined service job identifier. (required)
      * @param string                                                                         $appointment_id An existing appointment identifier for the Service Job. (required)
      *

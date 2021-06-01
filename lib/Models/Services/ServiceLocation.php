@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ServiceLocation Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about the location of the service job.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ServiceLocation implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'service_location_type' => 'string',
-'address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\Address',    ];
+'address' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\Address',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -245,7 +245,7 @@ self::SERVICE_LOCATION_TYPE_ONLINE,        ];
     /**
      * Gets address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\Address
      */
     public function getAddress()
     {
@@ -255,7 +255,7 @@ self::SERVICE_LOCATION_TYPE_ONLINE,        ];
     /**
      * Sets address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\Address $address address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\Address $address address
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PurchaseLabelsResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the purchaseLabels operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResult $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class PurchaseLabelsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ErrorList $errors errors
      *
      * @return $this
      */

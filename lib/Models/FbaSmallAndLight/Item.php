@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Item Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item to be sold.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Item implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class Item implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'price' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType',    ];
+'price' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType
      */
     public function getPrice()
     {
@@ -233,7 +233,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType $price price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType $price price
      *
      * @return $this
      */

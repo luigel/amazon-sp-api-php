@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,7 +15,7 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 /**
  * HazmatType Class Doc Comment.
@@ -23,7 +23,7 @@ namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
  * @description Hazardous materials options for a package. Consult the terms and conditions for each carrier for more information on hazardous materials.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class HazmatType
 {

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InboundShipmentResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for this operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InboundShipmentResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class InboundShipmentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class InboundShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class InboundShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResult $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class InboundShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class InboundShipmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList $errors errors
      *
      * @return $this
      */

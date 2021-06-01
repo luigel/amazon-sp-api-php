@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaInventory;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InventorySummary Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Inventory summary for a specific item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InventorySummary implements ModelInterface, ArrayAccess
 {
@@ -50,7 +50,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
 'fn_sku' => 'string',
 'seller_sku' => 'string',
 'condition' => 'string',
-'inventory_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails',
+'inventory_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails',
 'last_updated_time' => '\DateTime',
 'product_name' => 'string',
 'total_quantity' => 'int',    ];
@@ -324,7 +324,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_details.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails
      */
     public function getInventoryDetails()
     {
@@ -334,7 +334,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_details.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails $inventory_details inventory_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventoryDetails $inventory_details inventory_details
      *
      * @return $this
      */

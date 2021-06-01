@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFeatureSkuResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the getFeatureSKU operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFeatureSkuResult implements ModelInterface, ArrayAccess
 {
@@ -50,7 +50,7 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess
 'feature_name' => 'string',
 'is_eligible' => 'bool',
 'ineligible_reasons' => 'string[]',
-'sku_info' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku',    ];
+'sku_info' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -316,7 +316,7 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess
     /**
      * Gets sku_info.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku
      */
     public function getSkuInfo()
     {
@@ -326,7 +326,7 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess
     /**
      * Sets sku_info.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku $sku_info sku_info
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku $sku_info sku_info
      *
      * @return $this
      */

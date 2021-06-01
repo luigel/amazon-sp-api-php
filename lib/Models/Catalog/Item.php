@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Item Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item in the Amazon catalog.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Item extends Categories implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class Item extends Categories implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'identifiers' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType',
-'attribute_sets' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList',
-'relationships' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList',
-'sales_rankings' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList',    ];
+        'identifiers' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType',
+'attribute_sets' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList',
+'relationships' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList',
+'sales_rankings' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -208,7 +208,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets identifiers.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType
      */
     public function getIdentifiers()
     {
@@ -218,7 +218,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets identifiers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType $identifiers identifiers
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType $identifiers identifiers
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets attribute_sets.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList
      */
     public function getAttributeSets()
     {
@@ -242,7 +242,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets attribute_sets.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList $attribute_sets attribute_sets
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList $attribute_sets attribute_sets
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets relationships.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList
      */
     public function getRelationships()
     {
@@ -266,7 +266,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets relationships.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList $relationships relationships
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList $relationships relationships
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets sales_rankings.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList
      */
     public function getSalesRankings()
     {
@@ -290,7 +290,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets sales_rankings.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList $sales_rankings sales_rankings
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList $sales_rankings sales_rankings
      *
      * @return $this
      */

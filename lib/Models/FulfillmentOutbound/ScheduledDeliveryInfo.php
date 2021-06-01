@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ScheduledDeliveryInfo Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Delivery information for a scheduled delivery.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'delivery_time_zone' => 'string',
-'delivery_windows' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList',    ];
+'delivery_windows' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_windows.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList
      */
     public function getDeliveryWindows()
     {
@@ -233,7 +233,7 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_windows.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList $delivery_windows delivery_windows
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindowList $delivery_windows delivery_windows
      *
      * @return $this
      */

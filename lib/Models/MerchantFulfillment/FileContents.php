@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FileContents Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The document data and checksum.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FileContents implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class FileContents implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'contents' => 'string',
-'file_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType',
+'file_type' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType',
 'checksum' => 'string',    ];
 
     /**
@@ -232,7 +232,7 @@ class FileContents implements ModelInterface, ArrayAccess
     /**
      * Gets file_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType
      */
     public function getFileType()
     {
@@ -242,7 +242,7 @@ class FileContents implements ModelInterface, ArrayAccess
     /**
      * Sets file_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType $file_type file_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\FileType $file_type file_type
      *
      * @return $this
      */

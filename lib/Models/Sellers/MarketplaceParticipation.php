@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Sellers;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Sellers;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * MarketplaceParticipation Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class MarketplaceParticipation implements ModelInterface, ArrayAccess
 {
@@ -43,8 +43,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'marketplace' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Marketplace',
-'participation' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Participation',    ];
+        'marketplace' => '\Luigel\AmazonSellingPartnerAPI\Models\Sellers\Marketplace',
+'participation' => '\Luigel\AmazonSellingPartnerAPI\Models\Sellers\Participation',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -196,7 +196,7 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     /**
      * Gets marketplace.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Marketplace
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sellers\Marketplace
      */
     public function getMarketplace()
     {
@@ -206,7 +206,7 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     /**
      * Sets marketplace.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Marketplace $marketplace marketplace
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sellers\Marketplace $marketplace marketplace
      *
      * @return $this
      */
@@ -220,7 +220,7 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     /**
      * Gets participation.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Participation
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sellers\Participation
      */
     public function getParticipation()
     {
@@ -230,7 +230,7 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     /**
      * Sets participation.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sellers\Participation $participation participation
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sellers\Participation $participation participation
      *
      * @return $this
      */

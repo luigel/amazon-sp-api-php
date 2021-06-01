@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetServiceJobByServiceJobIdResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the GetServiceJobByServiceJobId operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetServiceJobByServiceJobIdResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList $errors errors
      *
      * @return $this
      */

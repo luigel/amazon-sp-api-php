@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PackageTrackingDetails Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PackageTrackingDetails implements ModelInterface, ArrayAccess
 {
@@ -49,14 +49,14 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
 'carrier_code' => 'string',
 'carrier_phone_number' => 'string',
 'carrier_url' => 'string',
-'ship_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
-'estimated_arrival_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
-'ship_to_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress',
-'current_status' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus',
+'ship_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'estimated_arrival_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'ship_to_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress',
+'current_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus',
 'current_status_description' => 'string',
 'signed_for_by' => 'string',
-'additional_location_info' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo',
-'tracking_events' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList',    ];
+'additional_location_info' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo',
+'tracking_events' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -409,7 +409,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets ship_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getShipDate()
     {
@@ -419,7 +419,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets ship_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $ship_date ship_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $ship_date ship_date
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets estimated_arrival_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getEstimatedArrivalDate()
     {
@@ -443,7 +443,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets estimated_arrival_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
      *
      * @return $this
      */
@@ -457,7 +457,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress
      */
     public function getShipToAddress()
     {
@@ -467,7 +467,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress $ship_to_address ship_to_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingAddress $ship_to_address ship_to_address
      *
      * @return $this
      */
@@ -481,7 +481,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets current_status.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus
      */
     public function getCurrentStatus()
     {
@@ -491,7 +491,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets current_status.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus $current_status current_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CurrentStatus $current_status current_status
      *
      * @return $this
      */
@@ -553,7 +553,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets additional_location_info.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo
      */
     public function getAdditionalLocationInfo()
     {
@@ -563,7 +563,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets additional_location_info.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo $additional_location_info additional_location_info
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\AdditionalLocationInfo $additional_location_info additional_location_info
      *
      * @return $this
      */
@@ -577,7 +577,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_events.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList
      */
     public function getTrackingEvents()
     {
@@ -587,7 +587,7 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_events.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList $tracking_events tracking_events
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\TrackingEventList $tracking_events tracking_events
      *
      * @return $this
      */

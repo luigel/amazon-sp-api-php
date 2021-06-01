@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetEligibleShipmentServicesRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Request schema.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_request_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails',
-'shipping_offering_filter' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter',    ];
+        'shipment_request_details' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails',
+'shipping_offering_filter' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -196,7 +196,7 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_request_details.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails
      */
     public function getShipmentRequestDetails()
     {
@@ -206,7 +206,7 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_request_details.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails $shipment_request_details shipment_request_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails $shipment_request_details shipment_request_details
      *
      * @return $this
      */
@@ -220,7 +220,7 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_offering_filter.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter
      */
     public function getShippingOfferingFilter()
     {
@@ -230,7 +230,7 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_offering_filter.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter $shipping_offering_filter shipping_offering_filter
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingOfferingFilter $shipping_offering_filter shipping_offering_filter
      *
      * @return $this
      */

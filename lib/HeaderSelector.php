@@ -2,7 +2,7 @@
 /**
  * ApiException.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,12 +13,12 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI;
+namespace Luigel\AmazonSellingPartnerAPI;
 
 /**
  * ApiException Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class HeaderSelector
 {

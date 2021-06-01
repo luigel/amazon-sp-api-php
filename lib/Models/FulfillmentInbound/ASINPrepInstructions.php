@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ASINPrepInstructions Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item preparation instructions to help with item sourcing decisions.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ASINPrepInstructions implements ModelInterface, ArrayAccess
 {
@@ -47,9 +47,9 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'barcode_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction',
-'prep_guidance' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance',
-'prep_instruction_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList',    ];
+'barcode_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction',
+'prep_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance',
+'prep_instruction_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -228,7 +228,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Gets barcode_instruction.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction
      */
     public function getBarcodeInstruction()
     {
@@ -238,7 +238,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Sets barcode_instruction.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction $barcode_instruction barcode_instruction
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction $barcode_instruction barcode_instruction
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Gets prep_guidance.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance
      */
     public function getPrepGuidance()
     {
@@ -262,7 +262,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Sets prep_guidance.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance $prep_guidance prep_guidance
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance $prep_guidance prep_guidance
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Gets prep_instruction_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList
      */
     public function getPrepInstructionList()
     {
@@ -286,7 +286,7 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
     /**
      * Sets prep_instruction_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList $prep_instruction_list prep_instruction_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList $prep_instruction_list prep_instruction_list
      *
      * @return $this
      */

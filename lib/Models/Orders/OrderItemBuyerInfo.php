@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderItemBuyerInfo Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A single order item&#x27;s buyer information.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
 {
@@ -47,9 +47,9 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'order_item_id' => 'string',
-'buyer_customized_info' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail',
-'gift_wrap_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'gift_wrap_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
+'buyer_customized_info' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail',
+'gift_wrap_price' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'gift_wrap_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
 'gift_message_text' => 'string',
 'gift_wrap_level' => 'string',    ];
 
@@ -244,7 +244,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Gets buyer_customized_info.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail
      */
     public function getBuyerCustomizedInfo()
     {
@@ -254,7 +254,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Sets buyer_customized_info.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail $buyer_customized_info buyer_customized_info
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerCustomizedInfoDetail $buyer_customized_info buyer_customized_info
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Gets gift_wrap_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getGiftWrapPrice()
     {
@@ -278,7 +278,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Sets gift_wrap_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $gift_wrap_price gift_wrap_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $gift_wrap_price gift_wrap_price
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Gets gift_wrap_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getGiftWrapTax()
     {
@@ -302,7 +302,7 @@ class OrderItemBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Sets gift_wrap_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $gift_wrap_tax gift_wrap_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $gift_wrap_tax gift_wrap_tax
      *
      * @return $this
      */

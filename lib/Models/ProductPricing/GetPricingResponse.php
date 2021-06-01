@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetPricingResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the getPricing and getCompetitivePricing operations.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetPricingResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetPricingResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetPricingResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetPricingResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceList $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetPricingResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetPricingResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ErrorList $errors errors
      *
      * @return $this
      */

@@ -2,7 +2,7 @@
 /**
  * FeesApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,20 +13,20 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 
 /**
  * FeesApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FeesApi
 {
@@ -65,13 +65,13 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForASIN.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body body (required)
      * @param string                                                                        $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse
      */
     public function getMyFeesEstimateForASIN($body, $asin)
     {
@@ -83,13 +83,13 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForASINWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
      * @param string                                                                        $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMyFeesEstimateForASINWithHttpInfo($body, $asin)
     {
@@ -101,7 +101,7 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForASINAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
      * @param string                                                                        $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
@@ -121,7 +121,7 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForASINAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
      * @param string                                                                        $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
@@ -138,7 +138,7 @@ class FeesApi
     /**
      * Create request for operation 'getMyFeesEstimateForASIN'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body (required)
      * @param string                                                                        $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
@@ -178,13 +178,13 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForSKU.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       body (required)
      * @param string                                                                        $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse
      */
     public function getMyFeesEstimateForSKU($body, $seller_sku)
     {
@@ -196,13 +196,13 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForSKUWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
      * @param string                                                                        $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMyFeesEstimateForSKUWithHttpInfo($body, $seller_sku)
     {
@@ -214,7 +214,7 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForSKUAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
      * @param string                                                                        $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
@@ -234,7 +234,7 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForSKUAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
      * @param string                                                                        $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
@@ -251,7 +251,7 @@ class FeesApi
     /**
      * Create request for operation 'getMyFeesEstimateForSKU'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest $body       (required)
      * @param string                                                                        $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException

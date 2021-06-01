@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CODSettings Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The COD (Cash On Delivery) charges that you associate with a COD fulfillment order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CODSettings implements ModelInterface, ArrayAccess
 {
@@ -47,10 +47,10 @@ class CODSettings implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'is_cod_required' => 'bool',
-'cod_charge' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'cod_charge_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'shipping_charge' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'shipping_charge_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
+'cod_charge' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'cod_charge_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'shipping_charge' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'shipping_charge_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -238,7 +238,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Gets cod_charge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getCodCharge()
     {
@@ -248,7 +248,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Sets cod_charge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $cod_charge cod_charge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $cod_charge cod_charge
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Gets cod_charge_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getCodChargeTax()
     {
@@ -272,7 +272,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Sets cod_charge_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $cod_charge_tax cod_charge_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $cod_charge_tax cod_charge_tax
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_charge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getShippingCharge()
     {
@@ -296,7 +296,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_charge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $shipping_charge shipping_charge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $shipping_charge shipping_charge
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_charge_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getShippingChargeTax()
     {
@@ -320,7 +320,7 @@ class CODSettings implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_charge_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $shipping_charge_tax shipping_charge_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $shipping_charge_tax shipping_charge_tax
      *
      * @return $this
      */

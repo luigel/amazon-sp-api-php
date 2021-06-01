@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Notifications;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Notifications;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Destination Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Represents a destination created when you call the createDestination operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Destination implements ModelInterface, ArrayAccess
 {
@@ -48,7 +48,7 @@ class Destination implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
 'destination_id' => 'string',
-'resource' => '\ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource',    ];
+'resource' => '\Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -256,7 +256,7 @@ class Destination implements ModelInterface, ArrayAccess
     /**
      * Gets resource.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource
      */
     public function getResource()
     {
@@ -266,7 +266,7 @@ class Destination implements ModelInterface, ArrayAccess
     /**
      * Sets resource.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource $resource resource
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResource $resource resource
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Shipment Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The details of a shipment, including the shipment status.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Shipment implements ModelInterface, ArrayAccess
 {
@@ -46,21 +46,21 @@ class Shipment implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId',
-'amazon_order_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId',
-'seller_order_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId',
-'item_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList',
-'ship_from_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address',
-'ship_to_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address',
-'package_dimensions' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions',
-'weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight',
-'insurance' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',
-'shipping_service' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService',
-'label' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label',
-'status' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus',
-'tracking_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId',
-'created_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
-'last_updated_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',    ];
+        'shipment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId',
+'amazon_order_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId',
+'seller_order_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId',
+'item_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList',
+'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address',
+'ship_to_address' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address',
+'package_dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions',
+'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight',
+'insurance' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',
+'shipping_service' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService',
+'label' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label',
+'status' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus',
+'tracking_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId',
+'created_date' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
+'last_updated_date' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -307,7 +307,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId
      */
     public function getShipmentId()
     {
@@ -317,7 +317,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId $shipment_id shipment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentId $shipment_id shipment_id
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets amazon_order_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId
      */
     public function getAmazonOrderId()
     {
@@ -341,7 +341,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets amazon_order_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId $amazon_order_id amazon_order_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AmazonOrderId $amazon_order_id amazon_order_id
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets seller_order_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId
      */
     public function getSellerOrderId()
     {
@@ -365,7 +365,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets seller_order_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId $seller_order_id seller_order_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerOrderId $seller_order_id seller_order_id
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets item_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList
      */
     public function getItemList()
     {
@@ -389,7 +389,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets item_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList $item_list item_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemList $item_list item_list
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address
      */
     public function getShipFromAddress()
     {
@@ -413,7 +413,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address $ship_from_address ship_from_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address $ship_from_address ship_from_address
      *
      * @return $this
      */
@@ -427,7 +427,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address
      */
     public function getShipToAddress()
     {
@@ -437,7 +437,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address $ship_to_address ship_to_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Address $ship_to_address ship_to_address
      *
      * @return $this
      */
@@ -451,7 +451,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets package_dimensions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions
      */
     public function getPackageDimensions()
     {
@@ -461,7 +461,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets package_dimensions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions $package_dimensions package_dimensions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimensions $package_dimensions package_dimensions
      *
      * @return $this
      */
@@ -475,7 +475,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight
      */
     public function getWeight()
     {
@@ -485,7 +485,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight $weight weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight $weight weight
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets insurance.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
      */
     public function getInsurance()
     {
@@ -509,7 +509,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets insurance.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $insurance insurance
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $insurance insurance
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService
      */
     public function getShippingService()
     {
@@ -533,7 +533,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService $shipping_service shipping_service
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingService $shipping_service shipping_service
      *
      * @return $this
      */
@@ -547,7 +547,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets label.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label
      */
     public function getLabel()
     {
@@ -557,7 +557,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets label.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label $label label
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Label $label label
      *
      * @return $this
      */
@@ -571,7 +571,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets status.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus
      */
     public function getStatus()
     {
@@ -581,7 +581,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets status.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus $status status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentStatus $status status
      *
      * @return $this
      */
@@ -595,7 +595,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId
      */
     public function getTrackingId()
     {
@@ -605,7 +605,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId $tracking_id tracking_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TrackingId $tracking_id tracking_id
      *
      * @return $this
      */
@@ -619,7 +619,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets created_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
      */
     public function getCreatedDate()
     {
@@ -629,7 +629,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets created_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $created_date created_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $created_date created_date
      *
      * @return $this
      */
@@ -643,7 +643,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets last_updated_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
      */
     public function getLastUpdatedDate()
     {
@@ -653,7 +653,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets last_updated_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $last_updated_date last_updated_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $last_updated_date last_updated_date
      *
      * @return $this
      */

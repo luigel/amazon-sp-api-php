@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Notifications;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Notifications;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateDestinationRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request schema for the createDestination operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateDestinationRequest implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'resource_specification' => '\ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification',
+        'resource_specification' => '\Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification',
 'name' => 'string',    ];
 
     /**
@@ -199,7 +199,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets resource_specification.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification
      */
     public function getResourceSpecification()
     {
@@ -209,7 +209,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets resource_specification.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification $resource_specification resource_specification
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification $resource_specification resource_specification
      *
      * @return $this
      */

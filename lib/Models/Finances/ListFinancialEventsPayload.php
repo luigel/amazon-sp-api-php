@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListFinancialEventsPayload Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the listFinancialEvents operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListFinancialEventsPayload implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'next_token' => 'string',
-'financial_events' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents',    ];
+'financial_events' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess
     /**
      * Gets financial_events.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents
      */
     public function getFinancialEvents()
     {
@@ -226,7 +226,7 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess
     /**
      * Sets financial_events.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents $financial_events financial_events
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEvents $financial_events financial_events
      *
      * @return $this
      */

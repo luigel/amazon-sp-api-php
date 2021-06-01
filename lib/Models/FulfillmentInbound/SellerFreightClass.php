@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,7 +15,7 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 /**
  * SellerFreightClass Class Doc Comment.
@@ -23,7 +23,7 @@ namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
  * @description The freight class of the shipment. For information about determining the freight class, contact the carrier.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SellerFreightClass
 {

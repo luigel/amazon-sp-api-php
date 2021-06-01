@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetItemEligibilityPreviewResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the getItemEligibilityPreview operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ItemEligibilityPreview $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetItemEligibilityPreviewResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInboundEligibility\ErrorList $errors errors
      *
      * @return $this
      */

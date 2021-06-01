@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Appointment Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The details of an appointment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Appointment implements ModelInterface, ArrayAccess
 {
@@ -46,12 +46,12 @@ class Appointment implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'appointment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
+        'appointment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
 'appointment_status' => 'string',
-'appointment_time' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTime',
-'assigned_technicians' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\Technician[]',
-'rescheduled_appointment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
-'poa' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\Poa',    ];
+'appointment_time' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTime',
+'assigned_technicians' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\Technician[]',
+'rescheduled_appointment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
+'poa' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\Poa',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -241,7 +241,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Gets appointment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId
      */
     public function getAppointmentId()
     {
@@ -251,7 +251,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Sets appointment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId $appointment_id appointment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId $appointment_id appointment_id
      *
      * @return $this
      */
@@ -293,7 +293,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Gets appointment_time.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTime
      */
     public function getAppointmentTime()
     {
@@ -303,7 +303,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Sets appointment_time.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTime $appointment_time appointment_time
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTime $appointment_time appointment_time
      *
      * @return $this
      */
@@ -317,7 +317,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Gets assigned_technicians.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\Technician[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\Technician[]
      */
     public function getAssignedTechnicians()
     {
@@ -327,7 +327,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Sets assigned_technicians.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\Technician[] $assigned_technicians a list of technicians assigned to the service job
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\Technician[] $assigned_technicians a list of technicians assigned to the service job
      *
      * @return $this
      */
@@ -341,7 +341,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Gets rescheduled_appointment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId
      */
     public function getRescheduledAppointmentId()
     {
@@ -351,7 +351,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Sets rescheduled_appointment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId $rescheduled_appointment_id rescheduled_appointment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId $rescheduled_appointment_id rescheduled_appointment_id
      *
      * @return $this
      */
@@ -365,7 +365,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Gets poa.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\Poa
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\Poa
      */
     public function getPoa()
     {
@@ -375,7 +375,7 @@ self::APPOINTMENT_STATUS_COMPLETED,        ];
     /**
      * Sets poa.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\Poa $poa poa
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\Poa $poa poa
      *
      * @return $this
      */

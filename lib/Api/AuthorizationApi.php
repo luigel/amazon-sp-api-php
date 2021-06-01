@@ -2,7 +2,7 @@
 /**
  * AuthorizationApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,14 +13,14 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\ApiException;
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\ApiException;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use InvalidArgumentException;
@@ -28,7 +28,7 @@ use InvalidArgumentException;
 /**
  * AuthorizationApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AuthorizationApi
 {
@@ -97,11 +97,11 @@ class AuthorizationApi
      * @throws InvalidArgumentException
      * @throws ApiException             on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuthorizationCodeWithHttpInfo($selling_partner_id, $developer_id, $mws_auth_token)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Authorization\GetAuthorizationCodeResponse';
         $request = $this->getAuthorizationCodeRequest($selling_partner_id, $developer_id, $mws_auth_token);
 
         return $this->sendRequest($request, GetAuthorizationCodeResponse::class);

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ShippingService Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A shipping service offer made by a carrier.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ShippingService implements ModelInterface, ArrayAccess
 {
@@ -48,16 +48,16 @@ class ShippingService implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipping_service_name' => 'string',
 'carrier_name' => 'string',
-'shipping_service_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
+'shipping_service_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
 'shipping_service_offer_id' => 'string',
-'ship_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
-'earliest_estimated_delivery_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
-'latest_estimated_delivery_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
-'rate' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',
-'shipping_service_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions',
-'available_shipping_service_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions',
-'available_label_formats' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList',
-'available_format_options_for_label' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList',
+'ship_date' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
+'earliest_estimated_delivery_date' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
+'latest_estimated_delivery_date' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp',
+'rate' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',
+'shipping_service_options' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions',
+'available_shipping_service_options' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions',
+'available_label_formats' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList',
+'available_format_options_for_label' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList',
 'requires_additional_seller_inputs' => 'bool',    ];
 
     /**
@@ -331,7 +331,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
      */
     public function getShippingServiceId()
     {
@@ -341,7 +341,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets ship_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
      */
     public function getShipDate()
     {
@@ -389,7 +389,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets ship_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $ship_date ship_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $ship_date ship_date
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets earliest_estimated_delivery_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
      */
     public function getEarliestEstimatedDeliveryDate()
     {
@@ -413,7 +413,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets earliest_estimated_delivery_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $earliest_estimated_delivery_date earliest_estimated_delivery_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $earliest_estimated_delivery_date earliest_estimated_delivery_date
      *
      * @return $this
      */
@@ -427,7 +427,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets latest_estimated_delivery_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp
      */
     public function getLatestEstimatedDeliveryDate()
     {
@@ -437,7 +437,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets latest_estimated_delivery_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $latest_estimated_delivery_date latest_estimated_delivery_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Timestamp $latest_estimated_delivery_date latest_estimated_delivery_date
      *
      * @return $this
      */
@@ -451,7 +451,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets rate.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
      */
     public function getRate()
     {
@@ -461,7 +461,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets rate.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $rate rate
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $rate rate
      *
      * @return $this
      */
@@ -475,7 +475,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions
      */
     public function getShippingServiceOptions()
     {
@@ -485,7 +485,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions $shipping_service_options shipping_service_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceOptions $shipping_service_options shipping_service_options
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets available_shipping_service_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions
      */
     public function getAvailableShippingServiceOptions()
     {
@@ -509,7 +509,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets available_shipping_service_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions $available_shipping_service_options available_shipping_service_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableShippingServiceOptions $available_shipping_service_options available_shipping_service_options
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets available_label_formats.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList
      */
     public function getAvailableLabelFormats()
     {
@@ -533,7 +533,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets available_label_formats.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList $available_label_formats available_label_formats
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatList $available_label_formats available_label_formats
      *
      * @return $this
      */
@@ -547,7 +547,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets available_format_options_for_label.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList
      */
     public function getAvailableFormatOptionsForLabel()
     {
@@ -557,7 +557,7 @@ class ShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets available_format_options_for_label.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList $available_format_options_for_label available_format_options_for_label
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableFormatOptionsForLabelList $available_format_options_for_label available_format_options_for_label
      *
      * @return $this
      */

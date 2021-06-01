@@ -1,4 +1,4 @@
-# Amazon Selling Partner API PHP 
+# Amazon Selling Partner API PHP
 
 This is an API Binding in PHP for the new Amazon Selling Partner API.
 
@@ -44,31 +44,31 @@ $options = [
     'refresh_token' => '', // Aztr|...
     'client_id' => '', // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
     'client_secret' => '', // The corresponding Client Secret
-    'region' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerRegion::$EUROPE, // or NORTH_AMERICA / FAR_EAST
+    'region' => \Luigel\AmazonSellingPartnerAPI\SellingPartnerRegion::$EUROPE, // or NORTH_AMERICA / FAR_EAST
     'access_key' => '', // Access Key of AWS IAM User, for example AKIAABCDJKEHFJDS
     'secret_key' => '', // Secret Key of AWS IAM User
-    'endpoint' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$EUROPE, // or NORTH_AMERICA / FAR_EAST
+    'endpoint' => \Luigel\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$EUROPE, // or NORTH_AMERICA / FAR_EAST
     'role_arn' => '', // AWS IAM Role ARN for example: arn:aws:iam::123456789:role/Your-Role-Name
 ];
-$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
+$accessToken = \Luigel\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
     $options['refresh_token'],
     $options['client_id'],
     $options['client_secret']
 );
-$assumedRole = \ClouSale\AmazonSellingPartnerAPI\AssumeRole::assume(
+$assumedRole = \Luigel\AmazonSellingPartnerAPI\AssumeRole::assume(
     $options['region'],
     $options['access_key'],
     $options['secret_key'],
     $options['role_arn'],
 );
-$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
+$config = \Luigel\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
 $config->setHost($options['endpoint']);
 $config->setAccessToken($accessToken);
 $config->setAccessKey($assumedRole->getAccessKeyId());
 $config->setSecretKey($assumedRole->getSecretAccessKey());
 $config->setRegion($options['region']);
 $config->setSecurityToken($assumedRole->getSessionToken());
-$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+$apiInstance = new \Luigel\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 $marketplace_id = 'A1PA6795UKMFR9';
 $asin = 'B0002ZFTJA';
 
@@ -89,23 +89,23 @@ $options = [
     'refresh_token' => '', // Aztr|...
     'client_id' => '', // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
     'client_secret' => '', // The corresponding Client Secret
-    'region' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerRegion::$EUROPE, // or NORTH_AMERICA / FAR_EAST
+    'region' => \Luigel\AmazonSellingPartnerAPI\SellingPartnerRegion::$EUROPE, // or NORTH_AMERICA / FAR_EAST
     'access_key' => '', // Access Key of AWS IAM User, for example AKIAABCDJKEHFJDS
     'secret_key' => '', // Secret Key of AWS IAM User
-    'endpoint' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$EUROPE, // or NORTH_AMERICA / FAR_EAST
+    'endpoint' => \Luigel\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$EUROPE, // or NORTH_AMERICA / FAR_EAST
 ];
-$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
+$accessToken = \Luigel\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
     $options['refresh_token'],
     $options['client_id'],
     $options['client_secret']
 );
-$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
+$config = \Luigel\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
 $config->setHost($options['endpoint']);
 $config->setAccessToken($accessToken);
 $config->setAccessKey($options['access_key']);
 $config->setSecretKey($options['secret_key']);
 $config->setRegion($options['region']);
-$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+$apiInstance = new \Luigel\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 $marketplace_id = 'A1PA6795UKMFR9';
 $asin = 'B0002ZFTJA';
 
@@ -120,10 +120,7 @@ echo $result->getPayload()->getAttributeSets()[0]->getTitle(); // Never Gonna Gi
 
 Feature Requests & Pull Requests are very welcome!
 
-# Notes
-
-If you are looking for a complete Repricing & FBA-Reimbursement solution, you might want to consider giving [ClouSale.com](https://www.clousale.com) a shot.
-
 # Thanks
 
+Thanks to @clousale for this package.
 Thanks go out to everybody who added PRs and worked on this package.

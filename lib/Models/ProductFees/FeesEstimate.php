@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FeesEstimate Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The total estimated fees for an item and a list of details.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FeesEstimate implements ModelInterface, ArrayAccess
 {
@@ -47,8 +47,8 @@ class FeesEstimate implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'time_of_fees_estimation' => '\DateTime',
-'total_fees_estimate' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'fee_detail_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList',    ];
+'total_fees_estimate' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'fee_detail_list' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -226,7 +226,7 @@ class FeesEstimate implements ModelInterface, ArrayAccess
     /**
      * Gets total_fees_estimate.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getTotalFeesEstimate()
     {
@@ -236,7 +236,7 @@ class FeesEstimate implements ModelInterface, ArrayAccess
     /**
      * Sets total_fees_estimate.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $total_fees_estimate total_fees_estimate
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $total_fees_estimate total_fees_estimate
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class FeesEstimate implements ModelInterface, ArrayAccess
     /**
      * Gets fee_detail_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList
      */
     public function getFeeDetailList()
     {
@@ -260,7 +260,7 @@ class FeesEstimate implements ModelInterface, ArrayAccess
     /**
      * Sets fee_detail_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList $fee_detail_list fee_detail_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeeDetailList $fee_detail_list fee_detail_list
      *
      * @return $this
      */

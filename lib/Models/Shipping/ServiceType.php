@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,7 +15,7 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 /**
  * ServiceType Class Doc Comment.
@@ -23,7 +23,7 @@ namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
 
  * @description The type of shipping service that will be used for the service offering.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ServiceType
 {

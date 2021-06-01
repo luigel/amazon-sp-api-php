@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AmazonPrepFeesDetails Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The fees for Amazon to prep goods for shipment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'prep_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction',
-'fee_per_unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
+        'prep_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction',
+'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
     /**
      * Gets prep_instruction.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction
      */
     public function getPrepInstruction()
     {
@@ -202,7 +202,7 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
     /**
      * Sets prep_instruction.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction $prep_instruction prep_instruction
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction $prep_instruction prep_instruction
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
     /**
      * Gets fee_per_unit.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount
      */
     public function getFeePerUnit()
     {
@@ -226,7 +226,7 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
     /**
      * Sets fee_per_unit.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount $fee_per_unit fee_per_unit
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount $fee_per_unit fee_per_unit
      *
      * @return $this
      */

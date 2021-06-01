@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetTransportDetailsResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetTransportDetailsResult implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_content' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent',    ];
+        'transport_content' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -183,7 +183,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess
     /**
      * Gets transport_content.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent
      */
     public function getTransportContent()
     {
@@ -193,7 +193,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess
     /**
      * Sets transport_content.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent $transport_content transport_content
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent $transport_content transport_content
      *
      * @return $this
      */

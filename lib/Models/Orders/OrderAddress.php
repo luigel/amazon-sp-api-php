@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderAddress Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The shipping address for the order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderAddress implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class OrderAddress implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'amazon_order_id' => 'string',
-'shipping_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',    ];
+'shipping_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Address',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -220,7 +220,7 @@ class OrderAddress implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Address
      */
     public function getShippingAddress()
     {
@@ -230,7 +230,7 @@ class OrderAddress implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address $shipping_address shipping_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Address $shipping_address shipping_address
      *
      * @return $this
      */

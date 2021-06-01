@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSolicitationActionsForOrderResponseEmbedded Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSolicitationActionsForOrderResponseEmbedded implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class GetSolicitationActionsForOrderResponseEmbedded implements ModelInterface, 
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'actions' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[]',    ];
+        'actions' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -187,7 +187,7 @@ class GetSolicitationActionsForOrderResponseEmbedded implements ModelInterface, 
     /**
      * Gets actions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[]
      */
     public function getActions()
     {
@@ -197,7 +197,7 @@ class GetSolicitationActionsForOrderResponseEmbedded implements ModelInterface, 
     /**
      * Sets actions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[] $actions actions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponse[] $actions actions
      *
      * @return $this
      */

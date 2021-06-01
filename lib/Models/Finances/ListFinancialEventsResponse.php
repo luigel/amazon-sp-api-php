@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListFinancialEventsResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the listFinancialEvents operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsPayload $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class ListFinancialEventsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ErrorList $errors errors
      *
      * @return $this
      */

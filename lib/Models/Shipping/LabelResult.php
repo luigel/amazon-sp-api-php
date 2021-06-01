@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * LabelResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Label details including label stream, format, size.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class LabelResult implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class LabelResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'container_reference_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId',
+        'container_reference_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId',
 'tracking_id' => 'string',
-'label' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Label',    ];
+'label' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Label',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -198,7 +198,7 @@ class LabelResult implements ModelInterface, ArrayAccess
     /**
      * Gets container_reference_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId
      */
     public function getContainerReferenceId()
     {
@@ -208,7 +208,7 @@ class LabelResult implements ModelInterface, ArrayAccess
     /**
      * Sets container_reference_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId $container_reference_id container_reference_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerReferenceId $container_reference_id container_reference_id
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class LabelResult implements ModelInterface, ArrayAccess
     /**
      * Gets label.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Label
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Label
      */
     public function getLabel()
     {
@@ -256,7 +256,7 @@ class LabelResult implements ModelInterface, ArrayAccess
     /**
      * Sets label.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Label $label label
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Label $label label
      *
      * @return $this
      */

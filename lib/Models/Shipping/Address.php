@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Address Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The address.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Address implements ModelInterface, ArrayAccess
 {
@@ -50,10 +50,10 @@ class Address implements ModelInterface, ArrayAccess
 'address_line1' => 'string',
 'address_line2' => 'string',
 'address_line3' => 'string',
-'state_or_region' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion',
-'city' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\City',
-'country_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CountryCode',
-'postal_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PostalCode',
+'state_or_region' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion',
+'city' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\City',
+'country_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\CountryCode',
+'postal_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\PostalCode',
 'email' => 'string',
 'copy_emails' => 'string[]',
 'phone_number' => 'string',    ];
@@ -361,7 +361,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets state_or_region.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion
      */
     public function getStateOrRegion()
     {
@@ -371,7 +371,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets state_or_region.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion $state_or_region state_or_region
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\StateOrRegion $state_or_region state_or_region
      *
      * @return $this
      */
@@ -385,7 +385,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets city.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\City
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\City
      */
     public function getCity()
     {
@@ -395,7 +395,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets city.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\City $city city
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\City $city city
      *
      * @return $this
      */
@@ -409,7 +409,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets country_code.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CountryCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CountryCode
      */
     public function getCountryCode()
     {
@@ -419,7 +419,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets country_code.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CountryCode $country_code country_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CountryCode $country_code country_code
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets postal_code.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PostalCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PostalCode
      */
     public function getPostalCode()
     {
@@ -443,7 +443,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets postal_code.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PostalCode $postal_code postal_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PostalCode $postal_code postal_code
      *
      * @return $this
      */

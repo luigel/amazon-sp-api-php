@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PointsGrantedDetail Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The number of Amazon Points offered with the purchase of an item, and their monetary value.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PointsGrantedDetail implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class PointsGrantedDetail implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'points_number' => 'int',
-'points_monetary_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',    ];
+'points_monetary_value' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class PointsGrantedDetail implements ModelInterface, ArrayAccess
     /**
      * Gets points_monetary_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getPointsMonetaryValue()
     {
@@ -226,7 +226,7 @@ class PointsGrantedDetail implements ModelInterface, ArrayAccess
     /**
      * Sets points_monetary_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $points_monetary_value points_monetary_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $points_monetary_value points_monetary_value
      *
      * @return $this
      */

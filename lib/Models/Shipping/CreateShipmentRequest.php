@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateShipmentRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request schema for the createShipment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateShipmentRequest implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'client_reference_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId',
-'ship_to' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
-'ship_from' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
-'containers' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList',    ];
+        'client_reference_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId',
+'ship_to' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
+'ship_from' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
+'containers' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -217,7 +217,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets client_reference_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId
      */
     public function getClientReferenceId()
     {
@@ -227,7 +227,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_reference_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId $client_reference_id client_reference_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId $client_reference_id client_reference_id
      *
      * @return $this
      */
@@ -241,7 +241,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipTo()
     {
@@ -251,7 +251,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipFrom()
     {
@@ -275,7 +275,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets containers.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList
      */
     public function getContainers()
     {
@@ -299,7 +299,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets containers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList $containers containers
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList $containers containers
      *
      * @return $this
      */

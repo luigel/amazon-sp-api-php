@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * TransportHeader Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The shipping identifier, information about whether the shipment is by an Amazon-partnered carrier, and information about whether the shipment is Small Parcel or Less Than Truckload/Full Truckload (LTL/FTL).
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class TransportHeader implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class TransportHeader implements ModelInterface, ArrayAccess
         'seller_id' => 'string',
 'shipment_id' => 'string',
 'is_partnered' => 'bool',
-'shipment_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType',    ];
+'shipment_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -289,7 +289,7 @@ class TransportHeader implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType
      */
     public function getShipmentType()
     {
@@ -299,7 +299,7 @@ class TransportHeader implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType $shipment_type shipment_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType $shipment_type shipment_type
      *
      * @return $this
      */

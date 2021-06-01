@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSolicitationActionsForOrderResponseLinks Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, ArrayAccess
 {
@@ -43,8 +43,8 @@ class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, Arr
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'self' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',
-'actions' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[]',    ];
+        'self' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',
+'actions' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -196,7 +196,7 @@ class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, Arr
     /**
      * Gets self.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
      */
     public function getSelf()
     {
@@ -206,7 +206,7 @@ class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, Arr
     /**
      * Sets self.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $self self
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $self self
      *
      * @return $this
      */
@@ -220,7 +220,7 @@ class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, Arr
     /**
      * Gets actions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[]
      */
     public function getActions()
     {
@@ -230,7 +230,7 @@ class GetSolicitationActionsForOrderResponseLinks implements ModelInterface, Arr
     /**
      * Sets actions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[] $actions eligible actions for the specified amazonOrderId
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject[] $actions eligible actions for the specified amazonOrderId
      *
      * @return $this
      */

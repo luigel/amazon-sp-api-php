@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,7 +15,7 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 /**
  * StandardIdForLabel Class Doc Comment.
@@ -23,7 +23,7 @@ namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
  * @description The type of standard identifier to print on the label.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class StandardIdForLabel
 {

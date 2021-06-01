@@ -1,10 +1,10 @@
 <?php
 
-namespace ClouSale\AmazonSellingPartnerAPI\Helpers;
+namespace Luigel\AmazonSellingPartnerAPI\Helpers;
 
-use ClouSale\AmazonSellingPartnerAPI\ApiException;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
-use ClouSale\AmazonSellingPartnerAPI\Signature;
+use Luigel\AmazonSellingPartnerAPI\ApiException;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Signature;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Query;
@@ -15,7 +15,7 @@ use GuzzleHttp\Utils;
 /**
  * Trait SellingPartnerApiRequest.
  *
- * @author Stefan Neuhaus / ClouSale
+ * @author Stefan Neuhaus / Luigel
  */
 trait SellingPartnerApiRequest
 {

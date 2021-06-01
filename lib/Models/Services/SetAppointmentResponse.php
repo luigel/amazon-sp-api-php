@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SetAppointmentResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Response schema for add or reschedule appointment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SetAppointmentResponse implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'appointment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
-'warnings' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\WarningList',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList',    ];
+        'appointment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId',
+'warnings' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\WarningList',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -198,7 +198,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets appointment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId
      */
     public function getAppointmentId()
     {
@@ -208,7 +208,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets appointment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentId $appointment_id appointment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentId $appointment_id appointment_id
      *
      * @return $this
      */
@@ -222,7 +222,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets warnings.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\WarningList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\WarningList
      */
     public function getWarnings()
     {
@@ -232,7 +232,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets warnings.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\WarningList $warnings warnings
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\WarningList $warnings warnings
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList
      */
     public function getErrors()
     {
@@ -256,7 +256,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\ErrorList $errors errors
      *
      * @return $this
      */

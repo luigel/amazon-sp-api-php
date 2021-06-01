@@ -1,6 +1,6 @@
 <?php
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models;
+namespace Luigel\AmazonSellingPartnerAPI\Models;
 
 interface IterableType
 {

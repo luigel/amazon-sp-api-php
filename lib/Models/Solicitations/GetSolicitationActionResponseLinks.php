@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSolicitationActionResponseLinks Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
 {
@@ -43,8 +43,8 @@ class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'self' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',
-'schema' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',    ];
+        'self' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',
+'schema' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -196,7 +196,7 @@ class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
     /**
      * Gets self.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
      */
     public function getSelf()
     {
@@ -206,7 +206,7 @@ class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
     /**
      * Sets self.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $self self
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $self self
      *
      * @return $this
      */
@@ -220,7 +220,7 @@ class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
     /**
      * Gets schema.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject
      */
     public function getSchema()
     {
@@ -230,7 +230,7 @@ class GetSolicitationActionResponseLinks implements ModelInterface, ArrayAccess
     /**
      * Sets schema.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $schema schema
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\LinkObject $schema schema
      *
      * @return $this
      */

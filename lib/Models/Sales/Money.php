@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Sales;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Sales;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Money Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The currency type and the amount.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Money implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class Money implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'currency_code' => 'string',
-'amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sales\Decimal',    ];
+'amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Sales\Decimal',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Gets amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Decimal
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sales\Decimal
      */
     public function getAmount()
     {
@@ -233,7 +233,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Sets amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Decimal $amount amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sales\Decimal $amount amount
      *
      * @return $this
      */

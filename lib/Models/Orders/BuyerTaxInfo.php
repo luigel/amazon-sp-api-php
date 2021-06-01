@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * BuyerTaxInfo Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Tax information about the buyer.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class BuyerTaxInfo implements ModelInterface, ArrayAccess
 {
@@ -48,7 +48,7 @@ class BuyerTaxInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'company_legal_name' => 'string',
 'taxing_region' => 'string',
-'tax_classifications' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[]',    ];
+'tax_classifications' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -246,7 +246,7 @@ class BuyerTaxInfo implements ModelInterface, ArrayAccess
     /**
      * Gets tax_classifications.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[]
      */
     public function getTaxClassifications()
     {
@@ -256,7 +256,7 @@ class BuyerTaxInfo implements ModelInterface, ArrayAccess
     /**
      * Sets tax_classifications.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[] $tax_classifications a list of tax classifications that apply to the order
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxClassification[] $tax_classifications a list of tax classifications that apply to the order
      *
      * @return $this
      */

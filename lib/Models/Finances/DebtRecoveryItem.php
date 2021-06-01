@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * DebtRecoveryItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item of a debt payment or debt adjustment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class DebtRecoveryItem implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'recovery_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'original_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'group_begin_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
-'group_end_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',    ];
+        'recovery_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'original_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'group_begin_date' => '\DateTime',
+'group_end_date' => '\DateTime',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -204,7 +204,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Gets recovery_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getRecoveryAmount()
     {
@@ -214,7 +214,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Sets recovery_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $recovery_amount recovery_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $recovery_amount recovery_amount
      *
      * @return $this
      */
@@ -228,7 +228,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Gets original_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getOriginalAmount()
     {
@@ -238,7 +238,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Sets original_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $original_amount original_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $original_amount original_amount
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Gets group_begin_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getGroupBeginDate()
     {
@@ -262,7 +262,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Sets group_begin_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $group_begin_date group_begin_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $group_begin_date group_begin_date
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Gets group_end_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getGroupEndDate()
     {
@@ -286,7 +286,7 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     /**
      * Sets group_end_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $group_end_date group_end_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $group_end_date group_end_date
      *
      * @return $this
      */

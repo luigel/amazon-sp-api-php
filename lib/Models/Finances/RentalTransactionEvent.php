@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * RentalTransactionEvent Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An event related to a rental transaction.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class RentalTransactionEvent implements ModelInterface, ArrayAccess
 {
@@ -49,13 +49,13 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
         'amazon_order_id' => 'string',
 'rental_event_type' => 'string',
 'extension_length' => 'int',
-'posted_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
-'rental_charge_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',
-'rental_fee_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList',
+'posted_date' => '\DateTime',
+'rental_charge_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',
+'rental_fee_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList',
 'marketplace_name' => 'string',
-'rental_initial_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'rental_reimbursement' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'rental_tax_withheld_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList',    ];
+'rental_initial_value' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'rental_reimbursement' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'rental_tax_withheld_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -312,7 +312,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getPostedDate()
     {
@@ -322,7 +322,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets rental_charge_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
      */
     public function getRentalChargeList()
     {
@@ -346,7 +346,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets rental_charge_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $rental_charge_list rental_charge_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $rental_charge_list rental_charge_list
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets rental_fee_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList
      */
     public function getRentalFeeList()
     {
@@ -370,7 +370,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets rental_fee_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList $rental_fee_list rental_fee_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponentList $rental_fee_list rental_fee_list
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets rental_initial_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getRentalInitialValue()
     {
@@ -418,7 +418,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets rental_initial_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $rental_initial_value rental_initial_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $rental_initial_value rental_initial_value
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets rental_reimbursement.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getRentalReimbursement()
     {
@@ -442,7 +442,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets rental_reimbursement.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $rental_reimbursement rental_reimbursement
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $rental_reimbursement rental_reimbursement
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets rental_tax_withheld_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList
      */
     public function getRentalTaxWithheldList()
     {
@@ -466,7 +466,7 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets rental_tax_withheld_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList $rental_tax_withheld_list rental_tax_withheld_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\TaxWithheldComponentList $rental_tax_withheld_list rental_tax_withheld_list
      *
      * @return $this
      */

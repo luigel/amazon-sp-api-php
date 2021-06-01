@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ShippingPromiseSet Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The promised delivery time and pickup time.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ShippingPromiseSet implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'delivery_window' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange',
-'receive_window' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange',    ];
+        'delivery_window' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange',
+'receive_window' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_window.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange
      */
     public function getDeliveryWindow()
     {
@@ -202,7 +202,7 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_window.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange $delivery_window delivery_window
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange $delivery_window delivery_window
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess
     /**
      * Gets receive_window.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange
      */
     public function getReceiveWindow()
     {
@@ -226,7 +226,7 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess
     /**
      * Sets receive_window.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TimeRange $receive_window receive_window
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TimeRange $receive_window receive_window
      *
      * @return $this
      */

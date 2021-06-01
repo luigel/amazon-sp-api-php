@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * TrackingInformation Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the getTrackingInformation operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class TrackingInformation implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'tracking_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingId',
-'summary' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary',
-'promised_delivery_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate',
-'event_history' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventList',    ];
+        'tracking_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingId',
+'summary' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary',
+'promised_delivery_date' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate',
+'event_history' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -217,7 +217,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingId
      */
     public function getTrackingId()
     {
@@ -227,7 +227,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingId $tracking_id tracking_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingId $tracking_id tracking_id
      *
      * @return $this
      */
@@ -241,7 +241,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Gets summary.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary
      */
     public function getSummary()
     {
@@ -251,7 +251,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Sets summary.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary $summary summary
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\TrackingSummary $summary summary
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Gets promised_delivery_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate
      */
     public function getPromisedDeliveryDate()
     {
@@ -275,7 +275,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Sets promised_delivery_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate $promised_delivery_date promised_delivery_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PromisedDeliveryDate $promised_delivery_date promised_delivery_date
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Gets event_history.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventList
      */
     public function getEventHistory()
     {
@@ -299,7 +299,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess
     /**
      * Sets event_history.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventList $event_history event_history
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventList $event_history event_history
      *
      * @return $this
      */

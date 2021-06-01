@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * NonPartneredLtlDataOutput Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information returned by Amazon about a Less Than Truckload/Full Truckload (LTL/FTL) shipment shipped by a carrier that has not partnered with Amazon.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
-'pro_number' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber',    ];
+'pro_number' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess
     /**
      * Gets pro_number.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber
      */
     public function getProNumber()
     {
@@ -233,7 +233,7 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess
     /**
      * Sets pro_number.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber $pro_number pro_number
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber $pro_number pro_number
      *
      * @return $this
      */

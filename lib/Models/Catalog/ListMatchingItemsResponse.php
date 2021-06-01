@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListMatchingItemsResponse Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListMatchingItemsResponse extends Categories implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class ListMatchingItemsResponse extends Categories implements ModelInterface, Ar
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'items' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ItemList',    ];
+        'items' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\ItemList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -183,7 +183,7 @@ class ListMatchingItemsResponse extends Categories implements ModelInterface, Ar
     /**
      * Gets items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\ItemList
      */
     public function getItems()
     {
@@ -193,7 +193,7 @@ class ListMatchingItemsResponse extends Categories implements ModelInterface, Ar
     /**
      * Sets items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ItemList $items items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\ItemList $items items
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListReturnReasonCodesResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'reason_code_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList',    ];
+        'reason_code_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -183,7 +183,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess
     /**
      * Gets reason_code_details.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList
      */
     public function getReasonCodeDetails()
     {
@@ -193,7 +193,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess
     /**
      * Sets reason_code_details.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList $reason_code_details reason_code_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReasonCodeDetailsList $reason_code_details reason_code_details
      *
      * @return $this
      */

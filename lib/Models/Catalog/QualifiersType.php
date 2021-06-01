@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * QualifiersType Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class QualifiersType extends Categories implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class QualifiersType extends Categories implements ModelInterface, ArrayAccess
 'item_subcondition' => 'string',
 'fulfillment_channel' => 'string',
 'ships_domestically' => 'string',
-'shipping_time' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType',
+'shipping_time' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType',
 'seller_positive_feedback_rating' => 'string',    ];
 
     /**
@@ -328,7 +328,7 @@ class QualifiersType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_time.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType
      */
     public function getShippingTime()
     {
@@ -338,7 +338,7 @@ class QualifiersType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_time.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType $shipping_time shipping_time
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\ShippingTimeType $shipping_time shipping_time
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSchemaResponse Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSchemaResponse implements ModelInterface, ArrayAccess
 {
@@ -43,9 +43,9 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        '_links' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks',
-'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\Schema',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
+        '_links' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks',
+'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\Schema',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -195,7 +195,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Gets _links.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks
      */
     public function getLinks()
     {
@@ -205,7 +205,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Sets _links.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks $_links _links
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSchemaResponseLinks $_links _links
      *
      * @return $this
      */
@@ -219,7 +219,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\Schema
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\Schema
      */
     public function getPayload()
     {
@@ -229,7 +229,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\Schema $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\Schema $payload payload
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
      */
     public function getErrors()
     {
@@ -253,7 +253,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
      *
      * @return $this
      */

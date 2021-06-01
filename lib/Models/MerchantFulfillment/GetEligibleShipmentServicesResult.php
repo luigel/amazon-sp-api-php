@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetEligibleShipmentServicesResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the getEligibleShipmentServices operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipping_service_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList',
-'rejected_shipping_service_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList',
-'temporarily_unavailable_carrier_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList',
-'terms_and_conditions_not_accepted_carrier_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList',    ];
+        'shipping_service_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList',
+'rejected_shipping_service_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList',
+'temporarily_unavailable_carrier_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList',
+'terms_and_conditions_not_accepted_carrier_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -208,7 +208,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList
      */
     public function getShippingServiceList()
     {
@@ -218,7 +218,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList $shipping_service_list shipping_service_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceList $shipping_service_list shipping_service_list
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Gets rejected_shipping_service_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList
      */
     public function getRejectedShippingServiceList()
     {
@@ -242,7 +242,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Sets rejected_shipping_service_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList $rejected_shipping_service_list rejected_shipping_service_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RejectedShippingServiceList $rejected_shipping_service_list rejected_shipping_service_list
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Gets temporarily_unavailable_carrier_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList
      */
     public function getTemporarilyUnavailableCarrierList()
     {
@@ -266,7 +266,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Sets temporarily_unavailable_carrier_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList $temporarily_unavailable_carrier_list temporarily_unavailable_carrier_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TemporarilyUnavailableCarrierList $temporarily_unavailable_carrier_list temporarily_unavailable_carrier_list
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Gets terms_and_conditions_not_accepted_carrier_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList
      */
     public function getTermsAndConditionsNotAcceptedCarrierList()
     {
@@ -290,7 +290,7 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess
     /**
      * Sets terms_and_conditions_not_accepted_carrier_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList $terms_and_conditions_not_accepted_carrier_list terms_and_conditions_not_accepted_carrier_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TermsAndConditionsNotAcceptedCarrierList $terms_and_conditions_not_accepted_carrier_list terms_and_conditions_not_accepted_carrier_list
      *
      * @return $this
      */

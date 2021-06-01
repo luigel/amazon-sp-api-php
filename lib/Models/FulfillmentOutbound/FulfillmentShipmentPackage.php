@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FulfillmentShipmentPackage Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Package information for a shipment in a fulfillment order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess
         'package_number' => 'int',
 'carrier_code' => 'string',
 'tracking_number' => 'string',
-'estimated_arrival_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',    ];
+'estimated_arrival_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -283,7 +283,7 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess
     /**
      * Gets estimated_arrival_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getEstimatedArrivalDate()
     {
@@ -293,7 +293,7 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess
     /**
      * Sets estimated_arrival_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
      *
      * @return $this
      */

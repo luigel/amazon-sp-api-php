@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Notifications;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Notifications;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * DestinationResourceSpecification Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The information required to create a destination resource. Applications should use one resource type (sqs or eventBridge) per destination.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class DestinationResourceSpecification implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class DestinationResourceSpecification implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'sqs' => '\ClouSale\AmazonSellingPartnerAPI\Models\Notifications\SqsResource',
-'event_bridge' => '\ClouSale\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification',    ];
+        'sqs' => '\Luigel\AmazonSellingPartnerAPI\Models\Notifications\SqsResource',
+'event_bridge' => '\Luigel\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class DestinationResourceSpecification implements ModelInterface, ArrayAccess
     /**
      * Gets sqs.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\SqsResource
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Notifications\SqsResource
      */
     public function getSqs()
     {
@@ -202,7 +202,7 @@ class DestinationResourceSpecification implements ModelInterface, ArrayAccess
     /**
      * Sets sqs.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\SqsResource $sqs sqs
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Notifications\SqsResource $sqs sqs
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class DestinationResourceSpecification implements ModelInterface, ArrayAccess
     /**
      * Gets event_bridge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification
      */
     public function getEventBridge()
     {
@@ -226,7 +226,7 @@ class DestinationResourceSpecification implements ModelInterface, ArrayAccess
     /**
      * Sets event_bridge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification $event_bridge event_bridge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Notifications\EventBridgeResourceSpecification $event_bridge event_bridge
      *
      * @return $this
      */

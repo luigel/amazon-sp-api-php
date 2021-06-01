@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AddAppointmentRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Input for add appointment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AddAppointmentRequest implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'appointment_time' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput',    ];
+        'appointment_time' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -190,7 +190,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets appointment_time.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput
      */
     public function getAppointmentTime()
     {
@@ -200,7 +200,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets appointment_time.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput $appointment_time appointment_time
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\AppointmentTimeInput $appointment_time appointment_time
      *
      * @return $this
      */

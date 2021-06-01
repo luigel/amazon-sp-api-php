@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PurchaseShipmentRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the purchaseShipment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
 {
@@ -46,13 +46,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'client_reference_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId',
-'ship_to' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
-'ship_from' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
+        'client_reference_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId',
+'ship_to' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
+'ship_from' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
 'ship_date' => '\DateTime',
-'service_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType',
-'containers' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList',
-'label_specification' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
+'service_type' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType',
+'containers' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList',
+'label_specification' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -241,7 +241,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets client_reference_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId
      */
     public function getClientReferenceId()
     {
@@ -251,7 +251,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_reference_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId $client_reference_id client_reference_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ClientReferenceId $client_reference_id client_reference_id
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipTo()
     {
@@ -275,7 +275,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipFrom()
     {
@@ -299,7 +299,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets service_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType
      */
     public function getServiceType()
     {
@@ -347,7 +347,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets service_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType $service_type service_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType $service_type service_type
      *
      * @return $this
      */
@@ -361,7 +361,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets containers.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList
      */
     public function getContainers()
     {
@@ -371,7 +371,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets containers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerList $containers containers
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerList $containers containers
      *
      * @return $this
      */
@@ -385,7 +385,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets label_specification.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
      */
     public function getLabelSpecification()
     {
@@ -395,7 +395,7 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets label_specification.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
      *
      * @return $this
      */

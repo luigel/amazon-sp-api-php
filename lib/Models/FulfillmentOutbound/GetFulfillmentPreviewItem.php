@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFulfillmentPreviewItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information for a fulfillment order preview.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
 {
@@ -47,8 +47,8 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
-'per_unit_declared_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'per_unit_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
 'seller_fulfillment_order_item_id' => 'string',    ];
 
     /**
@@ -238,7 +238,7 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getQuantity()
     {
@@ -248,7 +248,7 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_declared_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitDeclaredValue()
     {
@@ -272,7 +272,7 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_declared_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
      *
      * @return $this
      */

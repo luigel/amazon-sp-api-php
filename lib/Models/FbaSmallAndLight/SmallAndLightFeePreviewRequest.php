@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SmallAndLightFeePreviewRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Request schema for submitting items for which to retrieve fee estimates.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'marketplace_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId',
-'items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[]',    ];
+        'marketplace_id' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId',
+'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets marketplace_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId
      */
     public function getMarketplaceId()
     {
@@ -209,7 +209,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets marketplace_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId $marketplace_id marketplace_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId $marketplace_id marketplace_id
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[]
      */
     public function getItems()
     {
@@ -233,7 +233,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[] $items a list of items for which to retrieve fee estimates (limit: 25)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Item[] $items a list of items for which to retrieve fee estimates (limit: 25)
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-09-04
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Feeds;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Feeds;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateFeedResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Response schema.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateFeedResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class CreateFeedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Feeds\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Feeds\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class CreateFeedResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class CreateFeedResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedResult $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class CreateFeedResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Feeds\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class CreateFeedResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Feeds\ErrorList $errors errors
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PurchaseLabelsRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request schema for the purchaseLabels operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'rate_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateId',
-'label_specification' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
+        'rate_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateId',
+'label_specification' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets rate_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateId
      */
     public function getRateId()
     {
@@ -209,7 +209,7 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets rate_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateId $rate_id rate_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateId $rate_id rate_id
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets label_specification.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
      */
     public function getLabelSpecification()
     {
@@ -233,7 +233,7 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets label_specification.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
      *
      * @return $this
      */

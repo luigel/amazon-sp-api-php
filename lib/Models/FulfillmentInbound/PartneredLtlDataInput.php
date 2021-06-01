@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PartneredLtlDataInput Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information that is required by an Amazon-partnered carrier to ship a Less Than Truckload/Full Truckload (LTL/FTL) inbound shipment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PartneredLtlDataInput implements ModelInterface, ArrayAccess
 {
@@ -46,13 +46,13 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'contact' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact',
-'box_count' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType',
-'seller_freight_class' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass',
-'freight_ready_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'pallet_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList',
-'total_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
-'seller_declared_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
+        'contact' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact',
+'box_count' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType',
+'seller_freight_class' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass',
+'freight_ready_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
+'pallet_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList',
+'total_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
+'seller_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -222,7 +222,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets contact.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact
      */
     public function getContact()
     {
@@ -232,7 +232,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets contact.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact $contact contact
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact $contact contact
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets box_count.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType
      */
     public function getBoxCount()
     {
@@ -256,7 +256,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets box_count.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType $box_count box_count
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType $box_count box_count
      *
      * @return $this
      */
@@ -270,7 +270,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets seller_freight_class.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass
      */
     public function getSellerFreightClass()
     {
@@ -280,7 +280,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets seller_freight_class.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass $seller_freight_class seller_freight_class
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass $seller_freight_class seller_freight_class
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets freight_ready_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
      */
     public function getFreightReadyDate()
     {
@@ -304,7 +304,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets freight_ready_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $freight_ready_date freight_ready_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $freight_ready_date freight_ready_date
      *
      * @return $this
      */
@@ -318,7 +318,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets pallet_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList
      */
     public function getPalletList()
     {
@@ -328,7 +328,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets pallet_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList $pallet_list pallet_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList $pallet_list pallet_list
      *
      * @return $this
      */
@@ -342,7 +342,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets total_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight
      */
     public function getTotalWeight()
     {
@@ -352,7 +352,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets total_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight $total_weight total_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight $total_weight total_weight
      *
      * @return $this
      */
@@ -366,7 +366,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets seller_declared_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount
      */
     public function getSellerDeclaredValue()
     {
@@ -376,7 +376,7 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets seller_declared_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount $seller_declared_value seller_declared_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount $seller_declared_value seller_declared_value
      *
      * @return $this
      */

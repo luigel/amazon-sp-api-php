@@ -1,6 +1,6 @@
 <?php
 
-namespace ClouSale\AmazonSellingPartnerAPI;
+namespace Luigel\AmazonSellingPartnerAPI;
 
 class SellingPartnerEndpoint
 {

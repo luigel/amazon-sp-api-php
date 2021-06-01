@@ -1,5 +1,5 @@
 {
-    "name": "clousale/amazon-sp-api-php",
+    "name": "luigel/amazon-sp-api-php",
     "description": "",
     "keywords": [
         "api",
@@ -14,6 +14,11 @@
         {
             "name": "ClouSale",
             "homepage": "https://www.clousale.com"
+        },
+        {
+            "name": "Rigel Kent Carbonel",
+            "email": "rigel20.kent@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -30,9 +35,9 @@
         "friendsofphp/php-cs-fixer": "v2.17.3"
     },
     "autoload": {
-        "psr-4": { "ClouSale\\AmazonSellingPartnerAPI\\" : "lib/" }
+        "psr-4": { "Luigel\\AmazonSellingPartnerAPI\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "ClouSale\\AmazonSellingPartnerAPI\\" : "test/" }
+        "psr-4": { "Luigel\\AmazonSellingPartnerAPI\\" : "test/" }
     }
 }

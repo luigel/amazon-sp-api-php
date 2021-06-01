@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSolicitationActionsForOrderResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the getSolicitationActionsForOrder operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $swaggerTypes = [
-        '_links' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks',
-'_embedded' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
+        '_links' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks',
+'_embedded' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -198,7 +198,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Gets _links.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks
      */
     public function getLinks()
     {
@@ -208,7 +208,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Sets _links.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks $_links _links
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseLinks $_links _links
      *
      * @return $this
      */
@@ -222,7 +222,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Gets _embedded.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded
      */
     public function getEmbedded()
     {
@@ -232,7 +232,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Sets _embedded.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded $_embedded _embedded
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponseEmbedded $_embedded _embedded
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
      */
     public function getErrors()
     {
@@ -256,7 +256,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
      *
      * @return $this
      */

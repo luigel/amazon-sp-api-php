@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateFulfillmentOrderRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request body schema for the createFulfillmentOrder operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
 {
@@ -49,18 +49,18 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
         'marketplace_id' => 'string',
 'seller_fulfillment_order_id' => 'string',
 'displayable_order_id' => 'string',
-'displayable_order_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'displayable_order_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
 'displayable_order_comment' => 'string',
-'shipping_speed_category' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory',
-'delivery_window' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow',
-'destination_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address',
-'fulfillment_action' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction',
-'fulfillment_policy' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy',
-'cod_settings' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings',
+'shipping_speed_category' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory',
+'delivery_window' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow',
+'destination_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address',
+'fulfillment_action' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction',
+'fulfillment_policy' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy',
+'cod_settings' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings',
 'ship_from_country_code' => 'string',
-'notification_emails' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList',
-'feature_constraints' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]',
-'items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList',    ];
+'notification_emails' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList',
+'feature_constraints' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]',
+'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -364,7 +364,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets displayable_order_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getDisplayableOrderDate()
     {
@@ -374,7 +374,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets displayable_order_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $displayable_order_date displayable_order_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $displayable_order_date displayable_order_date
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_speed_category.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory
      */
     public function getShippingSpeedCategory()
     {
@@ -422,7 +422,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_speed_category.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory $shipping_speed_category shipping_speed_category
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategory $shipping_speed_category shipping_speed_category
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_window.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow
      */
     public function getDeliveryWindow()
     {
@@ -446,7 +446,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_window.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow $delivery_window delivery_window
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\DeliveryWindow $delivery_window delivery_window
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets destination_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address
      */
     public function getDestinationAddress()
     {
@@ -470,7 +470,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets destination_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address $destination_address destination_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address $destination_address destination_address
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_action.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction
      */
     public function getFulfillmentAction()
     {
@@ -494,7 +494,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_action.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction $fulfillment_action fulfillment_action
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentAction $fulfillment_action fulfillment_action
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_policy.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy
      */
     public function getFulfillmentPolicy()
     {
@@ -518,7 +518,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_policy.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy $fulfillment_policy fulfillment_policy
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPolicy $fulfillment_policy fulfillment_policy
      *
      * @return $this
      */
@@ -532,7 +532,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets cod_settings.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings
      */
     public function getCodSettings()
     {
@@ -542,7 +542,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets cod_settings.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings $cod_settings cod_settings
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CODSettings $cod_settings cod_settings
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets notification_emails.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList
      */
     public function getNotificationEmails()
     {
@@ -590,7 +590,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets notification_emails.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList $notification_emails notification_emails
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\NotificationEmailList $notification_emails notification_emails
      *
      * @return $this
      */
@@ -604,7 +604,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets feature_constraints.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]
      */
     public function getFeatureConstraints()
     {
@@ -614,7 +614,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets feature_constraints.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[] $feature_constraints a list of features and their fulfillment policies to apply to the order
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[] $feature_constraints a list of features and their fulfillment policies to apply to the order
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList
      */
     public function getItems()
     {
@@ -638,7 +638,7 @@ class CreateFulfillmentOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList $items items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderItemList $items items
      *
      * @return $this
      */

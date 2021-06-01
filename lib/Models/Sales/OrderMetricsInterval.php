@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Sales;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Sales;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderMetricsInterval Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Contains order metrics.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderMetricsInterval implements ModelInterface, ArrayAccess
 {
@@ -50,8 +50,8 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess
 'unit_count' => 'int',
 'order_item_count' => 'int',
 'order_count' => 'int',
-'average_unit_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money',
-'total_sales' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money',    ];
+'average_unit_price' => '\Luigel\AmazonSellingPartnerAPI\Models\Sales\Money',
+'total_sales' => '\Luigel\AmazonSellingPartnerAPI\Models\Sales\Money',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -331,7 +331,7 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess
     /**
      * Gets average_unit_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sales\Money
      */
     public function getAverageUnitPrice()
     {
@@ -341,7 +341,7 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess
     /**
      * Sets average_unit_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money $average_unit_price average_unit_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sales\Money $average_unit_price average_unit_price
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess
     /**
      * Gets total_sales.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sales\Money
      */
     public function getTotalSales()
     {
@@ -365,7 +365,7 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess
     /**
      * Sets total_sales.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sales\Money $total_sales total_sales
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sales\Money $total_sales total_sales
      *
      * @return $this
      */

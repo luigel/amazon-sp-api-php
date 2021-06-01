@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,12 +15,12 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\IterableType;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\IterableType;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ErrorList Class Doc Comment.
@@ -28,7 +28,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A list of error responses returned when a request is unsuccessful.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ErrorList implements ModelInterface, ArrayAccess, IterableType
 {
@@ -47,7 +47,7 @@ class ErrorList implements ModelInterface, ArrayAccess, IterableType
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[]',    ];
+        'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -187,7 +187,7 @@ class ErrorList implements ModelInterface, ArrayAccess, IterableType
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[]
      */
     public function getErrors()
     {
@@ -197,7 +197,7 @@ class ErrorList implements ModelInterface, ArrayAccess, IterableType
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[] $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\Error[] $errors errors
      *
      * @return $this
      */

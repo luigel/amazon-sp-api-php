@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InboundShipmentPlan Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Inbound shipment information used to create an inbound shipment. Returned by the createInboundShipmentPlan operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InboundShipmentPlan implements ModelInterface, ArrayAccess
 {
@@ -48,10 +48,10 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipment_id' => 'string',
 'destination_fulfillment_center_id' => 'string',
-'ship_to_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
-'label_prep_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType',
-'items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList',
-'estimated_box_contents_fee' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails',    ];
+'ship_to_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
+'label_prep_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType',
+'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList',
+'estimated_box_contents_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -280,7 +280,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address
      */
     public function getShipToAddress()
     {
@@ -290,7 +290,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address $ship_to_address ship_to_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address $ship_to_address ship_to_address
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Gets label_prep_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType
      */
     public function getLabelPrepType()
     {
@@ -314,7 +314,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Sets label_prep_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType $label_prep_type label_prep_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType $label_prep_type label_prep_type
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Gets items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList
      */
     public function getItems()
     {
@@ -338,7 +338,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Sets items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList $items items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList $items items
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Gets estimated_box_contents_fee.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails
      */
     public function getEstimatedBoxContentsFee()
     {
@@ -362,7 +362,7 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     /**
      * Sets estimated_box_contents_fee.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails $estimated_box_contents_fee estimated_box_contents_fee
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails $estimated_box_contents_fee estimated_box_contents_fee
      *
      * @return $this
      */

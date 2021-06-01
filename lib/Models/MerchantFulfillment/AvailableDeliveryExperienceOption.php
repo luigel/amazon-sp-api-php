@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AvailableDeliveryExperienceOption Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The available delivery confirmation options, and the fee charged, if any.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'delivery_experience_option' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption',
-'charge' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',    ];
+        'delivery_experience_option' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption',
+'charge' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_experience_option.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption
      */
     public function getDeliveryExperienceOption()
     {
@@ -209,7 +209,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_experience_option.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption $delivery_experience_option delivery_experience_option
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\DeliveryExperienceOption $delivery_experience_option delivery_experience_option
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
     /**
      * Gets charge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount
      */
     public function getCharge()
     {
@@ -233,7 +233,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess
     /**
      * Sets charge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $charge charge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CurrencyAmount $charge charge
      *
      * @return $this
      */

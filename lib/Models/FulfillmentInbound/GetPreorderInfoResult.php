@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetPreorderInfoResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetPreorderInfoResult implements ModelInterface, ArrayAccess
 {
@@ -45,8 +45,8 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipment_contains_preorderable_items' => 'bool',
 'shipment_confirmed_for_preorder' => 'bool',
-'need_by_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'confirmed_fulfillable_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',    ];
+'need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
+'confirmed_fulfillable_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -249,7 +249,7 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     /**
      * Gets need_by_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
      */
     public function getNeedByDate()
     {
@@ -259,7 +259,7 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets need_by_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $need_by_date need_by_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $need_by_date need_by_date
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     /**
      * Gets confirmed_fulfillable_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType
      */
     public function getConfirmedFulfillableDate()
     {
@@ -283,7 +283,7 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets confirmed_fulfillable_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $confirmed_fulfillable_date confirmed_fulfillable_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType $confirmed_fulfillable_date confirmed_fulfillable_date
      *
      * @return $this
      */

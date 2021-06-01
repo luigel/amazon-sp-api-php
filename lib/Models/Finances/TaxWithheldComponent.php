@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * TaxWithheldComponent Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about the taxes withheld.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class TaxWithheldComponent implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'tax_collection_model' => 'string',
-'taxes_withheld' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',    ];
+'taxes_withheld' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess
     /**
      * Gets taxes_withheld.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
      */
     public function getTaxesWithheld()
     {
@@ -226,7 +226,7 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess
     /**
      * Sets taxes_withheld.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $taxes_withheld taxes_withheld
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $taxes_withheld taxes_withheld
      *
      * @return $this
      */

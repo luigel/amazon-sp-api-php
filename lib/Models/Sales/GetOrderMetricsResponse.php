@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Sales;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Sales;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetOrderMetricsResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the getOrderMetrics operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Sales\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Sales\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sales\OrderMetricsList $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Sales\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sales\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetOrderMetricsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Sales\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Sales\ErrorList $errors errors
      *
      * @return $this
      */

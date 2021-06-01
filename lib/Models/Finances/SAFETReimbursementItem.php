@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SAFETReimbursementItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item from a SAFE-T claim reimbursement.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SAFETReimbursementItem implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'item_charge_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',
+        'item_charge_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList',
 'product_description' => 'string',
 'quantity' => 'string',    ];
 
@@ -198,7 +198,7 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess
     /**
      * Gets item_charge_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList
      */
     public function getItemChargeList()
     {
@@ -208,7 +208,7 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess
     /**
      * Sets item_charge_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $item_charge_list item_charge_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponentList $item_charge_list item_charge_list
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Amount Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The monetary value.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Amount implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class Amount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'currency_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
-'value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',    ];
+        'currency_code' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
+'value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode
      */
     public function getCurrencyCode()
     {
@@ -209,7 +209,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode $currency_code currency_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode $currency_code currency_code
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
      */
     public function getValue()
     {
@@ -233,7 +233,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
      *
      * @return $this
      */

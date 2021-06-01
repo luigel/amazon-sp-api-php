@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * RejectedShippingService Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about a rejected shipping service
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class RejectedShippingService implements ModelInterface, ArrayAccess
 {
@@ -48,7 +48,7 @@ class RejectedShippingService implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
 'shipping_service_name' => 'string',
-'shipping_service_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
+'shipping_service_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
 'rejection_reason_code' => 'string',
 'rejection_reason_message' => 'string',    ];
 
@@ -271,7 +271,7 @@ class RejectedShippingService implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
      */
     public function getShippingServiceId()
     {
@@ -281,7 +281,7 @@ class RejectedShippingService implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
      *
      * @return $this
      */

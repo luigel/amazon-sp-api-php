@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * NetworkComminglingTransactionEvent Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A network commingling transaction event.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
 {
@@ -47,13 +47,13 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'transaction_type' => 'string',
-'posted_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
+'posted_date' => '\DateTime',
 'net_co_transaction_id' => 'string',
 'swap_reason' => 'string',
 'asin' => 'string',
 'marketplace_id' => 'string',
-'tax_exclusive_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'tax_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
+'tax_exclusive_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'tax_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -252,7 +252,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getPostedDate()
     {
@@ -262,7 +262,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
      *
      * @return $this
      */
@@ -372,7 +372,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets tax_exclusive_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getTaxExclusiveAmount()
     {
@@ -382,7 +382,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets tax_exclusive_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $tax_exclusive_amount tax_exclusive_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $tax_exclusive_amount tax_exclusive_amount
      *
      * @return $this
      */
@@ -396,7 +396,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Gets tax_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getTaxAmount()
     {
@@ -406,7 +406,7 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $tax_amount tax_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $tax_amount tax_amount
      *
      * @return $this
      */

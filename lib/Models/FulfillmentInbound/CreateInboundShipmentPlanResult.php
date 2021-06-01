@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateInboundShipmentPlanResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'inbound_shipment_plans' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList',    ];
+        'inbound_shipment_plans' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -183,7 +183,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess
     /**
      * Gets inbound_shipment_plans.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList
      */
     public function getInboundShipmentPlans()
     {
@@ -193,7 +193,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess
     /**
      * Sets inbound_shipment_plans.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList $inbound_shipment_plans inbound_shipment_plans
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList $inbound_shipment_plans inbound_shipment_plans
      *
      * @return $this
      */

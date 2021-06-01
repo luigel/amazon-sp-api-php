@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFulfillmentPreviewRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request body schema for the getFulfillmentPreview operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
 {
@@ -47,12 +47,12 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'marketplace_id' => 'string',
-'address' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address',
-'items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList',
-'shipping_speed_categories' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList',
+'address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address',
+'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList',
+'shipping_speed_categories' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList',
 'include_cod_fulfillment_preview' => 'bool',
 'include_delivery_windows' => 'bool',
-'feature_constraints' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]',    ];
+'feature_constraints' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -253,7 +253,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address
      */
     public function getAddress()
     {
@@ -263,7 +263,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address $address address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Address $address address
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList
      */
     public function getItems()
     {
@@ -287,7 +287,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList $items items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewItemList $items items
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_speed_categories.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList
      */
     public function getShippingSpeedCategories()
     {
@@ -311,7 +311,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_speed_categories.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList $shipping_speed_categories shipping_speed_categories
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ShippingSpeedCategoryList $shipping_speed_categories shipping_speed_categories
      *
      * @return $this
      */
@@ -373,7 +373,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets feature_constraints.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[]
      */
     public function getFeatureConstraints()
     {
@@ -383,7 +383,7 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets feature_constraints.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[] $feature_constraints a list of features and their fulfillment policies to apply to the order
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSettings[] $feature_constraints a list of features and their fulfillment policies to apply to the order
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InvalidASIN Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InvalidASIN implements ModelInterface, ArrayAccess
 {
@@ -44,7 +44,7 @@ class InvalidASIN implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'error_reason' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason',    ];
+'error_reason' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -213,7 +213,7 @@ class InvalidASIN implements ModelInterface, ArrayAccess
     /**
      * Gets error_reason.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason
      */
     public function getErrorReason()
     {
@@ -223,7 +223,7 @@ class InvalidASIN implements ModelInterface, ArrayAccess
     /**
      * Sets error_reason.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason $error_reason error_reason
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason $error_reason error_reason
      *
      * @return $this
      */

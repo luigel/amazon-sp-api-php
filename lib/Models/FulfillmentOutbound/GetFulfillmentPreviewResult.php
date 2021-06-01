@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFulfillmentPreviewResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A list of fulfillment order previews, including estimated shipping weights, estimated shipping fees, and estimated ship dates and arrival dates.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'fulfillment_previews' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList',    ];
+        'fulfillment_previews' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -186,7 +186,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_previews.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList
      */
     public function getFulfillmentPreviews()
     {
@@ -196,7 +196,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_previews.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList $fulfillment_previews fulfillment_previews
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentPreviewList $fulfillment_previews fulfillment_previews
      *
      * @return $this
      */

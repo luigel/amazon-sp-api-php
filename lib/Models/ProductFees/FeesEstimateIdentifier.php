@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FeesEstimateIdentifier Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item identifier, marketplace, time of request, and other details that identify an estimate.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FeesEstimateIdentifier implements ModelInterface, ArrayAccess
 {
@@ -51,7 +51,7 @@ class FeesEstimateIdentifier implements ModelInterface, ArrayAccess
 'id_type' => 'string',
 'id_value' => 'string',
 'is_amazon_fulfilled' => 'bool',
-'price_to_estimate_fees' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees',
+'price_to_estimate_fees' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees',
 'seller_input_identifier' => 'string',    ];
 
     /**
@@ -342,7 +342,7 @@ class FeesEstimateIdentifier implements ModelInterface, ArrayAccess
     /**
      * Gets price_to_estimate_fees.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees
      */
     public function getPriceToEstimateFees()
     {
@@ -352,7 +352,7 @@ class FeesEstimateIdentifier implements ModelInterface, ArrayAccess
     /**
      * Sets price_to_estimate_fees.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees $price_to_estimate_fees price_to_estimate_fees
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\PriceToEstimateFees $price_to_estimate_fees price_to_estimate_fees
      *
      * @return $this
      */

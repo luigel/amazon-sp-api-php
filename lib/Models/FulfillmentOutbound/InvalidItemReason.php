@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InvalidItemReason Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The reason that the item is invalid for return.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InvalidItemReason implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'invalid_item_reason_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode',
+        'invalid_item_reason_code' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode',
 'description' => 'string',    ];
 
     /**
@@ -199,7 +199,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess
     /**
      * Gets invalid_item_reason_code.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode
      */
     public function getInvalidItemReasonCode()
     {
@@ -209,7 +209,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess
     /**
      * Sets invalid_item_reason_code.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode $invalid_item_reason_code invalid_item_reason_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\InvalidItemReasonCode $invalid_item_reason_code invalid_item_reason_code
      *
      * @return $this
      */

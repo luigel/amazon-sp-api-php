@@ -2,7 +2,7 @@
 /**
  * Configuration.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,12 +13,12 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI;
+namespace Luigel\AmazonSellingPartnerAPI;
 
 /**
  * Configuration Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Configuration
 {
@@ -355,7 +355,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report = 'PHP SDK (ClouSale\AmazonSellingPartnerAPI) Debug Report:'.PHP_EOL;
+        $report = 'PHP SDK (Luigel\AmazonSellingPartnerAPI) Debug Report:'.PHP_EOL;
         $report .= '    OS: '.php_uname().PHP_EOL;
         $report .= '    PHP Version: '.PHP_VERSION.PHP_EOL;
         $report .= '    OpenAPI Spec Version: v1'.PHP_EOL;

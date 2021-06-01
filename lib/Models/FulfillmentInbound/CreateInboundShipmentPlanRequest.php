@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateInboundShipmentPlanRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request schema for the createInboundShipmentPlan operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
 {
@@ -46,11 +46,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'ship_from_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
-'label_prep_preference' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference',
+        'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
+'label_prep_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference',
 'ship_to_country_code' => 'string',
 'ship_to_country_subdivision_code' => 'string',
-'inbound_shipment_plan_request_items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList',    ];
+'inbound_shipment_plan_request_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -220,7 +220,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address
      */
     public function getShipFromAddress()
     {
@@ -230,7 +230,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address $ship_from_address ship_from_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address $ship_from_address ship_from_address
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Gets label_prep_preference.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference
      */
     public function getLabelPrepPreference()
     {
@@ -254,7 +254,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Sets label_prep_preference.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference $label_prep_preference label_prep_preference
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference $label_prep_preference label_prep_preference
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Gets inbound_shipment_plan_request_items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList
      */
     public function getInboundShipmentPlanRequestItems()
     {
@@ -326,7 +326,7 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
     /**
      * Sets inbound_shipment_plan_request_items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList $inbound_shipment_plan_request_items inbound_shipment_plan_request_items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList $inbound_shipment_plan_request_items inbound_shipment_plan_request_items
      *
      * @return $this
      */

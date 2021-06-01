@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ReturnItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item that Amazon accepted for return.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ReturnItem implements ModelInterface, ArrayAccess
 {
@@ -52,10 +52,10 @@ class ReturnItem implements ModelInterface, ArrayAccess
 'seller_return_reason_code' => 'string',
 'return_comment' => 'string',
 'amazon_return_reason_code' => 'string',
-'status' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus',
-'status_changed_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus',
+'status_changed_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
 'return_authorization_id' => 'string',
-'return_received_condition' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition',
+'return_received_condition' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition',
 'fulfillment_center_id' => 'string',    ];
 
     /**
@@ -409,7 +409,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Gets status.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus
      */
     public function getStatus()
     {
@@ -419,7 +419,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Sets status.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus $status status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentReturnItemStatus $status status
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Gets status_changed_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getStatusChangedDate()
     {
@@ -443,7 +443,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Sets status_changed_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $status_changed_date status_changed_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $status_changed_date status_changed_date
      *
      * @return $this
      */
@@ -481,7 +481,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Gets return_received_condition.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition
      */
     public function getReturnReceivedCondition()
     {
@@ -491,7 +491,7 @@ class ReturnItem implements ModelInterface, ArrayAccess
     /**
      * Sets return_received_condition.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition $return_received_condition return_received_condition
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemDisposition $return_received_condition return_received_condition
      *
      * @return $this
      */

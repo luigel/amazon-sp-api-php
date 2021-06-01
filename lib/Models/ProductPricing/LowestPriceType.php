@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * LowestPriceType Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class LowestPriceType implements ModelInterface, ArrayAccess
 {
@@ -45,10 +45,10 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'condition' => 'string',
 'fulfillment_channel' => 'string',
-'landed_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
-'listing_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
-'shipping' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
-'points' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Points',    ];
+'landed_price' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
+'listing_price' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
+'shipping' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType',
+'points' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Points',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -277,7 +277,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Gets landed_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
      */
     public function getLandedPrice()
     {
@@ -287,7 +287,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Sets landed_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $landed_price landed_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $landed_price landed_price
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Gets listing_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
      */
     public function getListingPrice()
     {
@@ -311,7 +311,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Sets listing_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $listing_price listing_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $listing_price listing_price
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Gets shipping.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType
      */
     public function getShipping()
     {
@@ -335,7 +335,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Sets shipping.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $shipping shipping
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\MoneyType $shipping shipping
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Gets points.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Points
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Points
      */
     public function getPoints()
     {
@@ -359,7 +359,7 @@ class LowestPriceType implements ModelInterface, ArrayAccess
     /**
      * Sets points.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Points $points points
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Points $points points
      *
      * @return $this
      */

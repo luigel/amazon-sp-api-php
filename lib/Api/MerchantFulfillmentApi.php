@@ -2,7 +2,7 @@
 /**
  * MerchantFulfillmentApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,18 +13,18 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\ApiException;
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\ApiException;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Promise\PromiseInterface;
@@ -33,7 +33,7 @@ use InvalidArgumentException;
 /**
  * MerchantFulfillmentApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class MerchantFulfillmentApi
 {
@@ -77,7 +77,7 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse
      */
     public function cancelShipment($shipment_id)
     {
@@ -94,7 +94,7 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelShipmentWithHttpInfo($shipment_id)
     {
@@ -133,7 +133,7 @@ class MerchantFulfillmentApi
      */
     public function cancelShipmentAsyncWithHttpInfo($shipment_id)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
         $request = $this->cancelShipmentRequest($shipment_id);
 
         return $this->sendRequestAsync($request, CancelShipmentResponse::class);
@@ -182,7 +182,7 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse
      */
     public function cancelShipmentOld($shipment_id)
     {
@@ -199,11 +199,11 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelShipmentOldWithHttpInfo($shipment_id)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
         $request = $this->cancelShipmentOldRequest($shipment_id);
 
         return $this->sendRequest($request, CancelShipmentResponse::class);
@@ -239,7 +239,7 @@ class MerchantFulfillmentApi
      */
     public function cancelShipmentOldAsyncWithHttpInfo($shipment_id)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CancelShipmentResponse';
         $request = $this->cancelShipmentOldRequest($shipment_id);
 
         return $this->sendRequestAsync($request, CancelShipmentResponse::class);
@@ -283,12 +283,12 @@ class MerchantFulfillmentApi
     /**
      * Operation createShipment.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse
      */
     public function createShipment($body)
     {
@@ -300,12 +300,12 @@ class MerchantFulfillmentApi
     /**
      * Operation createShipmentWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createShipmentWithHttpInfo($body)
     {
@@ -317,7 +317,7 @@ class MerchantFulfillmentApi
     /**
      * Operation createShipmentAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -336,7 +336,7 @@ class MerchantFulfillmentApi
     /**
      * Operation createShipmentAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -344,7 +344,7 @@ class MerchantFulfillmentApi
      */
     public function createShipmentAsyncWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentResponse';
         $request = $this->createShipmentRequest($body);
 
         return $this->sendRequestAsync($request, CreateShipmentResponse::class);
@@ -353,7 +353,7 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'createShipment'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\CreateShipmentRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -379,12 +379,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputs.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse
      */
     public function getAdditionalSellerInputs($body)
     {
@@ -396,12 +396,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalSellerInputsWithHttpInfo($body)
     {
@@ -413,7 +413,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -432,7 +432,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -440,7 +440,7 @@ class MerchantFulfillmentApi
      */
     public function getAdditionalSellerInputsAsyncWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse';
         $request = $this->getAdditionalSellerInputsRequest($body);
 
         return $this->sendRequestAsync($request, GetAdditionalSellerInputsResponse::class);
@@ -449,7 +449,7 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'getAdditionalSellerInputs'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -475,12 +475,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsOld.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse
      */
     public function getAdditionalSellerInputsOld($body)
     {
@@ -492,12 +492,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsOldWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalSellerInputsOldWithHttpInfo($body)
     {
@@ -509,7 +509,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsOldAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -528,7 +528,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getAdditionalSellerInputsOldAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -544,7 +544,7 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'getAdditionalSellerInputsOld'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -570,12 +570,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServices.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse
      */
     public function getEligibleShipmentServices($body)
     {
@@ -587,12 +587,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibleShipmentServicesWithHttpInfo($body)
     {
@@ -604,7 +604,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -623,7 +623,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -631,7 +631,7 @@ class MerchantFulfillmentApi
      */
     public function getEligibleShipmentServicesAsyncWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
         $request = $this->getEligibleShipmentServicesRequest($body);
 
         return $this->sendRequestAsync($request, GetEligibleShipmentServicesResponse::class);
@@ -640,7 +640,7 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'getEligibleShipmentServices'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -666,12 +666,12 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesOld.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse
      */
     public function getEligibleShipmentServicesOld($body)
     {
@@ -683,16 +683,16 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesOldWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibleShipmentServicesOldWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
         $request = $this->getEligibleShipmentServicesOldRequest($body);
 
         return $this->sendRequest($request, GetEligibleShipmentServicesResponse::class);
@@ -701,7 +701,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesOldAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -720,7 +720,7 @@ class MerchantFulfillmentApi
     /**
      * Operation getEligibleShipmentServicesOldAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -728,7 +728,7 @@ class MerchantFulfillmentApi
      */
     public function getEligibleShipmentServicesOldAsyncWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse';
         $request = $this->getEligibleShipmentServicesOldRequest($body);
 
         return $this->sendRequest($request, GetEligibleShipmentServicesResponse::class);
@@ -737,7 +737,7 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'getEligibleShipmentServicesOld'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesRequest $body (required)
      *
      * @throws InvalidArgumentException
      *
@@ -768,7 +768,7 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetShipmentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetShipmentResponse
      */
     public function getShipment($shipment_id)
     {
@@ -785,7 +785,7 @@ class MerchantFulfillmentApi
      * @throws ApiException             on non-2xx response
      * @throws InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShipmentWithHttpInfo($shipment_id)
     {

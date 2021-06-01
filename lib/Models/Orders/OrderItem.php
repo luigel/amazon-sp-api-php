@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A single order item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderItem implements ModelInterface, ArrayAccess
 {
@@ -52,19 +52,19 @@ class OrderItem implements ModelInterface, ArrayAccess
 'title' => 'string',
 'quantity_ordered' => 'int',
 'quantity_shipped' => 'int',
-'product_info' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail',
-'points_granted' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail',
-'item_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'shipping_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'item_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'shipping_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'shipping_discount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'shipping_discount_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'promotion_discount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'promotion_discount_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'promotion_ids' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList',
-'cod_fee' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'cod_fee_discount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
+'product_info' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail',
+'points_granted' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail',
+'item_price' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'shipping_price' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'item_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'shipping_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'shipping_discount' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'shipping_discount_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'promotion_discount' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'promotion_discount_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'promotion_ids' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList',
+'cod_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
+'cod_fee_discount' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
 'is_gift' => 'bool',
 'condition_note' => 'string',
 'condition_id' => 'string',
@@ -72,7 +72,7 @@ class OrderItem implements ModelInterface, ArrayAccess
 'scheduled_delivery_start_date' => 'string',
 'scheduled_delivery_end_date' => 'string',
 'price_designation' => 'string',
-'tax_collection' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxCollection',
+'tax_collection' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxCollection',
 'serial_number_required' => 'bool',
 'is_transparency' => 'bool',
 'ioss_number' => 'string',
@@ -542,7 +542,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets product_info.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail
      */
     public function getProductInfo()
     {
@@ -552,7 +552,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets product_info.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail $product_info product_info
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\ProductInfoDetail $product_info product_info
      *
      * @return $this
      */
@@ -566,7 +566,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets points_granted.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail
      */
     public function getPointsGranted()
     {
@@ -576,7 +576,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets points_granted.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail $points_granted points_granted
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\PointsGrantedDetail $points_granted points_granted
      *
      * @return $this
      */
@@ -590,7 +590,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets item_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getItemPrice()
     {
@@ -600,7 +600,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets item_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $item_price item_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $item_price item_price
      *
      * @return $this
      */
@@ -614,7 +614,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets shipping_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getShippingPrice()
     {
@@ -624,7 +624,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets shipping_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_price shipping_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_price shipping_price
      *
      * @return $this
      */
@@ -638,7 +638,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets item_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getItemTax()
     {
@@ -648,7 +648,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets item_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $item_tax item_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $item_tax item_tax
      *
      * @return $this
      */
@@ -662,7 +662,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets shipping_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getShippingTax()
     {
@@ -672,7 +672,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets shipping_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_tax shipping_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_tax shipping_tax
      *
      * @return $this
      */
@@ -686,7 +686,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets shipping_discount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getShippingDiscount()
     {
@@ -696,7 +696,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets shipping_discount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_discount shipping_discount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_discount shipping_discount
      *
      * @return $this
      */
@@ -710,7 +710,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets shipping_discount_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getShippingDiscountTax()
     {
@@ -720,7 +720,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets shipping_discount_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_discount_tax shipping_discount_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $shipping_discount_tax shipping_discount_tax
      *
      * @return $this
      */
@@ -734,7 +734,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets promotion_discount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getPromotionDiscount()
     {
@@ -744,7 +744,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets promotion_discount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $promotion_discount promotion_discount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $promotion_discount promotion_discount
      *
      * @return $this
      */
@@ -758,7 +758,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets promotion_discount_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getPromotionDiscountTax()
     {
@@ -768,7 +768,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets promotion_discount_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $promotion_discount_tax promotion_discount_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $promotion_discount_tax promotion_discount_tax
      *
      * @return $this
      */
@@ -782,7 +782,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets promotion_ids.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList
      */
     public function getPromotionIds()
     {
@@ -792,7 +792,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets promotion_ids.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList $promotion_ids promotion_ids
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\PromotionIdList $promotion_ids promotion_ids
      *
      * @return $this
      */
@@ -806,7 +806,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets cod_fee.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getCodFee()
     {
@@ -816,7 +816,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets cod_fee.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $cod_fee cod_fee
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $cod_fee cod_fee
      *
      * @return $this
      */
@@ -830,7 +830,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets cod_fee_discount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getCodFeeDiscount()
     {
@@ -840,7 +840,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets cod_fee_discount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $cod_fee_discount cod_fee_discount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $cod_fee_discount cod_fee_discount
      *
      * @return $this
      */
@@ -1022,7 +1022,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Gets tax_collection.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxCollection
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxCollection
      */
     public function getTaxCollection()
     {
@@ -1032,7 +1032,7 @@ self::DEEMED_RESELLER_CATEGORY_UOSS,        ];
     /**
      * Sets tax_collection.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\TaxCollection $tax_collection tax_collection
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\TaxCollection $tax_collection tax_collection
      *
      * @return $this
      */

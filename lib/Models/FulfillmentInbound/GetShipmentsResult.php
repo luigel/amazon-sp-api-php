@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetShipmentsResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetShipmentsResult implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class GetShipmentsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_data' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList',
+        'shipment_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList',
 'next_token' => 'string',    ];
 
     /**
@@ -189,7 +189,7 @@ class GetShipmentsResult implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_data.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList
      */
     public function getShipmentData()
     {
@@ -199,7 +199,7 @@ class GetShipmentsResult implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_data.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList $shipment_data shipment_data
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentList $shipment_data shipment_data
      *
      * @return $this
      */

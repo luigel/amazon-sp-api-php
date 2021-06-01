@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Weight Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The weight of the package.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Weight implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class Weight implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',    ];
+        'value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
+'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
      */
     public function getValue()
     {
@@ -209,7 +209,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Gets unit.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight
      */
     public function getUnit()
     {
@@ -233,7 +233,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Sets unit.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight $unit unit
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight $unit unit
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FulfillmentOrderItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information for a fulfillment order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FulfillmentOrderItem implements ModelInterface, ArrayAccess
 {
@@ -48,18 +48,18 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'seller_fulfillment_order_item_id' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
 'gift_message' => 'string',
 'displayable_comment' => 'string',
 'fulfillment_network_sku' => 'string',
 'order_item_disposition' => 'string',
-'cancelled_quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
-'unfulfillable_quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
-'estimated_ship_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
-'estimated_arrival_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
-'per_unit_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'per_unit_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'per_unit_declared_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
+'cancelled_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'unfulfillable_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'estimated_ship_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'estimated_arrival_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'per_unit_price' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'per_unit_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'per_unit_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -328,7 +328,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getQuantity()
     {
@@ -338,7 +338,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets cancelled_quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getCancelledQuantity()
     {
@@ -458,7 +458,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets cancelled_quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $cancelled_quantity cancelled_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $cancelled_quantity cancelled_quantity
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets unfulfillable_quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getUnfulfillableQuantity()
     {
@@ -482,7 +482,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets unfulfillable_quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $unfulfillable_quantity unfulfillable_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $unfulfillable_quantity unfulfillable_quantity
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets estimated_ship_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getEstimatedShipDate()
     {
@@ -506,7 +506,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets estimated_ship_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_ship_date estimated_ship_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_ship_date estimated_ship_date
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets estimated_arrival_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getEstimatedArrivalDate()
     {
@@ -530,7 +530,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets estimated_arrival_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitPrice()
     {
@@ -554,7 +554,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_price per_unit_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_price per_unit_price
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitTax()
     {
@@ -578,7 +578,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_tax per_unit_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_tax per_unit_tax
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_declared_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitDeclaredValue()
     {
@@ -602,7 +602,7 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_declared_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
      *
      * @return $this
      */

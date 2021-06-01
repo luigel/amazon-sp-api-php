@@ -2,7 +2,7 @@
 /**
  * DefaultApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,21 +13,21 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 
 /**
  * DefaultApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FinancesApi
 {
@@ -72,9 +72,9 @@ class FinancesApi
      * @param string    $next_token                           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse
      */
     public function listFinancialEventGroups($max_results_per_page = '100', $financial_event_group_started_before = null, $financial_event_group_started_after = null, $next_token = null)
     {
@@ -92,9 +92,9 @@ class FinancesApi
      * @param string    $next_token                           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFinancialEventGroupsWithHttpInfo($max_results_per_page = '100', $financial_event_group_started_before = null, $financial_event_group_started_after = null, $next_token = null)
     {
@@ -139,7 +139,7 @@ class FinancesApi
      */
     public function listFinancialEventGroupsAsyncWithHttpInfo($max_results_per_page = '100', $financial_event_group_started_before = null, $financial_event_group_started_after = null, $next_token = null)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventGroupsResponse';
         $request = $this->listFinancialEventGroupsRequest($max_results_per_page, $financial_event_group_started_before, $financial_event_group_started_after, $next_token);
 
         return $this->sendRequestAsync($request, ListFinancialEventGroupsResponse::class);
@@ -195,9 +195,9 @@ class FinancesApi
      * @param string    $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
      */
     public function listFinancialEvents($max_results_per_page = '100', $posted_after = null, $posted_before = null, $next_token = null)
     {
@@ -215,9 +215,9 @@ class FinancesApi
      * @param string    $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFinancialEventsWithHttpInfo($max_results_per_page = '100', $posted_after = null, $posted_before = null, $next_token = null)
     {
@@ -316,9 +316,9 @@ class FinancesApi
      * @param string $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
      */
     public function listFinancialEventsByGroupId($event_group_id, $max_results_per_page = '100', $next_token = null)
     {
@@ -335,9 +335,9 @@ class FinancesApi
      * @param string $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFinancialEventsByGroupIdWithHttpInfo($event_group_id, $max_results_per_page = '100', $next_token = null)
     {
@@ -439,9 +439,9 @@ class FinancesApi
      * @param string $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse
      */
     public function listFinancialEventsByOrderId($order_id, $max_results_per_page = '100', $next_token = null)
     {
@@ -458,9 +458,9 @@ class FinancesApi
      * @param string $next_token           A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Finances\ListFinancialEventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFinancialEventsByOrderIdWithHttpInfo($order_id, $max_results_per_page = '100', $next_token = null)
     {

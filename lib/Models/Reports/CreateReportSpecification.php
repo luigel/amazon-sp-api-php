@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-09-04
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Reports;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Reports;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateReportSpecification Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateReportSpecification implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class CreateReportSpecification implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'report_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
+        'report_options' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
 'report_type' => 'string',
 'data_start_time' => '\DateTime',
 'data_end_time' => '\DateTime',
@@ -214,7 +214,7 @@ class CreateReportSpecification implements ModelInterface, ArrayAccess
     /**
      * Gets report_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
      */
     public function getReportOptions()
     {
@@ -224,7 +224,7 @@ class CreateReportSpecification implements ModelInterface, ArrayAccess
     /**
      * Sets report_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
      *
      * @return $this
      */

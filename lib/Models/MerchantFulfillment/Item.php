@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Item Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An Amazon order item identifier and a quantity.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Item implements ModelInterface, ArrayAccess
 {
@@ -46,12 +46,12 @@ class Item implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'order_item_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity',
-'item_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight',
-'item_description' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription',
-'transparency_code_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList',
-'item_level_seller_inputs_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList',    ];
+        'order_item_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity',
+'item_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight',
+'item_description' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription',
+'transparency_code_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList',
+'item_level_seller_inputs_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets order_item_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId
      */
     public function getOrderItemId()
     {
@@ -233,7 +233,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets order_item_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId $order_item_id order_item_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\OrderItemId $order_item_id order_item_id
      *
      * @return $this
      */
@@ -247,7 +247,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity
      */
     public function getQuantity()
     {
@@ -257,7 +257,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemQuantity $quantity quantity
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets item_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight
      */
     public function getItemWeight()
     {
@@ -281,7 +281,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets item_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight $item_weight item_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Weight $item_weight item_weight
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets item_description.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription
      */
     public function getItemDescription()
     {
@@ -305,7 +305,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets item_description.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription $item_description item_description
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ItemDescription $item_description item_description
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets transparency_code_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList
      */
     public function getTransparencyCodeList()
     {
@@ -329,7 +329,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets transparency_code_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList $transparency_code_list transparency_code_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\TransparencyCodeList $transparency_code_list transparency_code_list
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets item_level_seller_inputs_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList
      */
     public function getItemLevelSellerInputsList()
     {
@@ -353,7 +353,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets item_level_seller_inputs_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList $item_level_seller_inputs_list item_level_seller_inputs_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList $item_level_seller_inputs_list item_level_seller_inputs_list
      *
      * @return $this
      */

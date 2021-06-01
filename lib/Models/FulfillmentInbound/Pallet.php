@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Pallet Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Pallet information.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Pallet implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class Pallet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'dimensions' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions',
-'weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
+        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions',
+'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
 'is_stacked' => 'bool',    ];
 
     /**
@@ -205,7 +205,7 @@ class Pallet implements ModelInterface, ArrayAccess
     /**
      * Gets dimensions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions
      */
     public function getDimensions()
     {
@@ -215,7 +215,7 @@ class Pallet implements ModelInterface, ArrayAccess
     /**
      * Sets dimensions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions $dimensions dimensions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions $dimensions dimensions
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class Pallet implements ModelInterface, ArrayAccess
     /**
      * Gets weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight
      */
     public function getWeight()
     {
@@ -239,7 +239,7 @@ class Pallet implements ModelInterface, ArrayAccess
     /**
      * Sets weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight $weight weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight $weight weight
      *
      * @return $this
      */

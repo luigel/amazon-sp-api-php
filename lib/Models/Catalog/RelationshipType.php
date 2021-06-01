@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * RelationshipType Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Specific variations of the item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class RelationshipType extends Categories implements ModelInterface, ArrayAccess
 {
@@ -63,11 +63,11 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
 'scent' => 'string',
 'size' => 'string',
 'size_per_pearl' => 'string',
-'golf_club_loft' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'total_diamond_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'total_gem_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'golf_club_loft' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'total_diamond_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'total_gem_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
 'package_quantity' => 'int',
-'item_dimensions' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DimensionType',    ];
+'item_dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DimensionType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -720,7 +720,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets golf_club_loft.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getGolfClubLoft()
     {
@@ -730,7 +730,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets golf_club_loft.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $golf_club_loft golf_club_loft
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $golf_club_loft golf_club_loft
      *
      * @return $this
      */
@@ -744,7 +744,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets total_diamond_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getTotalDiamondWeight()
     {
@@ -754,7 +754,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets total_diamond_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $total_diamond_weight total_diamond_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $total_diamond_weight total_diamond_weight
      *
      * @return $this
      */
@@ -768,7 +768,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets total_gem_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getTotalGemWeight()
     {
@@ -778,7 +778,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets total_gem_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $total_gem_weight total_gem_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $total_gem_weight total_gem_weight
      *
      * @return $this
      */
@@ -816,7 +816,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets item_dimensions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DimensionType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DimensionType
      */
     public function getItemDimensions()
     {
@@ -826,7 +826,7 @@ class RelationshipType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets item_dimensions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DimensionType $item_dimensions item_dimensions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DimensionType $item_dimensions item_dimensions
      *
      * @return $this
      */

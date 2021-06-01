@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFulfillmentOrderResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
 {
@@ -43,11 +43,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'fulfillment_order' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder',
-'fulfillment_order_items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList',
-'fulfillment_shipments' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList',
-'return_items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList',
-'return_authorizations' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList',    ];
+        'fulfillment_order' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder',
+'fulfillment_order_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList',
+'fulfillment_shipments' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList',
+'return_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList',
+'return_authorizations' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -220,7 +220,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_order.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder
      */
     public function getFulfillmentOrder()
     {
@@ -230,7 +230,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_order.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder $fulfillment_order fulfillment_order
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrder $fulfillment_order fulfillment_order
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_order_items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList
      */
     public function getFulfillmentOrderItems()
     {
@@ -254,7 +254,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_order_items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList $fulfillment_order_items fulfillment_order_items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentOrderItemList $fulfillment_order_items fulfillment_order_items
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Gets fulfillment_shipments.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList
      */
     public function getFulfillmentShipments()
     {
@@ -278,7 +278,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_shipments.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList $fulfillment_shipments fulfillment_shipments
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentList $fulfillment_shipments fulfillment_shipments
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Gets return_items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList
      */
     public function getReturnItems()
     {
@@ -302,7 +302,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Sets return_items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList $return_items return_items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnItemList $return_items return_items
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Gets return_authorizations.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList
      */
     public function getReturnAuthorizations()
     {
@@ -326,7 +326,7 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess
     /**
      * Sets return_authorizations.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList $return_authorizations return_authorizations
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ReturnAuthorizationList $return_authorizations return_authorizations
      *
      * @return $this
      */

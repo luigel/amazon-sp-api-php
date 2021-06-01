@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListReturnReasonCodesResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The response schema for the listReturnReasonCodes operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResult $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class ListReturnReasonCodesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ErrorList $errors errors
      *
      * @return $this
      */

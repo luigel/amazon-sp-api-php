@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetRatesRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the getRates operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetRatesRequest implements ModelInterface, ArrayAccess
 {
@@ -46,11 +46,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'ship_to' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
-'ship_from' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address',
-'service_types' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList',
+        'ship_to' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
+'ship_from' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address',
+'service_types' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList',
 'ship_date' => '\DateTime',
-'container_specifications' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList',    ];
+'container_specifications' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipTo()
     {
@@ -233,7 +233,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_to ship_to
      *
      * @return $this
      */
@@ -247,7 +247,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address
      */
     public function getShipFrom()
     {
@@ -257,7 +257,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Address $ship_from ship_from
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets service_types.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList
      */
     public function getServiceTypes()
     {
@@ -281,7 +281,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets service_types.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList $service_types service_types
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceTypeList $service_types service_types
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets container_specifications.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList
      */
     public function getContainerSpecifications()
     {
@@ -329,7 +329,7 @@ class GetRatesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets container_specifications.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList $container_specifications container_specifications
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ContainerSpecificationList $container_specifications container_specifications
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CompetitivePriceType Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CompetitivePriceType implements ModelInterface, ArrayAccess
 {
@@ -44,7 +44,7 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'competitive_price_id' => 'string',
-'price' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType',
+'price' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType',
 'condition' => 'string',
 'subcondition' => 'string',
 'belongs_to_requester' => 'bool',    ];
@@ -238,7 +238,7 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess
     /**
      * Gets price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType
      */
     public function getPrice()
     {
@@ -248,7 +248,7 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess
     /**
      * Sets price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType $price price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\PriceType $price price
      *
      * @return $this
      */

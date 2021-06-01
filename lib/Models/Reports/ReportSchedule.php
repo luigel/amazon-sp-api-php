@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-09-04
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Reports;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Reports;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ReportSchedule Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Detailed information about a report schedule.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ReportSchedule implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class ReportSchedule implements ModelInterface, ArrayAccess
         'report_schedule_id' => 'string',
 'report_type' => 'string',
 'marketplace_ids' => 'string[]',
-'report_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
+'report_options' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
 'period' => 'string',
 'next_report_creation_time' => '\DateTime',    ];
 
@@ -298,7 +298,7 @@ class ReportSchedule implements ModelInterface, ArrayAccess
     /**
      * Gets report_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
      */
     public function getReportOptions()
     {
@@ -308,7 +308,7 @@ class ReportSchedule implements ModelInterface, ArrayAccess
     /**
      * Sets report_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
      *
      * @return $this
      */

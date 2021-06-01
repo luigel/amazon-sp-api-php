@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PriceToEstimateFees Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Price information for an item, used to estimate fees.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PriceToEstimateFees implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'listing_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'shipping' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'points' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\Points',    ];
+        'listing_price' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'shipping' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'points' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\Points',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -202,7 +202,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Gets listing_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getListingPrice()
     {
@@ -212,7 +212,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Sets listing_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $listing_price listing_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $listing_price listing_price
      *
      * @return $this
      */
@@ -226,7 +226,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Gets shipping.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getShipping()
     {
@@ -236,7 +236,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Sets shipping.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $shipping shipping
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $shipping shipping
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Gets points.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\Points
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\Points
      */
     public function getPoints()
     {
@@ -260,7 +260,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess
     /**
      * Sets points.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\Points $points points
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\Points $points points
      *
      * @return $this
      */

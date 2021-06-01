@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaInventory;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ResearchingQuantity Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The number of misplaced or warehouse damaged units that are actively being confirmed at our fulfillment centers.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ResearchingQuantity implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'total_researching_quantity' => 'int',
-'researching_quantity_breakdown' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[]',    ];
+'researching_quantity_breakdown' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets researching_quantity_breakdown.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[]
      */
     public function getResearchingQuantityBreakdown()
     {
@@ -226,7 +226,7 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets researching_quantity_breakdown.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[] $researching_quantity_breakdown a list of quantity details for items currently being researched
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantityEntry[] $researching_quantity_breakdown a list of quantity details for items currently being researched
      *
      * @return $this
      */

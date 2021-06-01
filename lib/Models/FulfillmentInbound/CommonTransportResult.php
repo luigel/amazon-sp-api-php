@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CommonTransportResult Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CommonTransportResult implements ModelInterface, ArrayAccess
 {
@@ -43,7 +43,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_result' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult',    ];
+        'transport_result' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -183,7 +183,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess
     /**
      * Gets transport_result.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult
      */
     public function getTransportResult()
     {
@@ -193,7 +193,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess
     /**
      * Sets transport_result.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult $transport_result transport_result
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult $transport_result transport_result
      *
      * @return $this
      */

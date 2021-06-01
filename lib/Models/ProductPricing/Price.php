@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Price Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Price implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class Price implements ModelInterface, ArrayAccess
         'status' => 'string',
 'seller_sku' => 'string',
 'asin' => 'string',
-'product' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Product',    ];
+'product' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Product',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -277,7 +277,7 @@ class Price implements ModelInterface, ArrayAccess
     /**
      * Gets product.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Product
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Product
      */
     public function getProduct()
     {
@@ -287,7 +287,7 @@ class Price implements ModelInterface, ArrayAccess
     /**
      * Sets product.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\Product $product product
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\Product $product product
      *
      * @return $this
      */

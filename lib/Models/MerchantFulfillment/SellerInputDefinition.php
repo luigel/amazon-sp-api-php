@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SellerInputDefinition Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Specifies characteristics that apply to a seller input.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SellerInputDefinition implements ModelInterface, ArrayAccess
 {
@@ -48,11 +48,11 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'is_required' => 'bool',
 'data_type' => 'string',
-'constraints' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints',
+'constraints' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints',
 'input_display_text' => 'string',
-'input_target' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType',
-'stored_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput',
-'restricted_set_values' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues',    ];
+'input_target' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType',
+'stored_value' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput',
+'restricted_set_values' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -286,7 +286,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets constraints.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints
      */
     public function getConstraints()
     {
@@ -296,7 +296,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets constraints.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints $constraints constraints
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\Constraints $constraints constraints
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets input_target.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType
      */
     public function getInputTarget()
     {
@@ -344,7 +344,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets input_target.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType $input_target input_target
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\InputTargetType $input_target input_target
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets stored_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput
      */
     public function getStoredValue()
     {
@@ -368,7 +368,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets stored_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput $stored_value stored_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInput $stored_value stored_value
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets restricted_set_values.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues
      */
     public function getRestrictedSetValues()
     {
@@ -392,7 +392,7 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets restricted_set_values.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues $restricted_set_values restricted_set_values
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\RestrictedSetValues $restricted_set_values restricted_set_values
      *
      * @return $this
      */

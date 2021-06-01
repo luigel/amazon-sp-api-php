@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * DimensionType Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The dimension type attribute of an item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class DimensionType extends Categories implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'height' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'length' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'width' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',    ];
+        'height' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'length' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'width' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -204,7 +204,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets height.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getHeight()
     {
@@ -214,7 +214,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets height.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $height height
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $height height
      *
      * @return $this
      */
@@ -228,7 +228,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets length.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getLength()
     {
@@ -238,7 +238,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets length.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $length length
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $length length
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets width.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getWidth()
     {
@@ -262,7 +262,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets width.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $width width
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $width width
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getWeight()
     {
@@ -286,7 +286,7 @@ class DimensionType extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $weight weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $weight weight
      *
      * @return $this
      */

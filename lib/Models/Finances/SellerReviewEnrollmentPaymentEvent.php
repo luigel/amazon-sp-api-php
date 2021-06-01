@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SellerReviewEnrollmentPaymentEvent Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A fee payment event for the Early Reviewer Program.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
 {
@@ -46,12 +46,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'posted_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
+        'posted_date' => '\DateTime',
 'enrollment_id' => 'string',
 'parent_asin' => 'string',
-'fee_component' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponent',
-'charge_component' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent',
-'total_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
+'fee_component' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponent',
+'charge_component' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent',
+'total_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Gets posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getPostedDate()
     {
@@ -226,7 +226,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Sets posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
      *
      * @return $this
      */
@@ -288,7 +288,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Gets fee_component.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponent
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponent
      */
     public function getFeeComponent()
     {
@@ -298,7 +298,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Sets fee_component.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FeeComponent $fee_component fee_component
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\FeeComponent $fee_component fee_component
      *
      * @return $this
      */
@@ -312,7 +312,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Gets charge_component.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent
      */
     public function getChargeComponent()
     {
@@ -322,7 +322,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Sets charge_component.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent $charge_component charge_component
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ChargeComponent $charge_component charge_component
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Gets total_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getTotalAmount()
     {
@@ -346,7 +346,7 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess
     /**
      * Sets total_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $total_amount total_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $total_amount total_amount
      *
      * @return $this
      */

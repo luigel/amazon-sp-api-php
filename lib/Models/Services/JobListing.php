@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * JobListing Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the GetJobs operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class JobListing implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class JobListing implements ModelInterface, ArrayAccess
         'total_result_size' => 'int',
 'next_page_token' => 'string',
 'previous_page_token' => 'string',
-'jobs' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob[]',    ];
+'jobs' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -276,7 +276,7 @@ class JobListing implements ModelInterface, ArrayAccess
     /**
      * Gets jobs.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob[]
      */
     public function getJobs()
     {
@@ -286,7 +286,7 @@ class JobListing implements ModelInterface, ArrayAccess
     /**
      * Sets jobs.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\ServiceJob[] $jobs list of job details for the given input
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\ServiceJob[] $jobs list of job details for the given input
      *
      * @return $this
      */

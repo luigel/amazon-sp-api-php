@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Order Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Order information.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Order implements ModelInterface, ArrayAccess
 {
@@ -55,12 +55,12 @@ class Order implements ModelInterface, ArrayAccess
 'sales_channel' => 'string',
 'order_channel' => 'string',
 'ship_service_level' => 'string',
-'order_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
+'order_total' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
 'number_of_items_shipped' => 'int',
 'number_of_items_unshipped' => 'int',
-'payment_execution_detail' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList',
+'payment_execution_detail' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList',
 'payment_method' => 'string',
-'payment_method_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList',
+'payment_method_details' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList',
 'marketplace_id' => 'string',
 'shipment_service_level_category' => 'string',
 'easy_ship_shipment_status' => 'string',
@@ -79,8 +79,8 @@ class Order implements ModelInterface, ArrayAccess
 'promise_response_due_date' => 'string',
 'is_estimated_ship_date_set' => 'bool',
 'is_sold_by_ab' => 'bool',
-'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
-'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',    ];
+'assigned_ship_from_location_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Address',
+'fulfillment_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -735,7 +735,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Gets order_total.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getOrderTotal()
     {
@@ -745,7 +745,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets order_total.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $order_total order_total
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $order_total order_total
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Gets payment_execution_detail.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList
      */
     public function getPaymentExecutionDetail()
     {
@@ -817,7 +817,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets payment_execution_detail.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList $payment_execution_detail payment_execution_detail
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList $payment_execution_detail payment_execution_detail
      *
      * @return $this
      */
@@ -859,7 +859,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Gets payment_method_details.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList
      */
     public function getPaymentMethodDetails()
     {
@@ -869,7 +869,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets payment_method_details.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList $payment_method_details payment_method_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList $payment_method_details payment_method_details
      *
      * @return $this
      */
@@ -1319,7 +1319,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Gets assigned_ship_from_location_address.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Address
      */
     public function getAssignedShipFromLocationAddress()
     {
@@ -1329,7 +1329,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets assigned_ship_from_location_address.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address $assigned_ship_from_location_address assigned_ship_from_location_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Address $assigned_ship_from_location_address assigned_ship_from_location_address
      *
      * @return $this
      */
@@ -1343,7 +1343,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Gets fulfillment_instruction.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction
      */
     public function getFulfillmentInstruction()
     {
@@ -1353,7 +1353,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets fulfillment_instruction.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction $fulfillment_instruction fulfillment_instruction
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction $fulfillment_instruction fulfillment_instruction
      *
      * @return $this
      */

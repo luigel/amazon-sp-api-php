@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Product Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Product implements ModelInterface, ArrayAccess
 {
@@ -46,12 +46,12 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'identifiers' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType',
-'attribute_sets' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList',
-'relationships' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList',
-'competitive_pricing' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType',
-'sales_rankings' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList',
-'offers' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList',    ];
+        'identifiers' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType',
+'attribute_sets' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList',
+'relationships' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList',
+'competitive_pricing' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType',
+'sales_rankings' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList',
+'offers' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -220,7 +220,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets identifiers.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType
      */
     public function getIdentifiers()
     {
@@ -230,7 +230,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets identifiers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType $identifiers identifiers
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\IdentifierType $identifiers identifiers
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets attribute_sets.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList
      */
     public function getAttributeSets()
     {
@@ -254,7 +254,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets attribute_sets.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList $attribute_sets attribute_sets
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\AttributeSetList $attribute_sets attribute_sets
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets relationships.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList
      */
     public function getRelationships()
     {
@@ -278,7 +278,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets relationships.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList $relationships relationships
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\RelationshipList $relationships relationships
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets competitive_pricing.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType
      */
     public function getCompetitivePricing()
     {
@@ -302,7 +302,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets competitive_pricing.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType $competitive_pricing competitive_pricing
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\CompetitivePricingType $competitive_pricing competitive_pricing
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets sales_rankings.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList
      */
     public function getSalesRankings()
     {
@@ -326,7 +326,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets sales_rankings.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList $sales_rankings sales_rankings
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\SalesRankList $sales_rankings sales_rankings
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Gets offers.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList
      */
     public function getOffers()
     {
@@ -350,7 +350,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets offers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList $offers offers
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\OffersList $offers offers
      *
      * @return $this
      */

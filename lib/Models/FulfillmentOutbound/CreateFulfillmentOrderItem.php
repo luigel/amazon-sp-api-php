@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateFulfillmentOrderItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information for creating a fulfillment order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
 {
@@ -48,13 +48,13 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'seller_fulfillment_order_item_id' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
 'gift_message' => 'string',
 'displayable_comment' => 'string',
 'fulfillment_network_sku' => 'string',
-'per_unit_declared_value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'per_unit_price' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
-'per_unit_tax' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
+'per_unit_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'per_unit_price' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',
+'per_unit_tax' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -292,7 +292,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getQuantity()
     {
@@ -302,7 +302,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_declared_value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitDeclaredValue()
     {
@@ -398,7 +398,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_declared_value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_declared_value per_unit_declared_value
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_price.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitPrice()
     {
@@ -422,7 +422,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_price.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_price per_unit_price
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_price per_unit_price
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_tax.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money
      */
     public function getPerUnitTax()
     {
@@ -446,7 +446,7 @@ class CreateFulfillmentOrderItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_tax.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_tax per_unit_tax
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Money $per_unit_tax per_unit_tax
      *
      * @return $this
      */

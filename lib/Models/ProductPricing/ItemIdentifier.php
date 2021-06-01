@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductPricing;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ItemIdentifier Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information that identifies an item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ItemIdentifier implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class ItemIdentifier implements ModelInterface, ArrayAccess
         'marketplace_id' => 'string',
 'asin' => 'string',
 'seller_sku' => 'string',
-'item_condition' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType',    ];
+'item_condition' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -283,7 +283,7 @@ class ItemIdentifier implements ModelInterface, ArrayAccess
     /**
      * Gets item_condition.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType
      */
     public function getItemCondition()
     {
@@ -293,7 +293,7 @@ class ItemIdentifier implements ModelInterface, ArrayAccess
     /**
      * Sets item_condition.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType $item_condition item_condition
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductPricing\ConditionType $item_condition item_condition
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Solicitations;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Solicitations;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetSolicitationActionResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Describes a solicitation action that can be taken for an order. Provides a JSON Hypertext Application Language (HAL) link to the JSON schema document that describes the expected input.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        '_links' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks',
-'_embedded' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded',
-'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
+        '_links' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks',
+'_embedded' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded',
+'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -204,7 +204,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Gets _links.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks
      */
     public function getLinks()
     {
@@ -214,7 +214,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets _links.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks $_links _links
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseLinks $_links _links
      *
      * @return $this
      */
@@ -228,7 +228,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Gets _embedded.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded
      */
     public function getEmbedded()
     {
@@ -238,7 +238,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets _embedded.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded $_embedded _embedded
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionResponseEmbedded $_embedded _embedded
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction
      */
     public function getPayload()
     {
@@ -262,7 +262,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\SolicitationsAction $payload payload
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList
      */
     public function getErrors()
     {
@@ -286,7 +286,7 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\ErrorList $errors errors
      *
      * @return $this
      */

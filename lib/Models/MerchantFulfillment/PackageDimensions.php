@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PackageDimensions Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The dimensions of a package contained in a shipment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PackageDimensions implements ModelInterface, ArrayAccess
 {
@@ -46,11 +46,11 @@ class PackageDimensions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'length' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
-'width' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
-'height' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
-'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength',
-'predefined_package_dimensions' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions',    ];
+        'length' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
+'width' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
+'height' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension',
+'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength',
+'predefined_package_dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -210,7 +210,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets length.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
      */
     public function getLength()
     {
@@ -220,7 +220,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets length.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $length length
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $length length
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets width.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
      */
     public function getWidth()
     {
@@ -244,7 +244,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets width.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $width width
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $width width
      *
      * @return $this
      */
@@ -258,7 +258,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets height.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension
      */
     public function getHeight()
     {
@@ -268,7 +268,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets height.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $height height
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PackageDimension $height height
      *
      * @return $this
      */
@@ -282,7 +282,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets unit.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength
      */
     public function getUnit()
     {
@@ -292,7 +292,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets unit.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength $unit unit
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\UnitOfLength $unit unit
      *
      * @return $this
      */
@@ -306,7 +306,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets predefined_package_dimensions.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions
      */
     public function getPredefinedPackageDimensions()
     {
@@ -316,7 +316,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets predefined_package_dimensions.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions $predefined_package_dimensions predefined_package_dimensions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\PredefinedPackageDimensions $predefined_package_dimensions predefined_package_dimensions
      *
      * @return $this
      */

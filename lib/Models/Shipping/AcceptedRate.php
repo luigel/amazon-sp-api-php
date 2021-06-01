@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AcceptedRate Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The specific rate purchased for the shipment, or null if unpurchased.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AcceptedRate implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class AcceptedRate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'total_charge' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Currency',
-'billed_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Weight',
-'service_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType',
-'promise' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet',    ];
+        'total_charge' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Currency',
+'billed_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Weight',
+'service_type' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType',
+'promise' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -204,7 +204,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Gets total_charge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Currency
      */
     public function getTotalCharge()
     {
@@ -214,7 +214,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Sets total_charge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Currency $total_charge total_charge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Currency $total_charge total_charge
      *
      * @return $this
      */
@@ -228,7 +228,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Gets billed_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Weight
      */
     public function getBilledWeight()
     {
@@ -238,7 +238,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Sets billed_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Weight $billed_weight billed_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Weight $billed_weight billed_weight
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Gets service_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType
      */
     public function getServiceType()
     {
@@ -262,7 +262,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Sets service_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ServiceType $service_type service_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ServiceType $service_type service_type
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Gets promise.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet
      */
     public function getPromise()
     {
@@ -286,7 +286,7 @@ class AcceptedRate implements ModelInterface, ArrayAccess
     /**
      * Sets promise.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet $promise promise
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShippingPromiseSet $promise promise
      *
      * @return $this
      */

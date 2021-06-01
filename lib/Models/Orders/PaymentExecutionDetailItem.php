@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PaymentExecutionDetailItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about a sub-payment method used to pay for a COD order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payment' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
+        'payment' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\Money',
 'payment_method' => 'string',    ];
 
     /**
@@ -199,7 +199,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess
     /**
      * Gets payment.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money
      */
     public function getPayment()
     {
@@ -209,7 +209,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess
     /**
      * Sets payment.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money $payment payment
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\Money $payment payment
      *
      * @return $this
      */

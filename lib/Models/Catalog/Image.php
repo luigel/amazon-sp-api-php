@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Catalog;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Catalog;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Image Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The image attribute of the item.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Image extends Categories implements ModelInterface, ArrayAccess
 {
@@ -47,8 +47,8 @@ class Image extends Categories implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'url' => 'string',
-'height' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
-'width' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',    ];
+'height' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',
+'width' => '\Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -222,7 +222,7 @@ class Image extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets height.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getHeight()
     {
@@ -232,7 +232,7 @@ class Image extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets height.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $height height
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $height height
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class Image extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets width.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits
      */
     public function getWidth()
     {
@@ -256,7 +256,7 @@ class Image extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets width.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $width width
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Catalog\DecimalWithUnits $width width
      *
      * @return $this
      */

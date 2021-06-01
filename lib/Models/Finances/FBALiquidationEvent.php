@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FBALiquidationEvent Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A payment event for Fulfillment by Amazon (FBA) inventory liquidation. This event is used only in the US marketplace.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FBALiquidationEvent implements ModelInterface, ArrayAccess
 {
@@ -46,10 +46,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'posted_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
+        'posted_date' => '\DateTime',
 'original_removal_order_id' => 'string',
-'liquidation_proceeds_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'liquidation_fee_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
+'liquidation_proceeds_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'liquidation_fee_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -204,7 +204,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Gets posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime
      */
     public function getPostedDate()
     {
@@ -214,7 +214,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Sets posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Gets liquidation_proceeds_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getLiquidationProceedsAmount()
     {
@@ -262,7 +262,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Sets liquidation_proceeds_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $liquidation_proceeds_amount liquidation_proceeds_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $liquidation_proceeds_amount liquidation_proceeds_amount
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Gets liquidation_fee_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getLiquidationFeeAmount()
     {
@@ -286,7 +286,7 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess
     /**
      * Sets liquidation_fee_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $liquidation_fee_amount liquidation_fee_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $liquidation_fee_amount liquidation_fee_amount
      *
      * @return $this
      */

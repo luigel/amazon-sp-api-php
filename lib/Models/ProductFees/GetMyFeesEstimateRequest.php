@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetMyFeesEstimateRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Request schema.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'fees_estimate_request' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest',    ];
+        'fees_estimate_request' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -186,7 +186,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets fees_estimate_request.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest
      */
     public function getFeesEstimateRequest()
     {
@@ -196,7 +196,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets fees_estimate_request.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest $fees_estimate_request fees_estimate_request
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest $fees_estimate_request fees_estimate_request
      *
      * @return $this
      */

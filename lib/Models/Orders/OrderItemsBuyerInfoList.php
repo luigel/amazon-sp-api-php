@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,12 +15,12 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\IterableType;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\IterableType;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderItemsBuyerInfoList Class Doc Comment.
@@ -28,7 +28,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A single order item&#x27;s buyer information list with the order ID.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableType
 {
@@ -47,7 +47,7 @@ class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableTy
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'order_items' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList',
+        'order_items' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList',
 'next_token' => 'string',
 'amazon_order_id' => 'string',    ];
 
@@ -206,7 +206,7 @@ class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableTy
     /**
      * Gets order_items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList
      */
     public function getOrderItems()
     {
@@ -216,7 +216,7 @@ class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableTy
     /**
      * Sets order_items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList $order_items order_items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\OrderItemBuyerInfoList $order_items order_items
      *
      * @return $this
      */

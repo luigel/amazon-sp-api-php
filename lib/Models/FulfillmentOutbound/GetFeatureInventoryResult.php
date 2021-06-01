@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetFeatureInventoryResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the getEligibileInventory operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetFeatureInventoryResult implements ModelInterface, ArrayAccess
 {
@@ -49,7 +49,7 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess
         'marketplace_id' => 'string',
 'feature_name' => 'string',
 'next_token' => 'string',
-'feature_skus' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[]',    ];
+'feature_skus' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[]',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -283,7 +283,7 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess
     /**
      * Gets feature_skus.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[]
      */
     public function getFeatureSkus()
     {
@@ -293,7 +293,7 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets feature_skus.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[] $feature_skus an array of SKUs eligible for this feature and the quantity available
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FeatureSku[] $feature_skus an array of SKUs eligible for this feature and the quantity available
      *
      * @return $this
      */

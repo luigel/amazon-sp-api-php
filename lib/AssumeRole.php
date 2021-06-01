@@ -1,6 +1,6 @@
 <?php
 
-namespace ClouSale\AmazonSellingPartnerAPI;
+namespace Luigel\AmazonSellingPartnerAPI;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Query;

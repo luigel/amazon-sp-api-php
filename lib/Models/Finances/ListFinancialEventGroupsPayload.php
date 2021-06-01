@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ListFinancialEventGroupsPayload Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload for the listFinancialEventGroups operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'next_token' => 'string',
-'financial_event_group_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList',    ];
+'financial_event_group_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess
     /**
      * Gets financial_event_group_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList
      */
     public function getFinancialEventGroupList()
     {
@@ -226,7 +226,7 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess
     /**
      * Sets financial_event_group_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList $financial_event_group_list financial_event_group_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\FinancialEventGroupList $financial_event_group_list financial_event_group_list
      *
      * @return $this
      */

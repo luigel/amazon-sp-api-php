@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AdditionalInputs Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Maps the additional seller input to the definition. The key to the map is the field name.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AdditionalInputs implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class AdditionalInputs implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'additional_input_field_name' => 'string',
-'seller_input_definition' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition',    ];
+'seller_input_definition' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -216,7 +216,7 @@ class AdditionalInputs implements ModelInterface, ArrayAccess
     /**
      * Gets seller_input_definition.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition
      */
     public function getSellerInputDefinition()
     {
@@ -226,7 +226,7 @@ class AdditionalInputs implements ModelInterface, ArrayAccess
     /**
      * Sets seller_input_definition.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition $seller_input_definition seller_input_definition
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\SellerInputDefinition $seller_input_definition seller_input_definition
      *
      * @return $this
      */

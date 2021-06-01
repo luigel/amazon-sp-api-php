@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * TransportResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The workflow status for a shipment with an Amazon-partnered carrier.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class TransportResult implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class TransportResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_status' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus',
+        'transport_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus',
 'error_code' => 'string',
 'error_description' => 'string',    ];
 
@@ -202,7 +202,7 @@ class TransportResult implements ModelInterface, ArrayAccess
     /**
      * Gets transport_status.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus
      */
     public function getTransportStatus()
     {
@@ -212,7 +212,7 @@ class TransportResult implements ModelInterface, ArrayAccess
     /**
      * Sets transport_status.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus $transport_status transport_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus $transport_status transport_status
      *
      * @return $this
      */

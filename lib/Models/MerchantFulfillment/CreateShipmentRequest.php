@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateShipmentRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Request schema.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateShipmentRequest implements ModelInterface, ArrayAccess
 {
@@ -46,12 +46,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_request_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails',
-'shipping_service_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
+        'shipment_request_details' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails',
+'shipping_service_id' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier',
 'shipping_service_offer_id' => 'string',
-'hazmat_type' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType',
-'label_format_option' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest',
-'shipment_level_seller_inputs_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList',    ];
+'hazmat_type' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType',
+'label_format_option' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest',
+'shipment_level_seller_inputs_list' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +223,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_request_details.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails
      */
     public function getShipmentRequestDetails()
     {
@@ -233,7 +233,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_request_details.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails $shipment_request_details shipment_request_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShipmentRequestDetails $shipment_request_details shipment_request_details
      *
      * @return $this
      */
@@ -247,7 +247,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_service_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier
      */
     public function getShippingServiceId()
     {
@@ -257,7 +257,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_service_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ShippingServiceIdentifier $shipping_service_id shipping_service_id
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets hazmat_type.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType
      */
     public function getHazmatType()
     {
@@ -305,7 +305,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets hazmat_type.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType $hazmat_type hazmat_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\HazmatType $hazmat_type hazmat_type
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets label_format_option.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest
      */
     public function getLabelFormatOption()
     {
@@ -329,7 +329,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets label_format_option.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest $label_format_option label_format_option
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\LabelFormatOptionRequest $label_format_option label_format_option
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_level_seller_inputs_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList
      */
     public function getShipmentLevelSellerInputsList()
     {
@@ -353,7 +353,7 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_level_seller_inputs_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList $shipment_level_seller_inputs_list shipment_level_seller_inputs_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalSellerInputsList $shipment_level_seller_inputs_list shipment_level_seller_inputs_list
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FulfillmentShipment Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Delivery and item information for a shipment in a fulfillment order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FulfillmentShipment implements ModelInterface, ArrayAccess
 {
@@ -49,11 +49,11 @@ class FulfillmentShipment implements ModelInterface, ArrayAccess
         'amazon_shipment_id' => 'string',
 'fulfillment_center_id' => 'string',
 'fulfillment_shipment_status' => 'string',
-'shipping_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
-'estimated_arrival_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'shipping_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
+'estimated_arrival_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp',
 'shipping_notes' => 'string[]',
-'fulfillment_shipment_item' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList',
-'fulfillment_shipment_package' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList',    ];
+'fulfillment_shipment_item' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList',
+'fulfillment_shipment_package' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -344,7 +344,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Gets shipping_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getShippingDate()
     {
@@ -354,7 +354,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Sets shipping_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $shipping_date shipping_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $shipping_date shipping_date
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Gets estimated_arrival_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp
      */
     public function getEstimatedArrivalDate()
     {
@@ -378,7 +378,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Sets estimated_arrival_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Timestamp $estimated_arrival_date estimated_arrival_date
      *
      * @return $this
      */
@@ -416,7 +416,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Gets fulfillment_shipment_item.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList
      */
     public function getFulfillmentShipmentItem()
     {
@@ -426,7 +426,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Sets fulfillment_shipment_item.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList $fulfillment_shipment_item fulfillment_shipment_item
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentItemList $fulfillment_shipment_item fulfillment_shipment_item
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Gets fulfillment_shipment_package.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList
      */
     public function getFulfillmentShipmentPackage()
     {
@@ -450,7 +450,7 @@ self::FULFILLMENT_SHIPMENT_STATUS_CANCELLED_BY_SELLER,        ];
     /**
      * Sets fulfillment_shipment_package.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList $fulfillment_shipment_package fulfillment_shipment_package
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\FulfillmentShipmentPackageList $fulfillment_shipment_package fulfillment_shipment_package
      *
      * @return $this
      */

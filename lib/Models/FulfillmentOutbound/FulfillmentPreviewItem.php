@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FulfillmentPreviewItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information for a shipment in a fulfillment order preview.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FulfillmentPreviewItem implements ModelInterface, ArrayAccess
 {
@@ -47,9 +47,9 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
 'seller_fulfillment_order_item_id' => 'string',
-'estimated_shipping_weight' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight',
+'estimated_shipping_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight',
 'shipping_weight_calculation_method' => 'string',    ];
 
     /**
@@ -266,7 +266,7 @@ self::SHIPPING_WEIGHT_CALCULATION_METHOD_DIMENSIONAL,        ];
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getQuantity()
     {
@@ -276,7 +276,7 @@ self::SHIPPING_WEIGHT_CALCULATION_METHOD_DIMENSIONAL,        ];
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ self::SHIPPING_WEIGHT_CALCULATION_METHOD_DIMENSIONAL,        ];
     /**
      * Gets estimated_shipping_weight.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight
      */
     public function getEstimatedShippingWeight()
     {
@@ -324,7 +324,7 @@ self::SHIPPING_WEIGHT_CALCULATION_METHOD_DIMENSIONAL,        ];
     /**
      * Sets estimated_shipping_weight.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight $estimated_shipping_weight estimated_shipping_weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Weight $estimated_shipping_weight estimated_shipping_weight
      *
      * @return $this
      */

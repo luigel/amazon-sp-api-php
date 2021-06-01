@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Services;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Services;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AssociatedItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about an item associated with the service job.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AssociatedItem implements ModelInterface, ArrayAccess
 {
@@ -49,10 +49,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess
         'asin' => 'string',
 'title' => 'string',
 'quantity' => 'int',
-'order_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\OrderId',
+'order_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\OrderId',
 'item_status' => 'string',
 'brand_name' => 'string',
-'item_delivery' => '\ClouSale\AmazonSellingPartnerAPI\Models\Services\ItemDelivery',    ];
+'item_delivery' => '\Luigel\AmazonSellingPartnerAPI\Models\Services\ItemDelivery',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -321,7 +321,7 @@ self::ITEM_STATUS_DELIVERED,        ];
     /**
      * Gets order_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\OrderId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\OrderId
      */
     public function getOrderId()
     {
@@ -331,7 +331,7 @@ self::ITEM_STATUS_DELIVERED,        ];
     /**
      * Sets order_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\OrderId $order_id order_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\OrderId $order_id order_id
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ self::ITEM_STATUS_DELIVERED,        ];
     /**
      * Gets item_delivery.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Services\ItemDelivery
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Services\ItemDelivery
      */
     public function getItemDelivery()
     {
@@ -407,7 +407,7 @@ self::ITEM_STATUS_DELIVERED,        ];
     /**
      * Sets item_delivery.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Services\ItemDelivery $item_delivery item_delivery
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Services\ItemDelivery $item_delivery item_delivery
      *
      * @return $this
      */

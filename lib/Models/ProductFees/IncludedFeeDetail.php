@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\ProductFees;
+namespace Luigel\AmazonSellingPartnerAPI\Models\ProductFees;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * IncludedFeeDetail Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The type of fee, fee amount, and other details.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class IncludedFeeDetail implements ModelInterface, ArrayAccess
 {
@@ -47,10 +47,10 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'fee_type' => 'string',
-'fee_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'fee_promotion' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'tax_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
-'final_fee' => '\ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',    ];
+'fee_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'fee_promotion' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'tax_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',
+'final_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -244,7 +244,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Gets fee_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getFeeAmount()
     {
@@ -254,7 +254,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Sets fee_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $fee_amount fee_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $fee_amount fee_amount
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Gets fee_promotion.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getFeePromotion()
     {
@@ -278,7 +278,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Sets fee_promotion.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $fee_promotion fee_promotion
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $fee_promotion fee_promotion
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Gets tax_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getTaxAmount()
     {
@@ -302,7 +302,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $tax_amount tax_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $tax_amount tax_amount
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Gets final_fee.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType
      */
     public function getFinalFee()
     {
@@ -326,7 +326,7 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess
     /**
      * Sets final_fee.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $final_fee final_fee
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\ProductFees\MoneyType $final_fee final_fee
      *
      * @return $this
      */

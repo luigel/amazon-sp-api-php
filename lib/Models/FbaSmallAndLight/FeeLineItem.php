@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FeeLineItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Fee details for a specific fee.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FeeLineItem implements ModelInterface, ArrayAccess
 {
@@ -47,7 +47,7 @@ class FeeLineItem implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'fee_type' => 'string',
-'fee_charge' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType',    ];
+'fee_charge' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -254,7 +254,7 @@ self::FEE_TYPE_COMMISSION,        ];
     /**
      * Gets fee_charge.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType
      */
     public function getFeeCharge()
     {
@@ -264,7 +264,7 @@ self::FEE_TYPE_COMMISSION,        ];
     /**
      * Sets fee_charge.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType $fee_charge fee_charge
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MoneyType $fee_charge fee_charge
      *
      * @return $this
      */

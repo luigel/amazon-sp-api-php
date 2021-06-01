@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaInventory;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InventoryDetails Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Summarized inventory details. This object will not appear if the details parameter in the request is false.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InventoryDetails implements ModelInterface, ArrayAccess
 {
@@ -50,9 +50,9 @@ class InventoryDetails implements ModelInterface, ArrayAccess
 'inbound_working_quantity' => 'int',
 'inbound_shipped_quantity' => 'int',
 'inbound_receiving_quantity' => 'int',
-'reserved_quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity',
-'researching_quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity',
-'unfulfillable_quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity',    ];
+'reserved_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity',
+'researching_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity',
+'unfulfillable_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -318,7 +318,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Gets reserved_quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity
      */
     public function getReservedQuantity()
     {
@@ -328,7 +328,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Sets reserved_quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity $reserved_quantity reserved_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ReservedQuantity $reserved_quantity reserved_quantity
      *
      * @return $this
      */
@@ -342,7 +342,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Gets researching_quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity
      */
     public function getResearchingQuantity()
     {
@@ -352,7 +352,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Sets researching_quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity $researching_quantity researching_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\ResearchingQuantity $researching_quantity researching_quantity
      *
      * @return $this
      */
@@ -366,7 +366,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Gets unfulfillable_quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity
      */
     public function getUnfulfillableQuantity()
     {
@@ -376,7 +376,7 @@ class InventoryDetails implements ModelInterface, ArrayAccess
     /**
      * Sets unfulfillable_quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity $unfulfillable_quantity unfulfillable_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\UnfulfillableQuantity $unfulfillable_quantity unfulfillable_quantity
      *
      * @return $this
      */

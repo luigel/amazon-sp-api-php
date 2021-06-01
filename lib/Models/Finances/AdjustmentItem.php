@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AdjustmentItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An item in an adjustment to the seller&#x27;s account.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AdjustmentItem implements ModelInterface, ArrayAccess
 {
@@ -47,8 +47,8 @@ class AdjustmentItem implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'quantity' => 'string',
-'per_unit_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'total_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'per_unit_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
+'total_amount' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency',
 'seller_sku' => 'string',
 'fn_sku' => 'string',
 'product_description' => 'string',
@@ -246,7 +246,7 @@ class AdjustmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets per_unit_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getPerUnitAmount()
     {
@@ -256,7 +256,7 @@ class AdjustmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets per_unit_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $per_unit_amount per_unit_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $per_unit_amount per_unit_amount
      *
      * @return $this
      */
@@ -270,7 +270,7 @@ class AdjustmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets total_amount.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency
      */
     public function getTotalAmount()
     {
@@ -280,7 +280,7 @@ class AdjustmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets total_amount.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency $total_amount total_amount
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\Currency $total_amount total_amount
      *
      * @return $this
      */

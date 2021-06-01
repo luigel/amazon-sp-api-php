@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * PartneredSmallParcelDataInput Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information that is required by an Amazon-partnered carrier to ship a Small Parcel inbound shipment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'package_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList',
+        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList',
 'carrier_name' => 'string',    ];
 
     /**
@@ -192,7 +192,7 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
     /**
      * Gets package_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList
      */
     public function getPackageList()
     {
@@ -202,7 +202,7 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
     /**
      * Sets package_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList $package_list package_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList $package_list package_list
      *
      * @return $this
      */

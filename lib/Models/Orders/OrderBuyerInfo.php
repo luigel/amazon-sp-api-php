@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Orders;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Orders;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * OrderBuyerInfo Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Buyer information for an order.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class OrderBuyerInfo implements ModelInterface, ArrayAccess
 {
@@ -50,7 +50,7 @@ class OrderBuyerInfo implements ModelInterface, ArrayAccess
 'buyer_email' => 'string',
 'buyer_name' => 'string',
 'buyer_county' => 'string',
-'buyer_tax_info' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo',
+'buyer_tax_info' => '\Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo',
 'purchase_order_number' => 'string',    ];
 
     /**
@@ -316,7 +316,7 @@ class OrderBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Gets buyer_tax_info.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo
      */
     public function getBuyerTaxInfo()
     {
@@ -326,7 +326,7 @@ class OrderBuyerInfo implements ModelInterface, ArrayAccess
     /**
      * Sets buyer_tax_info.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo $buyer_tax_info buyer_tax_info
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Orders\BuyerTaxInfo $buyer_tax_info buyer_tax_info
      *
      * @return $this
      */

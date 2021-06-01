@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InboundShipmentPlanItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Item information used to create an inbound shipment. Returned by the createInboundShipmentPlan operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
 {
@@ -48,8 +48,8 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'fulfillment_network_sku' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'prep_details_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -262,7 +262,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
      */
     public function getQuantity()
     {
@@ -272,7 +272,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Gets prep_details_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList
      */
     public function getPrepDetailsList()
     {
@@ -296,7 +296,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Sets prep_details_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList $prep_details_list prep_details_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList $prep_details_list prep_details_list
      *
      * @return $this
      */

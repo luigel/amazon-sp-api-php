@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateShipmentResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the createShipment operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateShipmentResult implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId',
-'eligible_rates' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateList',    ];
+        'shipment_id' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId',
+'eligible_rates' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId
      */
     public function getShipmentId()
     {
@@ -209,7 +209,7 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId $shipment_id shipment_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\ShipmentId $shipment_id shipment_id
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Gets eligible_rates.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateList
      */
     public function getEligibleRates()
     {
@@ -233,7 +233,7 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess
     /**
      * Sets eligible_rates.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\RateList $eligible_rates eligible_rates
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RateList $eligible_rates eligible_rates
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-09-04
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Feeds;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Feeds;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateFeedSpecification Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateFeedSpecification implements ModelInterface, ArrayAccess
 {
@@ -46,7 +46,7 @@ class CreateFeedSpecification implements ModelInterface, ArrayAccess
         'feed_type' => 'string',
 'marketplace_ids' => 'string[]',
 'input_feed_document_id' => 'string',
-'feed_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions',    ];
+'feed_options' => '\Luigel\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -283,7 +283,7 @@ class CreateFeedSpecification implements ModelInterface, ArrayAccess
     /**
      * Gets feed_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions
      */
     public function getFeedOptions()
     {
@@ -293,7 +293,7 @@ class CreateFeedSpecification implements ModelInterface, ArrayAccess
     /**
      * Sets feed_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions $feed_options feed_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Feeds\FeedOptions $feed_options feed_options
      *
      * @return $this
      */

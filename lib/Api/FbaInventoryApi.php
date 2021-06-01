@@ -2,7 +2,7 @@
 /**
  * FbaInventoryApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,13 +13,13 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Request;
@@ -27,7 +27,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * FbaInventoryApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FbaInventoryApi
 {
@@ -73,10 +73,10 @@ class FbaInventoryApi
      * @param string[]  $seller_skus      A list of seller SKUs for which to return inventory summaries. You may specify up to 50 SKUs. (optional)
      * @param string    $next_token       String token returned in the response of your previous request. (optional)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse
      */
     public function getInventorySummaries($granularity_type, $granularity_id, $marketplace_ids, $details = 'false', $start_date_time = null, $seller_skus = null, $next_token = null)
     {
@@ -96,10 +96,10 @@ class FbaInventoryApi
      * @param string[]  $seller_skus      A list of seller SKUs for which to return inventory summaries. You may specify up to 50 SKUs. (optional)
      * @param string    $next_token       String token returned in the response of your previous request. (optional)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\GetInventorySummariesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInventorySummariesWithHttpInfo($granularity_type, $granularity_id, $marketplace_ids, $details = 'false', $start_date_time = null, $seller_skus = null, $next_token = null)
     {

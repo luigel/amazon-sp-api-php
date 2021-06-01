@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * UnfulfillablePreviewItem Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Information about unfulfillable items in a fulfillment order preview.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
 {
@@ -47,9 +47,9 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
-'quantity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
+'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity',
 'seller_fulfillment_order_item_id' => 'string',
-'item_unfulfillable_reasons' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList',    ];
+'item_unfulfillable_reasons' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -238,7 +238,7 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity
      */
     public function getQuantity()
     {
@@ -248,7 +248,7 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\Quantity $quantity quantity
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
     /**
      * Gets item_unfulfillable_reasons.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList
      */
     public function getItemUnfulfillableReasons()
     {
@@ -296,7 +296,7 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess
     /**
      * Sets item_unfulfillable_reasons.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList $item_unfulfillable_reasons item_unfulfillable_reasons
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\StringList $item_unfulfillable_reasons item_unfulfillable_reasons
      *
      * @return $this
      */

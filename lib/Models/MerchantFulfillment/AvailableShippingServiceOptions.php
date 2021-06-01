@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * AvailableShippingServiceOptions Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The available shipping service options.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'available_carrier_will_pick_up_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList',
-'available_delivery_experience_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList',    ];
+        'available_carrier_will_pick_up_options' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList',
+'available_delivery_experience_options' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
     /**
      * Gets available_carrier_will_pick_up_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList
      */
     public function getAvailableCarrierWillPickUpOptions()
     {
@@ -209,7 +209,7 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
     /**
      * Sets available_carrier_will_pick_up_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList $available_carrier_will_pick_up_options available_carrier_will_pick_up_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableCarrierWillPickUpOptionsList $available_carrier_will_pick_up_options available_carrier_will_pick_up_options
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
     /**
      * Gets available_delivery_experience_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList
      */
     public function getAvailableDeliveryExperienceOptions()
     {
@@ -233,7 +233,7 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess
     /**
      * Sets available_delivery_experience_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList $available_delivery_experience_options available_delivery_experience_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AvailableDeliveryExperienceOptionsList $available_delivery_experience_options available_delivery_experience_options
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * InboundShipmentRequest Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The request schema for an inbound shipment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class InboundShipmentRequest implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'inbound_shipment_header' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader',
-'inbound_shipment_items' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList',
+        'inbound_shipment_header' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader',
+'inbound_shipment_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList',
 'marketplace_id' => 'string',    ];
 
     /**
@@ -208,7 +208,7 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets inbound_shipment_header.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader
      */
     public function getInboundShipmentHeader()
     {
@@ -218,7 +218,7 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets inbound_shipment_header.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader $inbound_shipment_header inbound_shipment_header
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader $inbound_shipment_header inbound_shipment_header
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets inbound_shipment_items.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList
      */
     public function getInboundShipmentItems()
     {
@@ -242,7 +242,7 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets inbound_shipment_items.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList $inbound_shipment_items inbound_shipment_items
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList $inbound_shipment_items inbound_shipment_items
      *
      * @return $this
      */

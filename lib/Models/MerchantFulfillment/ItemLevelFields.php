@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * ItemLevelFields Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class ItemLevelFields implements ModelInterface, ArrayAccess
 {
@@ -44,7 +44,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'additional_inputs' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList',    ];
+'additional_inputs' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -220,7 +220,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess
     /**
      * Gets additional_inputs.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList
      */
     public function getAdditionalInputs()
     {
@@ -230,7 +230,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess
     /**
      * Sets additional_inputs.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList $additional_inputs additional_inputs
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\AdditionalInputsList $additional_inputs additional_inputs
      *
      * @return $this
      */

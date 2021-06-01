@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Finances;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Finances;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * FinancialEvents Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Contains all information related to a financial event.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FinancialEvents implements ModelInterface, ArrayAccess
 {
@@ -46,28 +46,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'shipment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
-'refund_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
-'guarantee_claim_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
-'chargeback_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
-'pay_with_amazon_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList',
-'service_provider_credit_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList',
-'retrocharge_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList',
-'rental_transaction_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList',
-'product_ads_payment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList',
-'service_fee_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList',
-'seller_deal_payment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList',
-'debt_recovery_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList',
-'loan_servicing_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList',
-'adjustment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList',
-'safet_reimbursement_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList',
-'seller_review_enrollment_payment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList',
-'fba_liquidation_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList',
-'coupon_payment_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList',
-'imaging_services_fee_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList',
-'network_commingling_transaction_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList',
-'affordability_expense_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList',
-'affordability_expense_reversal_event_list' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList',    ];
+        'shipment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
+'refund_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
+'guarantee_claim_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
+'chargeback_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList',
+'pay_with_amazon_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList',
+'service_provider_credit_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList',
+'retrocharge_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList',
+'rental_transaction_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList',
+'product_ads_payment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList',
+'service_fee_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList',
+'seller_deal_payment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList',
+'debt_recovery_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList',
+'loan_servicing_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList',
+'adjustment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList',
+'safet_reimbursement_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList',
+'seller_review_enrollment_payment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList',
+'fba_liquidation_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList',
+'coupon_payment_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList',
+'imaging_services_fee_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList',
+'network_commingling_transaction_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList',
+'affordability_expense_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList',
+'affordability_expense_reversal_event_list' => '\Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -312,7 +312,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
      */
     public function getShipmentEventList()
     {
@@ -322,7 +322,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $shipment_event_list shipment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $shipment_event_list shipment_event_list
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets refund_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
      */
     public function getRefundEventList()
     {
@@ -346,7 +346,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets refund_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $refund_event_list refund_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $refund_event_list refund_event_list
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets guarantee_claim_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
      */
     public function getGuaranteeClaimEventList()
     {
@@ -370,7 +370,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets guarantee_claim_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $guarantee_claim_event_list guarantee_claim_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $guarantee_claim_event_list guarantee_claim_event_list
      *
      * @return $this
      */
@@ -384,7 +384,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets chargeback_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList
      */
     public function getChargebackEventList()
     {
@@ -394,7 +394,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets chargeback_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $chargeback_event_list chargeback_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ShipmentEventList $chargeback_event_list chargeback_event_list
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets pay_with_amazon_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList
      */
     public function getPayWithAmazonEventList()
     {
@@ -418,7 +418,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets pay_with_amazon_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList $pay_with_amazon_event_list pay_with_amazon_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\PayWithAmazonEventList $pay_with_amazon_event_list pay_with_amazon_event_list
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets service_provider_credit_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList
      */
     public function getServiceProviderCreditEventList()
     {
@@ -442,7 +442,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets service_provider_credit_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList $service_provider_credit_event_list service_provider_credit_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\SolutionProviderCreditEventList $service_provider_credit_event_list service_provider_credit_event_list
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets retrocharge_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList
      */
     public function getRetrochargeEventList()
     {
@@ -466,7 +466,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets retrocharge_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList $retrocharge_event_list retrocharge_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\RetrochargeEventList $retrocharge_event_list retrocharge_event_list
      *
      * @return $this
      */
@@ -480,7 +480,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets rental_transaction_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList
      */
     public function getRentalTransactionEventList()
     {
@@ -490,7 +490,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets rental_transaction_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList $rental_transaction_event_list rental_transaction_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\RentalTransactionEventList $rental_transaction_event_list rental_transaction_event_list
      *
      * @return $this
      */
@@ -504,7 +504,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets product_ads_payment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList
      */
     public function getProductAdsPaymentEventList()
     {
@@ -514,7 +514,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets product_ads_payment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList $product_ads_payment_event_list product_ads_payment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ProductAdsPaymentEventList $product_ads_payment_event_list product_ads_payment_event_list
      *
      * @return $this
      */
@@ -528,7 +528,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets service_fee_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList
      */
     public function getServiceFeeEventList()
     {
@@ -538,7 +538,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets service_fee_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList $service_fee_event_list service_fee_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ServiceFeeEventList $service_fee_event_list service_fee_event_list
      *
      * @return $this
      */
@@ -552,7 +552,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets seller_deal_payment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList
      */
     public function getSellerDealPaymentEventList()
     {
@@ -562,7 +562,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets seller_deal_payment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList $seller_deal_payment_event_list seller_deal_payment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerDealPaymentEventList $seller_deal_payment_event_list seller_deal_payment_event_list
      *
      * @return $this
      */
@@ -576,7 +576,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets debt_recovery_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList
      */
     public function getDebtRecoveryEventList()
     {
@@ -586,7 +586,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets debt_recovery_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList $debt_recovery_event_list debt_recovery_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\DebtRecoveryEventList $debt_recovery_event_list debt_recovery_event_list
      *
      * @return $this
      */
@@ -600,7 +600,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets loan_servicing_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList
      */
     public function getLoanServicingEventList()
     {
@@ -610,7 +610,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets loan_servicing_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList $loan_servicing_event_list loan_servicing_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\LoanServicingEventList $loan_servicing_event_list loan_servicing_event_list
      *
      * @return $this
      */
@@ -624,7 +624,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets adjustment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList
      */
     public function getAdjustmentEventList()
     {
@@ -634,7 +634,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets adjustment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList $adjustment_event_list adjustment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\AdjustmentEventList $adjustment_event_list adjustment_event_list
      *
      * @return $this
      */
@@ -648,7 +648,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets safet_reimbursement_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList
      */
     public function getSafetReimbursementEventList()
     {
@@ -658,7 +658,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets safet_reimbursement_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList $safet_reimbursement_event_list safet_reimbursement_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\SAFETReimbursementEventList $safet_reimbursement_event_list safet_reimbursement_event_list
      *
      * @return $this
      */
@@ -672,7 +672,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets seller_review_enrollment_payment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList
      */
     public function getSellerReviewEnrollmentPaymentEventList()
     {
@@ -682,7 +682,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets seller_review_enrollment_payment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList $seller_review_enrollment_payment_event_list seller_review_enrollment_payment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\SellerReviewEnrollmentPaymentEventList $seller_review_enrollment_payment_event_list seller_review_enrollment_payment_event_list
      *
      * @return $this
      */
@@ -696,7 +696,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets fba_liquidation_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList
      */
     public function getFbaLiquidationEventList()
     {
@@ -706,7 +706,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets fba_liquidation_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList $fba_liquidation_event_list fba_liquidation_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\FBALiquidationEventList $fba_liquidation_event_list fba_liquidation_event_list
      *
      * @return $this
      */
@@ -720,7 +720,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets coupon_payment_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList
      */
     public function getCouponPaymentEventList()
     {
@@ -730,7 +730,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets coupon_payment_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList $coupon_payment_event_list coupon_payment_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\CouponPaymentEventList $coupon_payment_event_list coupon_payment_event_list
      *
      * @return $this
      */
@@ -744,7 +744,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets imaging_services_fee_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList
      */
     public function getImagingServicesFeeEventList()
     {
@@ -754,7 +754,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets imaging_services_fee_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList $imaging_services_fee_event_list imaging_services_fee_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\ImagingServicesFeeEventList $imaging_services_fee_event_list imaging_services_fee_event_list
      *
      * @return $this
      */
@@ -768,7 +768,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets network_commingling_transaction_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList
      */
     public function getNetworkComminglingTransactionEventList()
     {
@@ -778,7 +778,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets network_commingling_transaction_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList $network_commingling_transaction_event_list network_commingling_transaction_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\NetworkComminglingTransactionEventList $network_commingling_transaction_event_list network_commingling_transaction_event_list
      *
      * @return $this
      */
@@ -792,7 +792,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets affordability_expense_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList
      */
     public function getAffordabilityExpenseEventList()
     {
@@ -802,7 +802,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets affordability_expense_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList $affordability_expense_event_list affordability_expense_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList $affordability_expense_event_list affordability_expense_event_list
      *
      * @return $this
      */
@@ -816,7 +816,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Gets affordability_expense_reversal_event_list.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList
      */
     public function getAffordabilityExpenseReversalEventList()
     {
@@ -826,7 +826,7 @@ class FinancialEvents implements ModelInterface, ArrayAccess
     /**
      * Sets affordability_expense_reversal_event_list.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList $affordability_expense_reversal_event_list affordability_expense_reversal_event_list
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Finances\AffordabilityExpenseEventList $affordability_expense_reversal_event_list affordability_expense_reversal_event_list
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v0
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
+namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetAdditionalSellerInputsResponse Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Response schema.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -192,7 +192,7 @@ class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payload.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult
      */
     public function getPayload()
     {
@@ -202,7 +202,7 @@ class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payload.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResult $payload payload
      *
      * @return $this
      */
@@ -216,7 +216,7 @@ class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList
      */
     public function getErrors()
     {
@@ -226,7 +226,7 @@ class GetAdditionalSellerInputsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList $errors errors
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\ErrorList $errors errors
      *
      * @return $this
      */

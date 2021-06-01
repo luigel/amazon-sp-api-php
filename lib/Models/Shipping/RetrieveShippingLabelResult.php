@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * RetrieveShippingLabelResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the retrieveShippingLabel operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'label_stream' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelStream',
-'label_specification' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
+        'label_stream' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelStream',
+'label_specification' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
     /**
      * Gets label_stream.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelStream
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelStream
      */
     public function getLabelStream()
     {
@@ -209,7 +209,7 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
     /**
      * Sets label_stream.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelStream $label_stream label_stream
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelStream $label_stream label_stream
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
     /**
      * Gets label_specification.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification
      */
     public function getLabelSpecification()
     {
@@ -233,7 +233,7 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess
     /**
      * Sets label_specification.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LabelSpecification $label_specification label_specification
      *
      * @return $this
      */

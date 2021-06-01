@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaInventory;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * GetInventorySummariesResult Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The payload schema for the getInventorySummaries operation.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class GetInventorySummariesResult implements ModelInterface, ArrayAccess
 {
@@ -46,8 +46,8 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'granularity' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity',
-'inventory_summaries' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries',    ];
+        'granularity' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity',
+'inventory_summaries' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +199,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess
     /**
      * Gets granularity.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity
      */
     public function getGranularity()
     {
@@ -209,7 +209,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess
     /**
      * Sets granularity.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity $granularity granularity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\Granularity $granularity granularity
      *
      * @return $this
      */
@@ -223,7 +223,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_summaries.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries
      */
     public function getInventorySummaries()
     {
@@ -233,7 +233,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_summaries.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries $inventory_summaries inventory_summaries
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaInventory\InventorySummaries $inventory_summaries inventory_summaries
      *
      * @return $this
      */

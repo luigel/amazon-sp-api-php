@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,16 +15,16 @@
  * OpenAPI spec version: 2020-09-04
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Reports;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Reports;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * CreateReportScheduleSpecification Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class CreateReportScheduleSpecification implements ModelInterface, ArrayAccess
 {
@@ -45,7 +45,7 @@ class CreateReportScheduleSpecification implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'report_type' => 'string',
 'marketplace_ids' => 'string[]',
-'report_options' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
+'report_options' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions',
 'period' => 'string',
 'next_report_creation_time' => '\DateTime',    ];
 
@@ -319,7 +319,7 @@ self::PERIOD_P1_M,        ];
     /**
      * Gets report_options.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions
      */
     public function getReportOptions()
     {
@@ -329,7 +329,7 @@ self::PERIOD_P1_M,        ];
     /**
      * Sets report_options.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportOptions $report_options report_options
      *
      * @return $this
      */

@@ -2,7 +2,7 @@
 /**
  * FbaOutboundApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,33 +13,33 @@
  * OpenAPI spec version: 2020-07-01
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\ApiException;
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\ApiException;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 
 /**
  * FbaOutboundApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class FbaOutboundApi
 {
@@ -83,7 +83,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse
      */
     public function cancelFulfillmentOrder($seller_fulfillment_order_id)
     {
@@ -100,7 +100,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CancelFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id)
     {
@@ -182,12 +182,12 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentOrder.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body body (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse
      */
     public function createFulfillmentOrder($body)
     {
@@ -199,12 +199,12 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentOrderWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFulfillmentOrderWithHttpInfo($body)
     {
@@ -216,7 +216,7 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentOrderAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -235,7 +235,7 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentOrderAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -251,7 +251,7 @@ class FbaOutboundApi
     /**
      * Create request for operation 'createFulfillmentOrder'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -277,13 +277,13 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentReturn.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        body (required)
      * @param string                                                                                      $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse
      */
     public function createFulfillmentReturn($body, $seller_fulfillment_order_id)
     {
@@ -295,13 +295,13 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentReturnWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
      * @param string                                                                                      $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFulfillmentReturnWithHttpInfo($body, $seller_fulfillment_order_id)
     {
@@ -313,7 +313,7 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentReturnAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
      * @param string                                                                                      $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. (required)
      *
      * @throws \InvalidArgumentException
@@ -333,7 +333,7 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentReturnAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
      * @param string                                                                                      $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. (required)
      *
      * @throws \InvalidArgumentException
@@ -350,7 +350,7 @@ class FbaOutboundApi
     /**
      * Create request for operation 'createFulfillmentReturn'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\CreateFulfillmentReturnRequest $body                        (required)
      * @param string                                                                                      $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. (required)
      *
      * @throws \InvalidArgumentException
@@ -397,7 +397,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse
      */
     public function getFeatureInventory($marketplace_id, $feature_name, $next_token = null)
     {
@@ -416,7 +416,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureInventoryResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFeatureInventoryWithHttpInfo($marketplace_id, $feature_name, $next_token = null)
     {
@@ -524,7 +524,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse
      */
     public function getFeatureSKU($marketplace_id, $feature_name, $seller_sku)
     {
@@ -543,7 +543,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeatureSkuResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFeatureSKUWithHttpInfo($marketplace_id, $feature_name, $seller_sku)
     {
@@ -657,7 +657,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse
      */
     public function getFeatures($marketplace_id)
     {
@@ -674,7 +674,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFeaturesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFeaturesWithHttpInfo($marketplace_id)
     {
@@ -757,7 +757,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse
      */
     public function getFulfillmentOrder($seller_fulfillment_order_id)
     {
@@ -774,7 +774,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id)
     {
@@ -856,12 +856,12 @@ class FbaOutboundApi
     /**
      * Operation getFulfillmentPreview.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body body (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse
      */
     public function getFulfillmentPreview($body)
     {
@@ -873,12 +873,12 @@ class FbaOutboundApi
     /**
      * Operation getFulfillmentPreviewWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFulfillmentPreviewWithHttpInfo($body)
     {
@@ -890,7 +890,7 @@ class FbaOutboundApi
     /**
      * Operation getFulfillmentPreviewAsync.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -909,7 +909,7 @@ class FbaOutboundApi
     /**
      * Operation getFulfillmentPreviewAsyncWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -925,7 +925,7 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getFulfillmentPreview'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetFulfillmentPreviewRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
@@ -956,7 +956,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse
      */
     public function getPackageTrackingDetails($package_number)
     {
@@ -973,7 +973,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\GetPackageTrackingDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPackageTrackingDetailsWithHttpInfo($package_number)
     {
@@ -1057,7 +1057,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse
      */
     public function listAllFulfillmentOrders($query_start_date = null, $next_token = null)
     {
@@ -1075,7 +1075,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAllFulfillmentOrdersWithHttpInfo($query_start_date = null, $next_token = null)
     {
@@ -1116,7 +1116,7 @@ class FbaOutboundApi
      */
     public function listAllFulfillmentOrdersAsyncWithHttpInfo($query_start_date = null, $next_token = null)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListAllFulfillmentOrdersResponse';
         $request = $this->listAllFulfillmentOrdersRequest($query_start_date, $next_token);
 
         return $this->sendRequestAsync($request, ListAllFulfillmentOrdersResponse::class);
@@ -1164,7 +1164,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse
      */
     public function listReturnReasonCodes($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
     {
@@ -1184,7 +1184,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listReturnReasonCodesWithHttpInfo($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
     {
@@ -1229,7 +1229,7 @@ class FbaOutboundApi
      */
     public function listReturnReasonCodesAsyncWithHttpInfo($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\ListReturnReasonCodesResponse';
         $request = $this->listReturnReasonCodesRequest($seller_sku, $language, $marketplace_id, $seller_fulfillment_order_id);
 
         return $this->sendRequestAsync($request, ListReturnReasonCodesResponse::class);
@@ -1312,7 +1312,7 @@ class FbaOutboundApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentOutbound\UpdateFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateFulfillmentOrderWithHttpInfo($body, $seller_fulfillment_order_id)
     {

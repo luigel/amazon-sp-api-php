@@ -2,7 +2,7 @@
 /**
  * SolicitationsApi.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -13,14 +13,14 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Api;
+namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use ClouSale\AmazonSellingPartnerAPI\Configuration;
-use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse;
-use ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Request;
@@ -28,7 +28,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * SolicitationsApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SolicitationsApi
 {
@@ -69,10 +69,10 @@ class SolicitationsApi
      * @param string   $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
      * @param string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse
      */
     public function createProductReviewAndSellerFeedbackSolicitation($amazon_order_id, $marketplace_ids)
     {
@@ -87,10 +87,10 @@ class SolicitationsApi
      * @param string   $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
      * @param string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProductReviewAndSellerFeedbackSolicitationWithHttpInfo($amazon_order_id, $marketplace_ids)
     {
@@ -131,7 +131,7 @@ class SolicitationsApi
      */
     public function createProductReviewAndSellerFeedbackSolicitationAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\CreateProductReviewAndSellerFeedbackSolicitationResponse';
         $request = $this->createProductReviewAndSellerFeedbackSolicitationRequest($amazon_order_id, $marketplace_ids);
 
         return $this->sendRequestAsync($request, CreateProductReviewAndSellerFeedbackSolicitationResponse::class);
@@ -191,10 +191,10 @@ class SolicitationsApi
      * @param string   $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
      * @param string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse
      */
     public function getSolicitationActionsForOrder($amazon_order_id, $marketplace_ids)
     {
@@ -209,10 +209,10 @@ class SolicitationsApi
      * @param string   $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
      * @param string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
-     * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSolicitationActionsForOrderWithHttpInfo($amazon_order_id, $marketplace_ids)
     {
@@ -253,7 +253,7 @@ class SolicitationsApi
      */
     public function getSolicitationActionsForOrderAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Solicitations\GetSolicitationActionsForOrderResponse';
         $request = $this->getSolicitationActionsForOrderRequest($amazon_order_id, $marketplace_ids);
 
         return $this->sendRequestAsync($request, GetSolicitationActionsForOrderResponse::class);

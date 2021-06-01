@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
+namespace Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * SmallAndLightEnrollment Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The Small and Light enrollment status of the item indicated by the specified seller SKU.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'marketplace_id' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId',
-'seller_sku' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU',
-'status' => '\ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus',    ];
+        'marketplace_id' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId',
+'seller_sku' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU',
+'status' => '\Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -208,7 +208,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Gets marketplace_id.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId
      */
     public function getMarketplaceId()
     {
@@ -218,7 +218,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Sets marketplace_id.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId $marketplace_id marketplace_id
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\MarketplaceId $marketplace_id marketplace_id
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Gets seller_sku.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU
      */
     public function getSellerSku()
     {
@@ -242,7 +242,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Sets seller_sku.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU $seller_sku seller_sku
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SellerSKU $seller_sku seller_sku
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Gets status.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus
      */
     public function getStatus()
     {
@@ -266,7 +266,7 @@ class SmallAndLightEnrollment implements ModelInterface, ArrayAccess
     /**
      * Sets status.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus $status status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\FbaSmallAndLight\SmallAndLightEnrollmentStatus $status status
      *
      * @return $this
      */

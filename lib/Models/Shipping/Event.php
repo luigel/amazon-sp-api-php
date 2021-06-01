@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 
 /**
@@ -15,11 +15,11 @@
  * OpenAPI spec version: v1
  */
 
-namespace ClouSale\AmazonSellingPartnerAPI\Models\Shipping;
+namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
 use ArrayAccess;
-use ClouSale\AmazonSellingPartnerAPI\Models\ModelInterface;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\ModelInterface;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * Event Class Doc Comment.
@@ -27,7 +27,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An event of a shipment
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Stefan Neuhaus / Luigel
  */
 class Event implements ModelInterface, ArrayAccess
 {
@@ -46,9 +46,9 @@ class Event implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'event_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventCode',
+        'event_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventCode',
 'event_time' => '\DateTime',
-'location' => '\ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Location',    ];
+'location' => '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\Location',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -205,7 +205,7 @@ class Event implements ModelInterface, ArrayAccess
     /**
      * Gets event_code.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventCode
      */
     public function getEventCode()
     {
@@ -215,7 +215,7 @@ class Event implements ModelInterface, ArrayAccess
     /**
      * Sets event_code.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\EventCode $event_code event_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\EventCode $event_code event_code
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class Event implements ModelInterface, ArrayAccess
     /**
      * Gets location.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Location
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Location
      */
     public function getLocation()
     {
@@ -263,7 +263,7 @@ class Event implements ModelInterface, ArrayAccess
     /**
      * Sets location.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Shipping\Location $location location
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\Location $location location
      *
      * @return $this
      */
