@@ -22,7 +22,7 @@ The purpose of this package is to have an easy way of getting started with the A
 Just require this package via composer:
 
 ```
-composer require clousale/amazon-sp-api-php
+composer require luigel/amazon-sp-api-php
 ```
 
 # Detailed Documentation
