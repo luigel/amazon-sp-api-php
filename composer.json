@@ -39,5 +39,6 @@
     },
     "autoload-dev": {
         "psr-4": { "Luigel\\AmazonSellingPartnerAPI\\" : "test/" }
-    }
+    },
+    "minimum-stability": "dev"
 }
