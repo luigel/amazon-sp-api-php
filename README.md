@@ -1,3 +1,7 @@
+# Forked
+
+This is forked from https://github.com/clousale/amazon-sp-api-php
+
 # Amazon Selling Partner API PHP
 
 This is an API Binding in PHP for the new Amazon Selling Partner API.
@@ -122,5 +126,6 @@ Feature Requests & Pull Requests are very welcome!
 
 # Thanks
 
-Thanks to @clousale for this package.
+Thanks to [ClouSale](https://github.com/clousale) for this package.
+
 Thanks go out to everybody who added PRs and worked on this package.
