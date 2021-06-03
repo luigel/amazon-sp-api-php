@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The createFulfillmentReturn operation creates a fulfillment return for items that were fulfilled using the createFulfillmentOrder operation. For calls to createFulfillmentReturn, you must include ReturnReasonCode values returned by a previous call to the listReturnReasonCodes operation.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class CreateFulfillmentReturnRequest implements ModelInterface, ArrayAccess
 {

@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A list of additional inputs.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class AdditionalInputsList implements ModelInterface, ArrayAccess, IterableType
 {

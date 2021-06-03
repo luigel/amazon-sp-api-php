@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description The COD (Cash On Delivery) charges that you associate with a COD fulfillment order.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class CODSettings implements ModelInterface, ArrayAccess
 {

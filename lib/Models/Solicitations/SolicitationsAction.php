@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A simple object containing the name of the template.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class SolicitationsAction implements ModelInterface, ArrayAccess
 {

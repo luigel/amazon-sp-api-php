@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A payment event for Fulfillment by Amazon (FBA) inventory liquidation. This event is used only in the US marketplace.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FBALiquidationEvent implements ModelInterface, ArrayAccess
 {

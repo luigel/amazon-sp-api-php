@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description Dimension and weight information for the package.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class PartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
 {

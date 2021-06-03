@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A list of payment instruments.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ChargeInstrumentList implements ModelInterface, ArrayAccess, IterableType
 {

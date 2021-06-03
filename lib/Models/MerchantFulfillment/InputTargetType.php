@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -23,7 +23,7 @@ namespace Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment;
 
  * @description Indicates whether the additional seller input is at the item or shipment level.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class InputTargetType
 {

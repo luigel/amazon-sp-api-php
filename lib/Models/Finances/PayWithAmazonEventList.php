@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description A list of events related to the seller&#x27;s Pay with Amazon account.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class PayWithAmazonEventList implements ModelInterface, ArrayAccess, IterableType
 {

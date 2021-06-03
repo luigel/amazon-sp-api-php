@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An array of fulfillment shipment information.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FulfillmentShipmentList implements ModelInterface, ArrayAccess, IterableType
 {

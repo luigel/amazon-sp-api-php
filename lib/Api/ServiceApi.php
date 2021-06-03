@@ -2,7 +2,7 @@
 /**
  * ServiceApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -31,7 +31,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * ServiceApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ServiceApi
 {

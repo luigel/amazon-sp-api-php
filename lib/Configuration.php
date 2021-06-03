@@ -2,7 +2,7 @@
 /**
  * Configuration.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -18,7 +18,7 @@ namespace Luigel\AmazonSellingPartnerAPI;
 /**
  * Configuration Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class Configuration
 {

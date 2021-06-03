@@ -2,7 +2,7 @@
 /**
  * ShippingApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -35,7 +35,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * ShippingApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ShippingApi
 {

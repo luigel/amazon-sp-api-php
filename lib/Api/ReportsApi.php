@@ -2,7 +2,7 @@
 /**
  * ReportsApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -37,7 +37,7 @@ use GuzzleHttp\Exception\RequestException;
 /**
  * ReportsApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ReportsApi
 {

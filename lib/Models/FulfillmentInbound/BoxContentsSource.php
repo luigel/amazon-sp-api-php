@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -23,7 +23,7 @@ namespace Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound;
 
  * @description Where the seller provided box contents information for a shipment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class BoxContentsSource
 {

@@ -2,7 +2,7 @@
 /**
  * SellersApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -26,7 +26,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * SellersApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class SellersApi
 {

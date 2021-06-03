@@ -2,7 +2,7 @@
 /**
  * CatalogApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -31,7 +31,7 @@ use InvalidArgumentException;
 /**
  * CatalogApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class CatalogApi
 {

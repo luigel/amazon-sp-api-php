@@ -2,7 +2,7 @@
 /**
  * FeesApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -26,7 +26,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * FeesApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FeesApi
 {

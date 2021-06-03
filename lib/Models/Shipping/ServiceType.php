@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -23,7 +23,7 @@ namespace Luigel\AmazonSellingPartnerAPI\Models\Shipping;
 
  * @description The type of shipping service that will be used for the service offering.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ServiceType
 {

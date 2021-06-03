@@ -2,7 +2,7 @@
 /**
  * OrdersV0Api.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -31,7 +31,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * OrdersV0Api Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class OrdersApi
 {

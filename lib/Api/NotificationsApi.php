@@ -2,7 +2,7 @@
 /**
  * NotificationsApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -35,7 +35,7 @@ use GuzzleHttp\Psr7\Request;
 /**
  * NotificationsApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class NotificationsApi
 {

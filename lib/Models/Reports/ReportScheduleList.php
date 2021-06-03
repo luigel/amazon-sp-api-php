@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -25,7 +25,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * ReportScheduleList Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ReportScheduleList implements ModelInterface, ArrayAccess, IterableType
 {

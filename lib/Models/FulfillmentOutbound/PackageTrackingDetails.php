@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -24,7 +24,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * PackageTrackingDetails Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class PackageTrackingDetails implements ModelInterface, ArrayAccess
 {

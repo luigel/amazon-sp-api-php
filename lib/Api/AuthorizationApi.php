@@ -2,7 +2,7 @@
 /**
  * AuthorizationApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use InvalidArgumentException;
 /**
  * AuthorizationApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class AuthorizationApi
 {

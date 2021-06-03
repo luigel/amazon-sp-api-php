@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -24,7 +24,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * GetMyFeesEstimateResponse Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class GetMyFeesEstimateResponse implements ModelInterface, ArrayAccess
 {

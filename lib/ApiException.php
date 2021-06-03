@@ -2,7 +2,7 @@
 /**
  * ApiException.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -20,7 +20,7 @@ use Exception;
 /**
  * ApiException Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ApiException extends Exception
 {

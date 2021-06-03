@@ -2,7 +2,7 @@
 /**
  * FbaInboundApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -38,7 +38,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * FbaInboundApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FbaInboundApi
 {

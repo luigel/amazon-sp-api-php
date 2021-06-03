@@ -2,7 +2,7 @@
 /**
  * FeedsApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -31,7 +31,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * FeedsApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FeedsApi
 {

@@ -2,7 +2,7 @@
 /**
  * ApiException.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -18,7 +18,7 @@ namespace Luigel\AmazonSellingPartnerAPI;
 /**
  * ApiException Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class HeaderSelector
 {

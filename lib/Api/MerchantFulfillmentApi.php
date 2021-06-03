@@ -2,7 +2,7 @@
 /**
  * MerchantFulfillmentApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -33,7 +33,7 @@ use InvalidArgumentException;
 /**
  * MerchantFulfillmentApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class MerchantFulfillmentApi
 {

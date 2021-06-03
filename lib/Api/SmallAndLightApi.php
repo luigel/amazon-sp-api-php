@@ -2,7 +2,7 @@
 /**
  * SmallAndLightApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -28,7 +28,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * SmallAndLightApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class SmallAndLightApi
 {

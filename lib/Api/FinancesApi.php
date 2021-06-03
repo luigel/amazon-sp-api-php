@@ -2,7 +2,7 @@
 /**
  * DefaultApi.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use GuzzleHttp\ClientInterface;
 /**
  * DefaultApi Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class FinancesApi
 {

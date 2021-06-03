@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -20,7 +20,7 @@ namespace Luigel\AmazonSellingPartnerAPI;
 /**
  * ObjectSerializer Class Doc Comment.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class ObjectSerializer
 {

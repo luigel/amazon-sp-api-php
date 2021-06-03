@@ -4,7 +4,7 @@
  *
  * PHP version 5
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 
 /**
@@ -27,7 +27,7 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
  * @description An Amazon-defined order identifier, in 3-7-7 format. &lt;br&gt;**Pattern** : &#x60;[0-9A-Z]{3}-[0-9]{7}-[0-9]{7}&#x60;.
  *
- * @author   Stefan Neuhaus / Luigel
+ * @author   Stefan Neuhaus
  */
 class AmazonOrderId implements ModelInterface, ArrayAccess
 {
