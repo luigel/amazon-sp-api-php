@@ -49,8 +49,8 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
         'seller_sku' => 'string',
 'asin' => 'string',
 'condition' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Condition',
-'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'quantity_in_case' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'quantity' => 'int',
+'quantity_in_case' => 'int',
 'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
 
     /**
@@ -301,7 +301,7 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantity()
     {
@@ -311,7 +311,7 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity quantity
+     * @param int $quantity quantity
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_in_case.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantityInCase()
     {
@@ -335,7 +335,7 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_in_case.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_in_case quantity_in_case
+     * @param int $quantity_in_case quantity_in_case
      *
      * @return $this
      */

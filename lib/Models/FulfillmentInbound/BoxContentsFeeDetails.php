@@ -46,7 +46,7 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'total_units' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+        'total_units' => 'int',
 'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',
 'total_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
 
@@ -198,7 +198,7 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess
     /**
      * Gets total_units.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getTotalUnits()
     {
@@ -208,7 +208,7 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess
     /**
      * Sets total_units.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $total_units total_units
+     * @param int $total_units total_units
      *
      * @return $this
      */

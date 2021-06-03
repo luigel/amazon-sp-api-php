@@ -49,9 +49,9 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
         'shipment_id' => 'string',
 'seller_sku' => 'string',
 'fulfillment_network_sku' => 'string',
-'quantity_shipped' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'quantity_received' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
-'quantity_in_case' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'quantity_shipped' => 'int',
+'quantity_received' => 'int',
+'quantity_in_case' => 'int',
 'release_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
 'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
 
@@ -307,7 +307,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_shipped.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantityShipped()
     {
@@ -317,7 +317,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_shipped.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_shipped quantity_shipped
+     * @param int $quantity_shipped quantity_shipped
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_received.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantityReceived()
     {
@@ -341,7 +341,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_received.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_received quantity_received
+     * @param int $quantity_received quantity_received
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity_in_case.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantityInCase()
     {
@@ -365,7 +365,7 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_in_case.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity_in_case quantity_in_case
+     * @param int $quantity_in_case quantity_in_case
      *
      * @return $this
      */

@@ -48,7 +48,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'fulfillment_network_sku' => 'string',
-'quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity',
+'quantity' => 'int',
 'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
 
     /**
@@ -262,7 +262,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity
+     * @return int
      */
     public function getQuantity()
     {
@@ -272,7 +272,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Quantity $quantity quantity
+     * @param int $quantity quantity
      *
      * @return $this
      */
