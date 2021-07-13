@@ -233,6 +233,16 @@ class ListOfCategories extends Categories implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Get subclass.
+     *
+     * @return string
+     */
+    public function getSubClass()
+    {
+        return Categories::class;
+    }
+
+    /**
      * Gets the string presentation of the object.
      *
      * @return string
