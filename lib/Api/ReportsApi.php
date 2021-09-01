@@ -10,29 +10,29 @@
  *
  * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
- * OpenAPI spec version: 2020-09-04
+ * OpenAPI spec version: 2021-06-30
  */
 
 namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use Luigel\AmazonSellingPartnerAPI\ApiException;
-use Luigel\AmazonSellingPartnerAPI\Configuration;
-use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
-use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportScheduleResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportSpecification;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportDocumentResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportScheduleResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse;
-use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
+use Luigel\AmazonSellingPartnerAPI\ApiException;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\Report;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportDocument;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportSchedule;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportSpecification;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResult;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportScheduleResponse;
 
 /**
  * ReportsApi Class Doc Comment.
@@ -85,7 +85,7 @@ class ReportsApi
      */
     public function cancelReport($report_id)
     {
-        list($response) = $this->cancelReportWithHttpInfo($report_id);
+        [$response] = $this->cancelReportWithHttpInfo($report_id);
 
         return $response;
     }
@@ -105,6 +105,41 @@ class ReportsApi
         $request = $this->cancelReportRequest($report_id);
 
         return $this->sendRequest($request, CancelReportResponse::class);
+    }
+
+    /**
+     * Create request for operation 'cancelReport'.
+     *
+     * @param string $report_id The identifier for the report. This identifier is unique only in combination with a seller ID. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function cancelReportRequest($report_id)
+    {
+        // verify the required parameter 'report_id' is set
+        if (null === $report_id || (is_array($report_id) && 0 === count($report_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_id when calling cancelReport');
+        }
+
+        $resourcePath = '/reports/2021-06-30/reports/{reportId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // path params
+        if (null !== $report_id) {
+            $resourcePath = str_replace(
+                '{'.'reportId'.'}',
+                ObjectSerializer::toPathValue($report_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'DELETE', $httpBody);
     }
 
     /**
@@ -144,41 +179,6 @@ class ReportsApi
     }
 
     /**
-     * Create request for operation 'cancelReport'.
-     *
-     * @param string $report_id The identifier for the report. This identifier is unique only in combination with a seller ID. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function cancelReportRequest($report_id)
-    {
-        // verify the required parameter 'report_id' is set
-        if (null === $report_id || (is_array($report_id) && 0 === count($report_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_id when calling cancelReport');
-        }
-
-        $resourcePath = '/reports/2020-09-04/reports/{reportId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // path params
-        if (null !== $report_id) {
-            $resourcePath = str_replace(
-                '{'.'reportId'.'}',
-                ObjectSerializer::toPathValue($report_id),
-                $resourcePath
-            );
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'DELETE', $httpBody);
-    }
-
-    /**
      * Operation cancelReportSchedule.
      *
      * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID. (required)
@@ -190,7 +190,7 @@ class ReportsApi
      */
     public function cancelReportSchedule($report_schedule_id)
     {
-        list($response) = $this->cancelReportScheduleWithHttpInfo($report_schedule_id);
+        [$response] = $this->cancelReportScheduleWithHttpInfo($report_schedule_id);
 
         return $response;
     }
@@ -210,6 +210,41 @@ class ReportsApi
         $request = $this->cancelReportScheduleRequest($report_schedule_id);
 
         return $this->sendRequest($request, CancelReportScheduleResponse::class);
+    }
+
+    /**
+     * Create request for operation 'cancelReportSchedule'.
+     *
+     * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function cancelReportScheduleRequest($report_schedule_id)
+    {
+        // verify the required parameter 'report_schedule_id' is set
+        if (null === $report_schedule_id || (is_array($report_schedule_id) && 0 === count($report_schedule_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling cancelReportSchedule');
+        }
+
+        $resourcePath = '/reports/2021-06-30/schedules/{reportScheduleId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // path params
+        if (null !== $report_schedule_id) {
+            $resourcePath = str_replace(
+                '{'.'reportScheduleId'.'}',
+                ObjectSerializer::toPathValue($report_schedule_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'DELETE', $httpBody);
     }
 
     /**
@@ -248,41 +283,6 @@ class ReportsApi
     }
 
     /**
-     * Create request for operation 'cancelReportSchedule'.
-     *
-     * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function cancelReportScheduleRequest($report_schedule_id)
-    {
-        // verify the required parameter 'report_schedule_id' is set
-        if (null === $report_schedule_id || (is_array($report_schedule_id) && 0 === count($report_schedule_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling cancelReportSchedule');
-        }
-
-        $resourcePath = '/reports/2020-09-04/schedules/{reportScheduleId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // path params
-        if (null !== $report_schedule_id) {
-            $resourcePath = str_replace(
-                '{'.'reportScheduleId'.'}',
-                ObjectSerializer::toPathValue($report_schedule_id),
-                $resourcePath
-            );
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'DELETE', $httpBody);
-    }
-
-    /**
      * Operation createReport.
      *
      * @param CreateReportSpecification $body body (required)
@@ -290,11 +290,11 @@ class ReportsApi
      * @throws ApiException              on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult
      */
     public function createReport(CreateReportSpecification $body)
     {
-        list($response) = $this->createReportWithHttpInfo($body);
+        [$response] = $this->createReportWithHttpInfo($body);
 
         return $response;
     }
@@ -307,13 +307,39 @@ class ReportsApi
      * @throws ApiException              on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function createReportWithHttpInfo(CreateReportSpecification $body)
     {
         $request = $this->createReportRequest($body);
 
-        return $this->sendRequest($request, CreateReportResponse::class);
+        return $this->sendRequest($request, CreateReportResult::class);
+    }
+
+    /**
+     * Create request for operation 'createReport'.
+     *
+     * @param CreateReportSpecification $body (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function createReportRequest(CreateReportSpecification $body)
+    {
+        // verify the required parameter 'body' is set
+        if (null === $body || (is_array($body) && 0 === count($body))) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createReport');
+        }
+
+        $resourcePath = '/reports/2021-06-30/reports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = $body;
+        $multipart = false;
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
     }
 
     /**
@@ -346,36 +372,10 @@ class ReportsApi
      */
     public function createReportAsyncWithHttpInfo($body)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult';
         $request = $this->createReportRequest($body);
 
-        return $this->sendRequestAsync($request, CreateReportResponse::class);
-    }
-
-    /**
-     * Create request for operation 'createReport'.
-     *
-     * @param CreateReportSpecification $body (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function createReportRequest(CreateReportSpecification $body)
-    {
-        // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling createReport');
-        }
-
-        $resourcePath = '/reports/2020-09-04/reports';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = $body;
-        $multipart = false;
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+        return $this->sendRequestAsync($request, CreateReportResult::class);
     }
 
     /**
@@ -386,11 +386,11 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResult
      */
     public function createReportSchedule($body)
     {
-        list($response) = $this->createReportScheduleWithHttpInfo($body);
+        [$response] = $this->createReportScheduleWithHttpInfo($body);
 
         return $response;
     }
@@ -403,13 +403,39 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function createReportScheduleWithHttpInfo($body)
     {
         $request = $this->createReportScheduleRequest($body);
 
-        return $this->sendRequest($request, CreateReportScheduleResponse::class);
+        return $this->sendRequest($request, CreateReportScheduleResult::class);
+    }
+
+    /**
+     * Create request for operation 'createReportSchedule'.
+     *
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleSpecification $body (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function createReportScheduleRequest($body)
+    {
+        // verify the required parameter 'body' is set
+        if (null === $body || (is_array($body) && 0 === count($body))) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createReportSchedule');
+        }
+
+        $resourcePath = '/reports/2021-06-30/schedules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = $body;
+        $multipart = false;
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
     }
 
     /**
@@ -444,33 +470,7 @@ class ReportsApi
     {
         $request = $this->createReportScheduleRequest($body);
 
-        return $this->sendRequestAsync($request, CreateReportScheduleResponse::class);
-    }
-
-    /**
-     * Create request for operation 'createReportSchedule'.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleSpecification $body (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function createReportScheduleRequest($body)
-    {
-        // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling createReportSchedule');
-        }
-
-        $resourcePath = '/reports/2020-09-04/schedules';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = $body;
-        $multipart = false;
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+        return $this->sendRequestAsync($request, CreateReportScheduleResult::class);
     }
 
     /**
@@ -481,11 +481,11 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\Report
      */
     public function getReport($report_id)
     {
-        list($response) = $this->getReportWithHttpInfo($report_id);
+        [$response] = $this->getReportWithHttpInfo($report_id);
 
         return $response;
     }
@@ -498,13 +498,48 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\Report, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportWithHttpInfo($report_id)
     {
         $request = $this->getReportRequest($report_id);
 
-        return $this->sendRequest($request, GetReportResponse::class);
+        return $this->sendRequest($request, Report::class);
+    }
+
+    /**
+     * Create request for operation 'getReport'.
+     *
+     * @param string $report_id The identifier for the report. This identifier is unique only in combination with a seller ID. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getReportRequest($report_id)
+    {
+        // verify the required parameter 'report_id' is set
+        if (null === $report_id || (is_array($report_id) && 0 === count($report_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_id when calling getReport');
+        }
+
+        $resourcePath = '/reports/2021-06-30/reports/{reportId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // path params
+        if (null !== $report_id) {
+            $resourcePath = str_replace(
+                '{'.'reportId'.'}',
+                ObjectSerializer::toPathValue($report_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
@@ -539,42 +574,7 @@ class ReportsApi
     {
         $request = $this->getReportRequest($report_id);
 
-        return $this->sendRequestAsync($request, GetReportResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getReport'.
-     *
-     * @param string $report_id The identifier for the report. This identifier is unique only in combination with a seller ID. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getReportRequest($report_id)
-    {
-        // verify the required parameter 'report_id' is set
-        if (null === $report_id || (is_array($report_id) && 0 === count($report_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_id when calling getReport');
-        }
-
-        $resourcePath = '/reports/2020-09-04/reports/{reportId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // path params
-        if (null !== $report_id) {
-            $resourcePath = str_replace(
-                '{'.'reportId'.'}',
-                ObjectSerializer::toPathValue($report_id),
-                $resourcePath
-            );
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+        return $this->sendRequestAsync($request, Report::class);
     }
 
     /**
@@ -585,11 +585,11 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportDocumentResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportDocument
      */
     public function getReportDocument($report_document_id)
     {
-        list($response) = $this->getReportDocumentWithHttpInfo($report_document_id);
+        [$response] = $this->getReportDocumentWithHttpInfo($report_document_id);
 
         return $response;
     }
@@ -602,13 +602,48 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportDocumentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportDocumentWithHttpInfo($report_document_id)
     {
         $request = $this->getReportDocumentRequest($report_document_id);
 
-        return $this->sendRequest($request, GetReportDocumentResponse::class);
+        return $this->sendRequest($request, ReportDocument::class);
+    }
+
+    /**
+     * Create request for operation 'getReportDocument'.
+     *
+     * @param string $report_document_id The identifier for the report document. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getReportDocumentRequest($report_document_id)
+    {
+        // verify the required parameter 'report_document_id' is set
+        if (null === $report_document_id || (is_array($report_document_id) && 0 === count($report_document_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_document_id when calling getReportDocument');
+        }
+
+        $resourcePath = '/reports/2021-06-30/documents/{reportDocumentId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // path params
+        if (null !== $report_document_id) {
+            $resourcePath = str_replace(
+                '{'.'reportDocumentId'.'}',
+                ObjectSerializer::toPathValue($report_document_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
@@ -643,42 +678,7 @@ class ReportsApi
     {
         $request = $this->getReportDocumentRequest($report_document_id);
 
-        return $this->sendRequestAsync($request, GetReportDocumentResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getReportDocument'.
-     *
-     * @param string $report_document_id The identifier for the report document. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getReportDocumentRequest($report_document_id)
-    {
-        // verify the required parameter 'report_document_id' is set
-        if (null === $report_document_id || (is_array($report_document_id) && 0 === count($report_document_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_document_id when calling getReportDocument');
-        }
-
-        $resourcePath = '/reports/2020-09-04/documents/{reportDocumentId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // path params
-        if (null !== $report_document_id) {
-            $resourcePath = str_replace(
-                '{'.'reportDocumentId'.'}',
-                ObjectSerializer::toPathValue($report_document_id),
-                $resourcePath
-            );
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+        return $this->sendRequestAsync($request, ReportDocument::class);
     }
 
     /**
@@ -689,11 +689,11 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportScheduleResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportSchedule
      */
     public function getReportSchedule($report_schedule_id)
     {
-        list($response) = $this->getReportScheduleWithHttpInfo($report_schedule_id);
+        [$response] = $this->getReportScheduleWithHttpInfo($report_schedule_id);
 
         return $response;
     }
@@ -706,13 +706,48 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportScheduleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportSchedule, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportScheduleWithHttpInfo($report_schedule_id)
     {
         $request = $this->getReportScheduleRequest($report_schedule_id);
 
-        return $this->sendRequest($request, GetReportScheduleResponse::class);
+        return $this->sendRequest($request, ReportSchedule::class);
+    }
+
+    /**
+     * Create request for operation 'getReportSchedule'.
+     *
+     * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getReportScheduleRequest($report_schedule_id)
+    {
+        // verify the required parameter 'report_schedule_id' is set
+        if (null === $report_schedule_id || (is_array($report_schedule_id) && 0 === count($report_schedule_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling getReportSchedule');
+        }
+
+        $resourcePath = '/reports/2021-06-30/schedules/{reportScheduleId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // path params
+        if (null !== $report_schedule_id) {
+            $resourcePath = str_replace(
+                '{'.'reportScheduleId'.'}',
+                ObjectSerializer::toPathValue($report_schedule_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
@@ -747,42 +782,7 @@ class ReportsApi
     {
         $request = $this->getReportScheduleRequest($report_schedule_id);
 
-        return $this->sendRequestAsync($request, GetReportScheduleResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getReportSchedule'.
-     *
-     * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getReportScheduleRequest($report_schedule_id)
-    {
-        // verify the required parameter 'report_schedule_id' is set
-        if (null === $report_schedule_id || (is_array($report_schedule_id) && 0 === count($report_schedule_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling getReportSchedule');
-        }
-
-        $resourcePath = '/reports/2020-09-04/schedules/{reportScheduleId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // path params
-        if (null !== $report_schedule_id) {
-            $resourcePath = str_replace(
-                '{'.'reportScheduleId'.'}',
-                ObjectSerializer::toPathValue($report_schedule_id),
-                $resourcePath
-            );
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+        return $this->sendRequestAsync($request, ReportSchedule::class);
     }
 
     /**
@@ -793,11 +793,11 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList
      */
     public function getReportSchedules($report_types)
     {
-        list($response) = $this->getReportSchedulesWithHttpInfo($report_types);
+        [$response] = $this->getReportSchedulesWithHttpInfo($report_types);
 
         return $response;
     }
@@ -810,13 +810,13 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportSchedulesWithHttpInfo($report_types)
     {
         $request = $this->getReportSchedulesRequest($report_types);
 
-        return $this->sendRequest($request, GetReportSchedulesResponse::class);
+        return $this->sendRequest($request, ReportScheduleList::class);
 
         try {
             $options = $this->createHttpClientOption();
@@ -837,7 +837,7 @@ class ReportsApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
+                if (! in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -852,7 +852,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -860,7 +860,7 @@ class ReportsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -868,7 +868,7 @@ class ReportsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -876,7 +876,7 @@ class ReportsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class ReportsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -892,7 +892,7 @@ class ReportsApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class ReportsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -908,7 +908,7 @@ class ReportsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -916,7 +916,7 @@ class ReportsApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse',
+                        '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportScheduleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -924,6 +924,40 @@ class ReportsApi
             }
             throw $e;
         }
+    }
+
+    /**
+     * Create request for operation 'getReportSchedules'.
+     *
+     * @param string[] $report_types A list of report types used to filter report schedules. (required)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getReportSchedulesRequest($report_types)
+    {
+        // verify the required parameter 'report_types' is set
+        if (null === $report_types || (is_array($report_types) && 0 === count($report_types))) {
+            throw new \InvalidArgumentException('Missing the required parameter $report_types when calling getReportSchedules');
+        }
+
+        $resourcePath = '/reports/2021-06-30/schedules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if (is_array($report_types)) {
+            $report_types = ObjectSerializer::serializeCollection($report_types, 'csv', true);
+        }
+        if (null !== $report_types) {
+            $queryParams['reportTypes'] = ObjectSerializer::toQueryValue($report_types);
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
@@ -958,62 +992,28 @@ class ReportsApi
     {
         $request = $this->getReportSchedulesRequest($report_types);
 
-        return $this->sendRequestAsync($request, GetReportSchedulesResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getReportSchedules'.
-     *
-     * @param string[] $report_types A list of report types used to filter report schedules. (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getReportSchedulesRequest($report_types)
-    {
-        // verify the required parameter 'report_types' is set
-        if (null === $report_types || (is_array($report_types) && 0 === count($report_types))) {
-            throw new \InvalidArgumentException('Missing the required parameter $report_types when calling getReportSchedules');
-        }
-
-        $resourcePath = '/reports/2020-09-04/schedules';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if (is_array($report_types)) {
-            $report_types = ObjectSerializer::serializeCollection($report_types, 'csv', true);
-        }
-        if (null !== $report_types) {
-            $queryParams['reportTypes'] = ObjectSerializer::toQueryValue($report_types);
-        }
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+        return $this->sendRequestAsync($request, ReportScheduleList::class);
     }
 
     /**
      * Operation getReports.
      *
-     * @param string[]  $report_types        A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
-     * @param string[]  $processing_statuses A list of processing statuses used to filter reports. (optional)
-     * @param string[]  $marketplace_ids     A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
-     * @param int       $page_size           The maximum number of reports to return in a single call. (optional, default to 10)
-     * @param \DateTime $created_since       The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
-     * @param \DateTime $created_until       The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
-     * @param string    $next_token          A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
+     * @param string[] $report_types A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
+     * @param string[] $processing_statuses A list of processing statuses used to filter reports. (optional)
+     * @param string[] $marketplace_ids A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
+     * @param int $page_size The maximum number of reports to return in a single call. (optional, default to 10)
+     * @param \DateTime $created_since The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
+     * @param \DateTime $created_until The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
+     * @param string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
      *
      * @throws ApiException              on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList
      */
     public function getReports($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
     {
-        list($response) = $this->getReportsWithHttpInfo($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
+        [$response] = $this->getReportsWithHttpInfo($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
 
         return $response;
     }
@@ -1021,84 +1021,36 @@ class ReportsApi
     /**
      * Operation getReportsWithHttpInfo.
      *
-     * @param string[]  $report_types        A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
-     * @param string[]  $processing_statuses A list of processing statuses used to filter reports. (optional)
-     * @param string[]  $marketplace_ids     A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
-     * @param int       $page_size           The maximum number of reports to return in a single call. (optional, default to 10)
-     * @param \DateTime $created_since       The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
-     * @param \DateTime $created_until       The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
-     * @param string    $next_token          A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
+     * @param string[] $report_types A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
+     * @param string[] $processing_statuses A list of processing statuses used to filter reports. (optional)
+     * @param string[] $marketplace_ids A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
+     * @param int $page_size The maximum number of reports to return in a single call. (optional, default to 10)
+     * @param \DateTime $created_since The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
+     * @param \DateTime $created_until The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
+     * @param string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
      *
      * @throws ApiException              on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportsWithHttpInfo($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
     {
         $request = $this->getReportsRequest($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
 
-        return $this->sendRequest($request, GetReportsResponse::class);
-    }
-
-    /**
-     * Operation getReportsAsync.
-     *
-     * @param string[]  $report_types        A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
-     * @param string[]  $processing_statuses A list of processing statuses used to filter reports. (optional)
-     * @param string[]  $marketplace_ids     A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
-     * @param int       $page_size           The maximum number of reports to return in a single call. (optional, default to 10)
-     * @param \DateTime $created_since       The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
-     * @param \DateTime $created_until       The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
-     * @param string    $next_token          A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getReportsAsync($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
-    {
-        return $this->getReportsAsyncWithHttpInfo($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getReportsAsyncWithHttpInfo.
-     *
-     * @param string[]  $report_types        A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
-     * @param string[]  $processing_statuses A list of processing statuses used to filter reports. (optional)
-     * @param string[]  $marketplace_ids     A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
-     * @param int       $page_size           The maximum number of reports to return in a single call. (optional, default to 10)
-     * @param \DateTime $created_since       The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
-     * @param \DateTime $created_until       The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
-     * @param string    $next_token          A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getReportsAsyncWithHttpInfo($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
-    {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse';
-        $request = $this->getReportsRequest($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
-
-        return $this->sendRequestAsync($request, GetReportsResponse::class);
+        return $this->sendRequest($request, ReportList::class);
     }
 
     /**
      * Create request for operation 'getReports'.
      *
-     * @param string[]  $report_types        A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
-     * @param string[]  $processing_statuses A list of processing statuses used to filter reports. (optional)
-     * @param string[]  $marketplace_ids     A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
-     * @param int       $page_size           The maximum number of reports to return in a single call. (optional, default to 10)
-     * @param \DateTime $created_since       The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
-     * @param \DateTime $created_until       The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
-     * @param string    $next_token          A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
+     * @param string[] $report_types A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
+     * @param string[] $processing_statuses A list of processing statuses used to filter reports. (optional)
+     * @param string[] $marketplace_ids A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
+     * @param int $page_size The maximum number of reports to return in a single call. (optional, default to 10)
+     * @param \DateTime $created_since The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
+     * @param \DateTime $created_until The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
+     * @param string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
      *
      * @throws \InvalidArgumentException
      *
@@ -1106,7 +1058,7 @@ class ReportsApi
      */
     protected function getReportsRequest($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
     {
-        $resourcePath = '/reports/2020-09-04/reports';
+        $resourcePath = '/reports/2021-06-30/reports';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1152,5 +1104,53 @@ class ReportsApi
         }
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+    }
+
+    /**
+     * Operation getReportsAsync.
+     *
+     * @param string[] $report_types A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
+     * @param string[] $processing_statuses A list of processing statuses used to filter reports. (optional)
+     * @param string[] $marketplace_ids A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
+     * @param int $page_size The maximum number of reports to return in a single call. (optional, default to 10)
+     * @param \DateTime $created_since The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
+     * @param \DateTime $created_until The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
+     * @param string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getReportsAsync($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
+    {
+        return $this->getReportsAsyncWithHttpInfo($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getReportsAsyncWithHttpInfo.
+     *
+     * @param string[] $report_types A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. (optional)
+     * @param string[] $processing_statuses A list of processing statuses used to filter reports. (optional)
+     * @param string[] $marketplace_ids A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. (optional)
+     * @param int $page_size The maximum number of reports to return in a single call. (optional, default to 10)
+     * @param \DateTime $created_since The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days. (optional)
+     * @param \DateTime $created_until The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now. (optional)
+     * @param string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getReportsAsyncWithHttpInfo($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList';
+        $request = $this->getReportsRequest($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
+
+        return $this->sendRequestAsync($request, ReportList::class);
     }
 }
