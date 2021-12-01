@@ -274,6 +274,7 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
      *
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -285,7 +286,8 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
      * @param int $offset Offset
      *
      * @return mixed
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -298,7 +300,8 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
      * @param mixed $value  Value to be set
      *
      * @return void
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -314,7 +317,8 @@ class GetSolicitationActionsForOrderResponse implements ModelInterface, ArrayAcc
      * @param int $offset Offset
      *
      * @return void
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

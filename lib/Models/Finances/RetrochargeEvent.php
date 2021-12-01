@@ -394,6 +394,7 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess
      *
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -405,7 +406,8 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return mixed
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -418,7 +420,8 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess
      * @param mixed $value  Value to be set
      *
      * @return void
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -434,7 +437,8 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return void
-     */
+    */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
