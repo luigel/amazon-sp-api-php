@@ -24,7 +24,6 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * Amount Class Doc Comment.
  *
-
  * @description The monetary value.
  *
  * @author   Stefan Neuhaus
@@ -47,7 +46,7 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'currency_code' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
-'value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',    ];
+        'value' => 'float',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -56,7 +55,7 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'currency_code' => null,
-'value' => null,    ];
+        'value' => null,];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -86,7 +85,7 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'currency_code' => 'CurrencyCode',
-'value' => 'Value',    ];
+        'value' => 'Value',];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -95,7 +94,7 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'currency_code' => 'setCurrencyCode',
-'value' => 'setValue',    ];
+        'value' => 'setValue',];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -104,7 +103,7 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'currency_code' => 'getCurrencyCode',
-'value' => 'getValue',    ];
+        'value' => 'getValue',];
 
     /**
      * Array of attributes where the key is the local name,
@@ -223,7 +222,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getValue()
     {
@@ -233,7 +232,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param float $value value
      *
      * @return $this
      */
@@ -263,7 +262,7 @@ class Amount implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return mixed
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -273,11 +272,11 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param int   $offset Offset
-     * @param mixed $value  Value to be set
+     * @param int $offset Offset
+     * @param mixed $value Value to be set
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -294,7 +293,7 @@ class Amount implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

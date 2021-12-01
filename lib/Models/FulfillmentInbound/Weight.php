@@ -24,7 +24,6 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * Weight Class Doc Comment.
  *
-
  * @description The weight of the package.
  *
  * @author   Stefan Neuhaus
@@ -46,8 +45,8 @@ class Weight implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',    ];
+        'value' => 'float',
+        'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -56,7 +55,7 @@ class Weight implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'value' => null,
-'unit' => null,    ];
+        'unit' => null,];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -86,7 +85,7 @@ class Weight implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'value' => 'Value',
-'unit' => 'Unit',    ];
+        'unit' => 'Unit',];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -95,7 +94,7 @@ class Weight implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'value' => 'setValue',
-'unit' => 'setUnit',    ];
+        'unit' => 'setUnit',];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -104,7 +103,7 @@ class Weight implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'value' => 'getValue',
-'unit' => 'getUnit',    ];
+        'unit' => 'getUnit',];
 
     /**
      * Array of attributes where the key is the local name,
@@ -199,7 +198,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getValue()
     {
@@ -209,7 +208,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param float $value value
      *
      * @return $this
      */
@@ -263,7 +262,7 @@ class Weight implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return mixed
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -273,11 +272,11 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param int   $offset Offset
-     * @param mixed $value  Value to be set
+     * @param int $offset Offset
+     * @param mixed $value Value to be set
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -294,7 +293,7 @@ class Weight implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

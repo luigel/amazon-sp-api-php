@@ -24,7 +24,6 @@ use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * Dimensions Class Doc Comment.
  *
-
  * @description The dimension values and unit of measurement.
  *
  * @author   Stefan Neuhaus
@@ -46,10 +45,10 @@ class Dimensions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'length' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'width' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'height' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement',    ];
+        'length' => 'float',
+        'width' => 'float',
+        'height' => 'float',
+        'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -58,9 +57,9 @@ class Dimensions implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'length' => null,
-'width' => null,
-'height' => null,
-'unit' => null,    ];
+        'width' => null,
+        'height' => null,
+        'unit' => null,];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -90,9 +89,9 @@ class Dimensions implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'length' => 'Length',
-'width' => 'Width',
-'height' => 'Height',
-'unit' => 'Unit',    ];
+        'width' => 'Width',
+        'height' => 'Height',
+        'unit' => 'Unit',];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -101,9 +100,9 @@ class Dimensions implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'length' => 'setLength',
-'width' => 'setWidth',
-'height' => 'setHeight',
-'unit' => 'setUnit',    ];
+        'width' => 'setWidth',
+        'height' => 'setHeight',
+        'unit' => 'setUnit',];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -112,9 +111,9 @@ class Dimensions implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'length' => 'getLength',
-'width' => 'getWidth',
-'height' => 'getHeight',
-'unit' => 'getUnit',    ];
+        'width' => 'getWidth',
+        'height' => 'getHeight',
+        'unit' => 'getUnit',];
 
     /**
      * Array of attributes where the key is the local name,
@@ -217,7 +216,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets length.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getLength()
     {
@@ -227,7 +226,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets length.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $length length
+     * @param float $length length
      *
      * @return $this
      */
@@ -241,7 +240,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets width.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getWidth()
     {
@@ -251,7 +250,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets width.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $width width
+     * @param float $width width
      *
      * @return $this
      */
@@ -265,7 +264,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets height.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getHeight()
     {
@@ -275,7 +274,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets height.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $height height
+     * @param float $height height
      *
      * @return $this
      */
@@ -329,7 +328,7 @@ class Dimensions implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return mixed
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -339,11 +338,11 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param int   $offset Offset
-     * @param mixed $value  Value to be set
+     * @param int $offset Offset
+     * @param mixed $value Value to be set
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -360,7 +359,7 @@ class Dimensions implements ModelInterface, ArrayAccess
      * @param int $offset Offset
      *
      * @return void
-    */
+     */
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
