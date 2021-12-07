@@ -45,7 +45,7 @@ class Categories implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'product_category_id' => 'string',
 'product_category_name' => 'string',
-'parent' => 'object',    ];
+'parent' => self::class,    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
