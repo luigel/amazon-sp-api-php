@@ -36,6 +36,7 @@ class PrepInstruction
     const BLACK_SHRINK_WRAPPING = 'BlackShrinkWrapping';
     const LABELING = 'Labeling';
     const HANG_GARMENT = 'HangGarment';
+    const SET_CREATION = 'SetCreation';
 
     /**
      * Gets allowable values of the enum.
@@ -46,10 +47,12 @@ class PrepInstruction
     {
         return [
             self::POLYBAGGING,
-self::BUBBLE_WRAPPING,
-self::TAPING,
-self::BLACK_SHRINK_WRAPPING,
-self::LABELING,
-self::HANG_GARMENT,        ];
+            self::BUBBLE_WRAPPING,
+            self::TAPING,
+            self::BLACK_SHRINK_WRAPPING,
+            self::LABELING,
+            self::HANG_GARMENT,
+            self::SET_CREATION,
+            ];
     }
 }
