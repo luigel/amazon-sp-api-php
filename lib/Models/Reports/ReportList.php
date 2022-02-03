@@ -12,7 +12,7 @@
  *
  * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
- * OpenAPI spec version: 2020-09-04
+ * OpenAPI spec version: 2021-06-30
  */
 
 namespace Luigel\AmazonSellingPartnerAPI\Models\Reports;

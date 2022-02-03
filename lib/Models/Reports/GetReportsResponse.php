@@ -12,7 +12,7 @@
  *
  * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
- * OpenAPI spec version: 2020-09-04
+ * OpenAPI spec version: 2021-06-30
  */
 
 namespace Luigel\AmazonSellingPartnerAPI\Models\Reports;
@@ -46,9 +46,10 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList',
-'next_token' => 'string',
-'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ErrorList',    ];
+        'reports' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList',
+        'next_token' => 'string',
+        'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Reports\ErrorList',
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -56,9 +57,10 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerFormats = [
-        'payload' => null,
-'next_token' => null,
-'errors' => null,    ];
+        'reports' => null,
+        'next_token' => null,
+        'errors' => null,
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -87,9 +89,10 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload' => 'payload',
-'next_token' => 'nextToken',
-'errors' => 'errors',    ];
+        'reports' => 'reports',
+        'next_token' => 'nextToken',
+        'errors' => 'errors',
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -97,9 +100,10 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'payload' => 'setPayload',
-'next_token' => 'setNextToken',
-'errors' => 'setErrors',    ];
+        'reports' => 'setReports',
+        'next_token' => 'setNextToken',
+        'errors' => 'setErrors',
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -107,9 +111,10 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'payload' => 'getPayload',
-'next_token' => 'getNextToken',
-'errors' => 'getErrors',    ];
+        'reports' => 'getReports',
+        'next_token' => 'getNextToken',
+        'errors' => 'getErrors',
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -167,7 +172,7 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        $this->container['reports'] = isset($data['reports']) ? $data['reports'] : null;
         $this->container['next_token'] = isset($data['next_token']) ? $data['next_token'] : null;
         $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
@@ -196,25 +201,25 @@ class GetReportsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets payload.
+     * Gets reports.
      *
      * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList
      */
-    public function getPayload()
+    public function getReports()
     {
-        return $this->container['payload'];
+        return $this->container['reports'];
     }
 
     /**
-     * Sets payload.
+     * Sets reports.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList $payload payload
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList $reports reports
      *
      * @return $this
      */
-    public function setPayload($payload)
+    public function setReports($reports)
     {
-        $this->container['payload'] = $payload;
+        $this->container['reports'] = $reports;
 
         return $this;
     }

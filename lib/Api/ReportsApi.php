@@ -33,6 +33,7 @@ use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportResponse;
 use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportSpecification;
 use Luigel\AmazonSellingPartnerAPI\Models\Reports\CreateReportScheduleResult;
 use Luigel\AmazonSellingPartnerAPI\Models\Reports\CancelReportScheduleResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse;
 
 /**
  * ReportsApi Class Doc Comment.
@@ -1009,7 +1010,7 @@ class ReportsApi
      * @throws ApiException              on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\ReportList
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse
      */
     public function getReports($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
     {
@@ -1038,7 +1039,7 @@ class ReportsApi
     {
         $request = $this->getReportsRequest($report_types, $processing_statuses, $marketplace_ids, $page_size, $created_since, $created_until, $next_token);
 
-        return $this->sendRequest($request, ReportList::class);
+        return $this->sendRequest($request, GetReportsResponse::class);
     }
 
     /**

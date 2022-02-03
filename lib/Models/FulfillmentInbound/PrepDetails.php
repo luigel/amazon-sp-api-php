@@ -46,7 +46,7 @@ class PrepDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'prep_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction',
+        'prep_instruction' => 'string',
 'prep_owner' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepOwner',    ];
 
     /**
