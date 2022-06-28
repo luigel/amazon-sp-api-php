@@ -45,7 +45,7 @@ class Amount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'currency_code' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
+        'currency_code' => 'string',
         'value' => 'float',];
 
     /**
@@ -198,7 +198,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode
+     * @return string
      */
     public function getCurrencyCode()
     {
@@ -208,7 +208,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode $currency_code currency_code
+     * @param string $currency_code currency_code
      *
      * @return $this
      */
