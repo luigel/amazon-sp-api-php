@@ -11,7 +11,6 @@ use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Utils;
-use Illuminate\Support\Facades\Log;
 /**
  * Trait SellingPartnerApiRequest.
  *
@@ -100,7 +99,6 @@ trait SellingPartnerApiRequest
     {
         $response = null;
         try {
-            Log::info('SP-API Request => URL: ' . $request->getUri()->getPath());
             $options = $this->createHttpClientOption();
             try {
                 $response = $this->client->send($request, $options);
@@ -120,25 +118,12 @@ trait SellingPartnerApiRequest
                     $content = json_decode($content);
                 }
             }
-            //check for rate limit
-            $this->checkRateLimit($response);
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
                 $response->getHeaders(),
             ];
         } catch (ApiException $e) {
-            //we allow 4 retries only
-            if ($e->getCode() === 429 && $retry < 4) {
-                $retry++;
-                //increment by 6 seconds per retry (6, 12, 18, 24)
-                $sleepRetry = 6 * $retry;
-                Log::info('SP-API Response => Error QuotaExceed: Sleeping for ' . $sleepRetry . ' secs before retrying. Retry count = ' . $retry);
-                sleep($sleepRetry);
-                return $this->sendRequest($request, $returnType, $retry);
-            } else if ($e->getCode() === 429 && $retry >= 4) {
-                Log::info('SP-API Response => Error QuotaExceed: Failed to retry. Maxinum of 4 tries.');
-            }
             switch ($e->getCode()) {
                 case 503:
                 case 500:
@@ -156,24 +141,10 @@ trait SellingPartnerApiRequest
                     $e->setResponseObject($data);
                     break;
             }
-            Log::error('SP-API Response => ERROR: ' . $request->getUri()->getPath() . ', CODE: ' . $e->getCode() . ', MESSAGE: '  . $e->getMessage());
             throw $e;
         }
     }
-    private function checkRateLimit($response) {
-        $rateLimit = $response->getHeader('x-amzn-RateLimit-Limit');
-        if ($rateLimit && count($rateLimit) > 0 && (float)$rateLimit[0] > 0) {
-            $rateLimit = 1 / (float)$rateLimit[0];
-            if ($rateLimit < 1) $rateLimit = 1;
-            Log::info('SP-API Response => RateLimit: '. $rateLimit . ' - Sleeping for ' .  $rateLimit . ' sec(s).');
-            var_dump(date('Y-m-d H:m:s') . ' SP-API Response => RateLimit: '. $rateLimit . ' - Sleeping for ' .  $rateLimit . ' sec(s).');
-            sleep($rateLimit);
-        } else {
-            Log::info('SP-API Response => RateLimit: NONE (setting to 1sec)');
-            var_dump(date('Y-m-d H:m:s') . ' SP-API Response => RateLimit: NONE');
-            sleep(1);
-        }
-    }
+    
     /**
      * Create http client option.
      *
