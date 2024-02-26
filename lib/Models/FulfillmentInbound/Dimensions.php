@@ -48,7 +48,7 @@ class Dimensions implements ModelInterface, ArrayAccess
         'length' => 'float',
         'width' => 'float',
         'height' => 'float',
-        'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement',];
+        'unit' => 'string',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -288,7 +288,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets unit.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement
+     * @return string
      */
     public function getUnit()
     {
@@ -298,7 +298,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets unit.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement $unit unit
+     * @param string $unit unit
      *
      * @return $this
      */
