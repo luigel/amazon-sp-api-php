@@ -46,7 +46,7 @@ class TransportResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus',
+        'transport_status' => 'string',
 'error_code' => 'string',
 'error_description' => 'string',    ];
 
@@ -202,7 +202,7 @@ class TransportResult implements ModelInterface, ArrayAccess
     /**
      * Gets transport_status.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus
+     * @return string
      */
     public function getTransportStatus()
     {
@@ -212,7 +212,7 @@ class TransportResult implements ModelInterface, ArrayAccess
     /**
      * Sets transport_status.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportStatus $transport_status transport_status
+     * @param string $transport_status transport_status
      *
      * @return $this
      */
