@@ -43,7 +43,7 @@ class ErrorList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Error[]'
+        'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Error[]'
     ];
 
     /**
@@ -194,7 +194,7 @@ class ErrorList implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Error[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Error[]
      */
     public function getErrors()
     {
@@ -204,7 +204,7 @@ class ErrorList implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Error[] $errors A list of errors describing the failures.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Error[] $errors A list of errors describing the failures.
      *
      * @return $this
      */

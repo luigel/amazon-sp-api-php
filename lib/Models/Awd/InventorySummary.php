@@ -43,7 +43,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'inventory_details' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryDetails',
+        'inventory_details' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryDetails',
         'sku' => 'string',
         'total_inbound_quantity' => 'int',
         'total_onhand_quantity' => 'int'
@@ -212,7 +212,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_details
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryDetails
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryDetails
      */
     public function getInventoryDetails()
     {
@@ -222,7 +222,7 @@ class InventorySummary implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_details
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryDetails $inventory_details inventory_details
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryDetails $inventory_details inventory_details
      *
      * @return $this
      */

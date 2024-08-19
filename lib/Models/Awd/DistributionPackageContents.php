@@ -43,8 +43,8 @@ class DistributionPackageContents implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'packages' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
-        'products' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]'
+        'packages' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
+        'products' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]'
     ];
 
     /**
@@ -197,7 +197,7 @@ class DistributionPackageContents implements ModelInterface, ArrayAccess
     /**
      * Gets packages
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getPackages()
     {
@@ -207,7 +207,7 @@ class DistributionPackageContents implements ModelInterface, ArrayAccess
     /**
      * Sets packages
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $packages This is required only when `DistributionPackageType=PALLET`.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $packages This is required only when `DistributionPackageType=PALLET`.
      *
      * @return $this
      */
@@ -221,7 +221,7 @@ class DistributionPackageContents implements ModelInterface, ArrayAccess
     /**
      * Gets products
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]
      */
     public function getProducts()
     {
@@ -231,7 +231,7 @@ class DistributionPackageContents implements ModelInterface, ArrayAccess
     /**
      * Sets products
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[] $products This is required only when `DistributionPackageType=CASE`.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[] $products This is required only when `DistributionPackageType=CASE`.
      *
      * @return $this
      */

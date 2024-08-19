@@ -43,7 +43,7 @@ class TransportationDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'carrier_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode',
+        'carrier_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode',
         'ship_by' => '\DateTime',
         'tracking_id' => 'string'
     ];
@@ -206,7 +206,7 @@ class TransportationDetails implements ModelInterface, ArrayAccess
     /**
      * Gets carrier_code
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode
      */
     public function getCarrierCode()
     {
@@ -216,7 +216,7 @@ class TransportationDetails implements ModelInterface, ArrayAccess
     /**
      * Sets carrier_code
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode $carrier_code carrier_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode $carrier_code carrier_code
      *
      * @return $this
      */

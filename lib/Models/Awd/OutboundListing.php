@@ -44,7 +44,7 @@ class OutboundListing implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'next_token' => 'string',
-        'outbound_orders' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundOrder[]'
+        'outbound_orders' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundOrder[]'
     ];
 
     /**
@@ -221,7 +221,7 @@ class OutboundListing implements ModelInterface, ArrayAccess
     /**
      * Gets outbound_orders
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundOrder[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundOrder[]
      */
     public function getOutboundOrders()
     {
@@ -231,7 +231,7 @@ class OutboundListing implements ModelInterface, ArrayAccess
     /**
      * Sets outbound_orders
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundOrder[] $outbound_orders List of outbound orders.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundOrder[] $outbound_orders List of outbound orders.
      *
      * @return $this
      */

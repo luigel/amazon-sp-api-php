@@ -47,7 +47,7 @@ class InboundShipmentSummary implements ModelInterface, ArrayAccess
         'external_reference_id' => 'string',
         'order_id' => 'string',
         'shipment_id' => 'string',
-        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus',
+        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus',
         'updated_at' => '\DateTime'
     ];
 
@@ -326,7 +326,7 @@ class InboundShipmentSummary implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus
      */
     public function getShipmentStatus()
     {
@@ -336,7 +336,7 @@ class InboundShipmentSummary implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus $shipment_status shipment_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus $shipment_status shipment_status
      *
      * @return $this
      */

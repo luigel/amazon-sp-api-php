@@ -45,7 +45,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'height' => 'double',
         'length' => 'double',
-        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DimensionUnitOfMeasurement',
+        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DimensionUnitOfMeasurement',
         'width' => 'double'
     ];
 
@@ -269,7 +269,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Gets unit_of_measurement
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DimensionUnitOfMeasurement
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DimensionUnitOfMeasurement
      */
     public function getUnitOfMeasurement()
     {
@@ -279,7 +279,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess
     /**
      * Sets unit_of_measurement
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DimensionUnitOfMeasurement $unit_of_measurement unit_of_measurement
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DimensionUnitOfMeasurement $unit_of_measurement unit_of_measurement
      *
      * @return $this
      */

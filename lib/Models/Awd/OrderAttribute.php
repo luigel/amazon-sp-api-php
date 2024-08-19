@@ -43,8 +43,8 @@ class OrderAttribute implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreference',
-        'order_preference_value' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreferenceValue'
+        'order_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreference',
+        'order_preference_value' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreferenceValue'
     ];
 
     /**
@@ -203,7 +203,7 @@ class OrderAttribute implements ModelInterface, ArrayAccess
     /**
      * Gets order_preference
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreference
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreference
      */
     public function getOrderPreference()
     {
@@ -213,7 +213,7 @@ class OrderAttribute implements ModelInterface, ArrayAccess
     /**
      * Sets order_preference
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreference $order_preference order_preference
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreference $order_preference order_preference
      *
      * @return $this
      */
@@ -227,7 +227,7 @@ class OrderAttribute implements ModelInterface, ArrayAccess
     /**
      * Gets order_preference_value
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreferenceValue
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreferenceValue
      */
     public function getOrderPreferenceValue()
     {
@@ -237,7 +237,7 @@ class OrderAttribute implements ModelInterface, ArrayAccess
     /**
      * Sets order_preference_value
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderPreferenceValue $order_preference_value order_preference_value
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderPreferenceValue $order_preference_value order_preference_value
      *
      * @return $this
      */

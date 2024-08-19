@@ -43,10 +43,10 @@ class InboundEligibility implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ineligibility_reasons' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderIneligibilityReason[]',
-        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuEligibility[]',
+        'ineligibility_reasons' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderIneligibilityReason[]',
+        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuEligibility[]',
         'previewed_at' => '\DateTime',
-        'status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus'
+        'status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus'
     ];
 
     /**
@@ -218,7 +218,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets ineligibility_reasons
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderIneligibilityReason[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderIneligibilityReason[]
      */
     public function getIneligibilityReasons()
     {
@@ -228,7 +228,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets ineligibility_reasons
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderIneligibilityReason[] $ineligibility_reasons If there are order level eligibility issues, then this list will contain those error codes and descriptions.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderIneligibilityReason[] $ineligibility_reasons If there are order level eligibility issues, then this list will contain those error codes and descriptions.
      *
      * @return $this
      */
@@ -242,7 +242,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets packages_to_inbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuEligibility[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuEligibility[]
      */
     public function getPackagesToInbound()
     {
@@ -252,7 +252,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets packages_to_inbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuEligibility[] $packages_to_inbound Details on SKU eligibility for each inbound package.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuEligibility[] $packages_to_inbound Details on SKU eligibility for each inbound package.
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus
      */
     public function getStatus()
     {
@@ -300,7 +300,7 @@ class InboundEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus $status status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus $status status
      *
      * @return $this
      */

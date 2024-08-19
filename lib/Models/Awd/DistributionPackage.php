@@ -43,9 +43,9 @@ class DistributionPackage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contents' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageContents',
-        'measurements' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\MeasurementData',
-        'type' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageType'
+        'contents' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageContents',
+        'measurements' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\MeasurementData',
+        'type' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageType'
     ];
 
     /**
@@ -212,7 +212,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Gets contents
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageContents
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageContents
      */
     public function getContents()
     {
@@ -222,7 +222,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Sets contents
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageContents $contents contents
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageContents $contents contents
      *
      * @return $this
      */
@@ -236,7 +236,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Gets measurements
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\MeasurementData
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\MeasurementData
      */
     public function getMeasurements()
     {
@@ -246,7 +246,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Sets measurements
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\MeasurementData $measurements measurements
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\MeasurementData $measurements measurements
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageType
      */
     public function getType()
     {
@@ -270,7 +270,7 @@ class DistributionPackage implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageType $type type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageType $type type
      *
      * @return $this
      */

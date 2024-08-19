@@ -43,7 +43,7 @@ class CarrierCode implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'carrier_code_type' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCodeType',
+        'carrier_code_type' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCodeType',
         'carrier_code_value' => 'string'
     ];
 
@@ -197,7 +197,7 @@ class CarrierCode implements ModelInterface, ArrayAccess
     /**
      * Gets carrier_code_type
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCodeType
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCodeType
      */
     public function getCarrierCodeType()
     {
@@ -207,7 +207,7 @@ class CarrierCode implements ModelInterface, ArrayAccess
     /**
      * Sets carrier_code_type
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCodeType $carrier_code_type carrier_code_type
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCodeType $carrier_code_type carrier_code_type
      *
      * @return $this
      */

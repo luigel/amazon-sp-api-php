@@ -43,7 +43,7 @@ class ProductQuantity implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'attributes' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductAttribute[]',
+        'attributes' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductAttribute[]',
         'quantity' => 'int',
         'sku' => 'string'
     ];
@@ -209,7 +209,7 @@ class ProductQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductAttribute[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductAttribute[]
      */
     public function getAttributes()
     {
@@ -219,7 +219,7 @@ class ProductQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductAttribute[] $attributes Attributes for this instance of the product. For example, already-prepped, or other attributes that distinguish the product beyond the SKU.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductAttribute[] $attributes Attributes for this instance of the product. For example, already-prepped, or other attributes that distinguish the product beyond the SKU.
      *
      * @return $this
      */

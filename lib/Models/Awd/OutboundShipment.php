@@ -44,13 +44,13 @@ class OutboundShipment implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'created_at' => '\DateTime',
-        'destination_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address',
+        'destination_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Address',
         'order_id' => 'string',
-        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address',
-        'shipment_package_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
+        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Address',
+        'shipment_package_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
         'shipment_id' => 'string',
-        'shipment_product_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]',
-        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipmentStatus',
+        'shipment_product_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]',
+        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipmentStatus',
         'updated_at' => '\DateTime'
     ];
 
@@ -278,7 +278,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets destination_address
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address
      */
     public function getDestinationAddress()
     {
@@ -288,7 +288,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets destination_address
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address $destination_address destination_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address $destination_address destination_address
      *
      * @return $this
      */
@@ -326,7 +326,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets origin_address
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address
      */
     public function getOriginAddress()
     {
@@ -336,7 +336,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets origin_address
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address $origin_address origin_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address $origin_address origin_address
      *
      * @return $this
      */
@@ -350,7 +350,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_package_quantities
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getShipmentPackageQuantities()
     {
@@ -360,7 +360,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_package_quantities
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $shipment_package_quantities Specific distribution packages that are included in the context of this shipment.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $shipment_package_quantities Specific distribution packages that are included in the context of this shipment.
      *
      * @return $this
      */
@@ -398,7 +398,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_product_quantities
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]
      */
     public function getShipmentProductQuantities()
     {
@@ -408,7 +408,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_product_quantities
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[] $shipment_product_quantities Specific product units that are included in the context of this shipment.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[] $shipment_product_quantities Specific product units that are included in the context of this shipment.
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipmentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipmentStatus
      */
     public function getShipmentStatus()
     {
@@ -432,7 +432,7 @@ class OutboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipmentStatus $shipment_status shipment_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipmentStatus $shipment_status shipment_status
      *
      * @return $this
      */

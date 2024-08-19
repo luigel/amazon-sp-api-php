@@ -43,9 +43,9 @@ class SkuEligibility implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ineligibility_reasons' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuIneligibilityReason[]',
-        'package_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity',
-        'status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus'
+        'ineligibility_reasons' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuIneligibilityReason[]',
+        'package_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity',
+        'status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus'
     ];
 
     /**
@@ -209,7 +209,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets ineligibility_reasons
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuIneligibilityReason[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuIneligibilityReason[]
      */
     public function getIneligibilityReasons()
     {
@@ -219,7 +219,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets ineligibility_reasons
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuIneligibilityReason[] $ineligibility_reasons If not eligible, these are list of error codes and descriptions.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuIneligibilityReason[] $ineligibility_reasons If not eligible, these are list of error codes and descriptions.
      *
      * @return $this
      */
@@ -233,7 +233,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets package_quantity
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity
      */
     public function getPackageQuantity()
     {
@@ -243,7 +243,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets package_quantity
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity $package_quantity package_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity $package_quantity package_quantity
      *
      * @return $this
      */
@@ -257,7 +257,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus
      */
     public function getStatus()
     {
@@ -267,7 +267,7 @@ class SkuEligibility implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundEligibilityStatus $status status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundEligibilityStatus $status status
      *
      * @return $this
      */

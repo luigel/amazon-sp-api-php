@@ -43,7 +43,7 @@ class PackageWeight implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\WeightUnitOfMeasurement',
+        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\WeightUnitOfMeasurement',
         'weight' => 'double'
     ];
 
@@ -203,7 +203,7 @@ class PackageWeight implements ModelInterface, ArrayAccess
     /**
      * Gets unit_of_measurement
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\WeightUnitOfMeasurement
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\WeightUnitOfMeasurement
      */
     public function getUnitOfMeasurement()
     {
@@ -213,7 +213,7 @@ class PackageWeight implements ModelInterface, ArrayAccess
     /**
      * Sets unit_of_measurement
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\WeightUnitOfMeasurement $unit_of_measurement unit_of_measurement
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\WeightUnitOfMeasurement $unit_of_measurement unit_of_measurement
      *
      * @return $this
      */

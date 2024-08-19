@@ -44,7 +44,7 @@ class ShipmentListing implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'next_token' => 'string',
-        'shipments' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentSummary[]'
+        'shipments' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentSummary[]'
     ];
 
     /**
@@ -221,7 +221,7 @@ class ShipmentListing implements ModelInterface, ArrayAccess
     /**
      * Gets shipments
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentSummary[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentSummary[]
      */
     public function getShipments()
     {
@@ -231,7 +231,7 @@ class ShipmentListing implements ModelInterface, ArrayAccess
     /**
      * Sets shipments
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentSummary[] $shipments List of inbound shipment summaries.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentSummary[] $shipments List of inbound shipment summaries.
      *
      * @return $this
      */

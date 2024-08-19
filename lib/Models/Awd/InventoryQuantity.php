@@ -44,7 +44,7 @@ class InventoryQuantity implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'quantity' => 'float',
-        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryUnitOfMeasurement'
+        'unit_of_measurement' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryUnitOfMeasurement'
     ];
 
     /**
@@ -227,7 +227,7 @@ class InventoryQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets unit_of_measurement
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryUnitOfMeasurement
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryUnitOfMeasurement
      */
     public function getUnitOfMeasurement()
     {
@@ -237,7 +237,7 @@ class InventoryQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets unit_of_measurement
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryUnitOfMeasurement $unit_of_measurement unit_of_measurement
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryUnitOfMeasurement $unit_of_measurement unit_of_measurement
      *
      * @return $this
      */

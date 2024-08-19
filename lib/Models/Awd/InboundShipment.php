@@ -43,18 +43,18 @@ class InboundShipment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'carrier_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode',
+        'carrier_code' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode',
         'created_at' => '\DateTime',
-        'destination_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address',
+        'destination_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Address',
         'external_reference_id' => 'string',
         'order_id' => 'string',
-        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address',
-        'received_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity[]',
+        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Address',
+        'received_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity[]',
         'ship_by' => '\DateTime',
-        'shipment_container_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
+        'shipment_container_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
         'shipment_id' => 'string',
-        'shipment_sku_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuQuantity[]',
-        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus',
+        'shipment_sku_quantities' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuQuantity[]',
+        'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus',
         'tracking_id' => 'string',
         'updated_at' => '\DateTime',
         'warehouse_reference_id' => 'string'
@@ -293,7 +293,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets carrier_code
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode
      */
     public function getCarrierCode()
     {
@@ -303,7 +303,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets carrier_code
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\CarrierCode $carrier_code carrier_code
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\CarrierCode $carrier_code carrier_code
      *
      * @return $this
      */
@@ -341,7 +341,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets destination_address
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address
      */
     public function getDestinationAddress()
     {
@@ -351,7 +351,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets destination_address
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address $destination_address destination_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address $destination_address destination_address
      *
      * @return $this
      */
@@ -413,7 +413,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets origin_address
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address
      */
     public function getOriginAddress()
     {
@@ -423,7 +423,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets origin_address
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address $origin_address origin_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address $origin_address origin_address
      *
      * @return $this
      */
@@ -437,7 +437,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets received_quantity
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity[]
      */
     public function getReceivedQuantity()
     {
@@ -447,7 +447,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets received_quantity
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity[] $received_quantity Quantity received (at the receiving end) as part of this shipment.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity[] $received_quantity Quantity received (at the receiving end) as part of this shipment.
      *
      * @return $this
      */
@@ -485,7 +485,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_container_quantities
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getShipmentContainerQuantities()
     {
@@ -495,7 +495,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_container_quantities
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $shipment_container_quantities Packages that are part of this shipment.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $shipment_container_quantities Packages that are part of this shipment.
      *
      * @return $this
      */
@@ -533,7 +533,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_sku_quantities
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuQuantity[]
      */
     public function getShipmentSkuQuantities()
     {
@@ -543,7 +543,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_sku_quantities
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\SkuQuantity[] $shipment_sku_quantities Quantity details at SKU level for the shipment. This attribute will only appear if the skuQuantities parameter in the request is set to SHOW.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\SkuQuantity[] $shipment_sku_quantities Quantity details at SKU level for the shipment. This attribute will only appear if the skuQuantities parameter in the request is set to SHOW.
      *
      * @return $this
      */
@@ -557,7 +557,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus
      */
     public function getShipmentStatus()
     {
@@ -567,7 +567,7 @@ class InboundShipment implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InboundShipmentStatus $shipment_status shipment_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InboundShipmentStatus $shipment_status shipment_status
      *
      * @return $this
      */

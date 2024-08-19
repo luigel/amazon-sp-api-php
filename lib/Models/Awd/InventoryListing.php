@@ -43,7 +43,7 @@ class InventoryListing implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'inventory' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventorySummary[]',
+        'inventory' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventorySummary[]',
         'next_token' => 'string'
     ];
 
@@ -200,7 +200,7 @@ class InventoryListing implements ModelInterface, ArrayAccess
     /**
      * Gets inventory
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventorySummary[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventorySummary[]
      */
     public function getInventory()
     {
@@ -210,7 +210,7 @@ class InventoryListing implements ModelInterface, ArrayAccess
     /**
      * Sets inventory
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventorySummary[] $inventory List of inventory summaries.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventorySummary[] $inventory List of inventory summaries.
      *
      * @return $this
      */

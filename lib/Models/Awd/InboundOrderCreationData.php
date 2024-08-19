@@ -44,10 +44,10 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'external_reference_id' => 'string',
-        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address',
-        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
+        'origin_address' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\Address',
+        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
         'ship_by' => '\DateTime',
-        'transportation_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\TransportationPreference'
+        'transportation_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\TransportationPreference'
     ];
 
     /**
@@ -248,7 +248,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Gets origin_address
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address
      */
     public function getOriginAddress()
     {
@@ -258,7 +258,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Sets origin_address
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\Address $origin_address origin_address
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\Address $origin_address origin_address
      *
      * @return $this
      */
@@ -272,7 +272,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Gets packages_to_inbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getPackagesToInbound()
     {
@@ -282,7 +282,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Sets packages_to_inbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $packages_to_inbound List of packages to be inbounded.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $packages_to_inbound List of packages to be inbounded.
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Gets transportation_preference
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\TransportationPreference
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\TransportationPreference
      */
     public function getTransportationPreference()
     {
@@ -330,7 +330,7 @@ class InboundOrderCreationData implements ModelInterface, ArrayAccess
     /**
      * Sets transportation_preference
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\TransportationPreference $transportation_preference transportation_preference
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\TransportationPreference $transportation_preference transportation_preference
      *
      * @return $this
      */

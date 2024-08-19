@@ -44,7 +44,7 @@ class ShipmentLabels implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'label_download_url' => 'string',
-        'label_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\LabelStatus'
+        'label_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\LabelStatus'
     ];
 
     /**
@@ -224,7 +224,7 @@ class ShipmentLabels implements ModelInterface, ArrayAccess
     /**
      * Gets label_status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\LabelStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\LabelStatus
      */
     public function getLabelStatus()
     {
@@ -234,7 +234,7 @@ class ShipmentLabels implements ModelInterface, ArrayAccess
     /**
      * Sets label_status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\LabelStatus $label_status label_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\LabelStatus $label_status label_status
      *
      * @return $this
      */

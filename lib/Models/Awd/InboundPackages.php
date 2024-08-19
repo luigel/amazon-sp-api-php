@@ -43,7 +43,7 @@ class InboundPackages implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]'
+        'packages_to_inbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]'
     ];
 
     /**
@@ -194,7 +194,7 @@ class InboundPackages implements ModelInterface, ArrayAccess
     /**
      * Gets packages_to_inbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getPackagesToInbound()
     {
@@ -204,7 +204,7 @@ class InboundPackages implements ModelInterface, ArrayAccess
     /**
      * Sets packages_to_inbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $packages_to_inbound List of packages to be inbounded.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $packages_to_inbound List of packages to be inbounded.
      *
      * @return $this
      */

@@ -45,17 +45,17 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'confirmed_on' => '\DateTime',
         'created_at' => '\DateTime',
-        'eligible_packages_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
-        'eligible_products_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]',
-        'execution_errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundExecutionError[]',
+        'eligible_packages_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
+        'eligible_products_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]',
+        'execution_errors' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundExecutionError[]',
         'order_id' => 'string',
-        'order_preferences' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderAttribute[]',
-        'order_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundStatus',
-        'outbound_shipments' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipment[]',
-        'packages_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
-        'products_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]',
-        'shipped_outbound_packages' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]',
-        'shipped_outbound_products' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]',
+        'order_preferences' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderAttribute[]',
+        'order_status' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundStatus',
+        'outbound_shipments' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipment[]',
+        'packages_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
+        'products_to_outbound' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]',
+        'shipped_outbound_packages' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]',
+        'shipped_outbound_products' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]',
         'updated_at' => '\DateTime'
     ];
 
@@ -326,7 +326,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets eligible_packages_to_outbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getEligiblePackagesToOutbound()
     {
@@ -336,7 +336,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets eligible_packages_to_outbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $eligible_packages_to_outbound List of packages that are eligible for outbound.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $eligible_packages_to_outbound List of packages that are eligible for outbound.
      *
      * @return $this
      */
@@ -350,7 +350,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets eligible_products_to_outbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]
      */
     public function getEligibleProductsToOutbound()
     {
@@ -360,7 +360,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets eligible_products_to_outbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[] $eligible_products_to_outbound List of product units that are eligible for outbound.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[] $eligible_products_to_outbound List of product units that are eligible for outbound.
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets execution_errors
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundExecutionError[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundExecutionError[]
      */
     public function getExecutionErrors()
     {
@@ -384,7 +384,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets execution_errors
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundExecutionError[] $execution_errors Execution errors associated with the outbound order. This field will be populated if the order failed validation.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundExecutionError[] $execution_errors Execution errors associated with the outbound order. This field will be populated if the order failed validation.
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets order_preferences
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderAttribute[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderAttribute[]
      */
     public function getOrderPreferences()
     {
@@ -432,7 +432,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets order_preferences
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OrderAttribute[] $order_preferences Order preferences for this outbound order.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OrderAttribute[] $order_preferences Order preferences for this outbound order.
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets order_status
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundStatus
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundStatus
      */
     public function getOrderStatus()
     {
@@ -456,7 +456,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets order_status
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundStatus $order_status order_status
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundStatus $order_status order_status
      *
      * @return $this
      */
@@ -470,7 +470,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets outbound_shipments
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipment[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipment[]
      */
     public function getOutboundShipments()
     {
@@ -480,7 +480,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets outbound_shipments
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\OutboundShipment[] $outbound_shipments List of outbound shipments that are part of this order.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\OutboundShipment[] $outbound_shipments List of outbound shipments that are part of this order.
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets packages_to_outbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getPackagesToOutbound()
     {
@@ -504,7 +504,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets packages_to_outbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $packages_to_outbound List of packages to be outbound.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $packages_to_outbound List of packages to be outbound.
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets products_to_outbound
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]
      */
     public function getProductsToOutbound()
     {
@@ -528,7 +528,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets products_to_outbound
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[] $products_to_outbound List of product units to be outbound.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[] $products_to_outbound List of product units to be outbound.
      *
      * @return $this
      */
@@ -542,7 +542,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets shipped_outbound_packages
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[]
      */
     public function getShippedOutboundPackages()
     {
@@ -552,7 +552,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets shipped_outbound_packages
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackageQuantity[] $shipped_outbound_packages Outbound packages that are shipped after the execution has completed post confirmation.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackageQuantity[] $shipped_outbound_packages Outbound packages that are shipped after the execution has completed post confirmation.
      *
      * @return $this
      */
@@ -566,7 +566,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Gets shipped_outbound_products
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[]
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[]
      */
     public function getShippedOutboundProducts()
     {
@@ -576,7 +576,7 @@ class OutboundOrder implements ModelInterface, ArrayAccess
     /**
      * Sets shipped_outbound_products
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\ProductQuantity[] $shipped_outbound_products Outbound product units that are shipped after the execution has completed post confirmation.
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\ProductQuantity[] $shipped_outbound_products Outbound product units that are shipped after the execution has completed post confirmation.
      *
      * @return $this
      */

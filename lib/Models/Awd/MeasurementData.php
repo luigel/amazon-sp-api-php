@@ -43,9 +43,9 @@ class MeasurementData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageDimensions',
-        'volume' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageVolume',
-        'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageWeight'
+        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageDimensions',
+        'volume' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageVolume',
+        'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageWeight'
     ];
 
     /**
@@ -206,7 +206,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Gets dimensions
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageDimensions
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageDimensions
      */
     public function getDimensions()
     {
@@ -216,7 +216,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Sets dimensions
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageDimensions $dimensions dimensions
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageDimensions $dimensions dimensions
      *
      * @return $this
      */
@@ -230,7 +230,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Gets volume
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageVolume
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageVolume
      */
     public function getVolume()
     {
@@ -240,7 +240,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Sets volume
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageVolume $volume volume
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageVolume $volume volume
      *
      * @return $this
      */
@@ -254,7 +254,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageWeight
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageWeight
      */
     public function getWeight()
     {
@@ -264,7 +264,7 @@ class MeasurementData implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\PackageWeight $weight weight
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\PackageWeight $weight weight
      *
      * @return $this
      */

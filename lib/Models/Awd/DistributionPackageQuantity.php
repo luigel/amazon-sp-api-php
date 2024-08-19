@@ -44,7 +44,7 @@ class DistributionPackageQuantity implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'count' => 'int',
-        'distribution_package' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackage'
+        'distribution_package' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackage'
     ];
 
     /**
@@ -227,7 +227,7 @@ class DistributionPackageQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets distribution_package
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackage
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackage
      */
     public function getDistributionPackage()
     {
@@ -237,7 +237,7 @@ class DistributionPackageQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets distribution_package
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\DistributionPackage $distribution_package distribution_package
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\DistributionPackage $distribution_package distribution_package
      *
      * @return $this
      */

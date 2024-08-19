@@ -12,7 +12,6 @@ namespace Luigel\AmazonSellingPartnerAPI\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\RequestOptions;
 use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
 use Luigel\AmazonSellingPartnerAPI\Configuration;
 use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
@@ -1889,24 +1888,5 @@ class AwdApi
         }
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
-    }
-
-    /**
-     * Create http client option
-     *
-     * @throws \RuntimeException on file opening failure
-     * @return array of http client options
-     */
-    protected function createHttpClientOption()
-    {
-        $options = [];
-        if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
-            if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
-            }
-        }
-
-        return $options;
     }
 }

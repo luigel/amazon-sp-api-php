@@ -43,8 +43,8 @@ class SkuQuantity implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'expected_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity',
-        'received_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity',
+        'expected_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity',
+        'received_quantity' => '\Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity',
         'sku' => 'string'
     ];
 
@@ -209,7 +209,7 @@ class SkuQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets expected_quantity
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity
      */
     public function getExpectedQuantity()
     {
@@ -219,7 +219,7 @@ class SkuQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets expected_quantity
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity $expected_quantity expected_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity $expected_quantity expected_quantity
      *
      * @return $this
      */
@@ -233,7 +233,7 @@ class SkuQuantity implements ModelInterface, ArrayAccess
     /**
      * Gets received_quantity
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity
      */
     public function getReceivedQuantity()
     {
@@ -243,7 +243,7 @@ class SkuQuantity implements ModelInterface, ArrayAccess
     /**
      * Sets received_quantity
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd;\InventoryQuantity $received_quantity received_quantity
+     * @param \Luigel\AmazonSellingPartnerAPI\Models\Awd\InventoryQuantity $received_quantity received_quantity
      *
      * @return $this
      */
