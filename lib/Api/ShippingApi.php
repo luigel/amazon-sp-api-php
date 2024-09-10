@@ -1,46 +1,17 @@
 <?php
-/**
- * ShippingApi.
- *
- * @author   Stefan Neuhaus
- */
-
-/**
- * Selling Partner API for Shipping.
- *
- * Provides programmatic access to Amazon Shipping APIs.
- *
- * OpenAPI spec version: v1
- */
 
 namespace Luigel\AmazonSellingPartnerAPI\Api;
 
-use Luigel\AmazonSellingPartnerAPI\Configuration;
-use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
-use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse;
-use Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse;
-use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Psr7\Request;
+use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Configuration;
+use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
+use Luigel\AmazonSellingPartnerAPI\ObjectSerializer;
 
-/**
- * ShippingApi Class Doc Comment.
- *
- * @author   Stefan Neuhaus
- */
 class ShippingApi
 {
     use SellingPartnerApiRequest;
-
     /**
      * @var ClientInterface
      */
@@ -56,6 +27,9 @@ class ShippingApi
      */
     protected $headerSelector;
 
+    /**
+     * @param ClientInterface $client
+     */
     public function __construct(Configuration $config)
     {
         $this->client = new Client();
@@ -72,51 +46,53 @@ class ShippingApi
     }
 
     /**
-     * Operation cancelShipment.
+     * Operation cancelShipment
      *
-     * @param string $shipment_id shipment_id (required)
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
+     * @throws \InvalidArgumentException
      * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse
      */
-    public function cancelShipment($shipment_id)
+    public function cancelShipment($shipment_id, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->cancelShipmentWithHttpInfo($shipment_id);
-
+        list($response) = $this->cancelShipmentWithHttpInfo($shipment_id, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation cancelShipmentWithHttpInfo.
+     * Operation cancelShipmentWithHttpInfo
      *
-     * @param string $shipment_id (required)
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
+     * @throws \InvalidArgumentException
      * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelShipmentWithHttpInfo($shipment_id)
+    public function cancelShipmentWithHttpInfo($shipment_id, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse';
+        $request = $this->cancelShipmentRequest($shipment_id, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, CancelShipmentResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation cancelShipmentAsync.
+     * Operation cancelShipmentAsync
      *
-     * @param string $shipment_id (required)
+     *
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsync($shipment_id)
+    public function cancelShipmentAsync($shipment_id, $x_amzn_shipping_business_id = null)
     {
-        return $this->cancelShipmentAsyncWithHttpInfo($shipment_id)
+        return $this->cancelShipmentAsyncWithHttpInfo($shipment_id, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -125,102 +101,120 @@ class ShippingApi
     }
 
     /**
-     * Operation cancelShipmentAsyncWithHttpInfo.
+     * Operation cancelShipmentAsyncWithHttpInfo
      *
-     * @param string $shipment_id (required)
+     *
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsyncWithHttpInfo($shipment_id)
+    public function cancelShipmentAsyncWithHttpInfo($shipment_id, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse';
+        $request = $this->cancelShipmentRequest($shipment_id, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, CancelShipmentResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'cancelShipment'.
+     * Create request for operation 'cancelShipment'
      *
-     * @param string $shipment_id (required)
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function cancelShipmentRequest($shipment_id)
+    protected function cancelShipmentRequest($shipment_id, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'shipment_id' is set
-        if (null === $shipment_id || (is_array($shipment_id) && 0 === count($shipment_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $shipment_id when calling cancelShipment');
+        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $shipment_id when calling cancelShipment'
+            );
         }
 
-        $resourcePath = '/shipping/v1/shipments/{shipmentId}/cancel';
+        $resourcePath = '/shipping/v2/shipments/{shipmentId}/cancel';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
         // path params
-        if (null !== $shipment_id) {
+        if ($shipment_id !== null) {
             $resourcePath = str_replace(
-                '{'.'shipmentId'.'}',
+                '{' . 'shipmentId' . '}',
                 ObjectSerializer::toPathValue($shipment_id),
                 $resourcePath
             );
         }
 
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'DELETE', $httpBody);
     }
 
     /**
-     * Operation createShipment.
+     * Operation directPurchaseShipment
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseRequest $body body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $locale The IETF Language Tag. Note that this only supports the primary language subtag with one secondary language subtag (i.e. en-US, fr-CA). The secondary language subtag is almost always a regional designation. This does not support additional subtags beyond the primary and secondary language subtags. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseResponse
      */
-    public function createShipment($body)
+    public function directPurchaseShipment($body, $x_amzn_idempotency_key = null, $locale = null, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->createShipmentWithHttpInfo($body);
-
+        list($response) = $this->directPurchaseShipmentWithHttpInfo($body, $x_amzn_idempotency_key, $locale, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation createShipmentWithHttpInfo.
+     * Operation directPurchaseShipmentWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $locale The IETF Language Tag. Note that this only supports the primary language subtag with one secondary language subtag (i.e. en-US, fr-CA). The secondary language subtag is almost always a regional designation. This does not support additional subtags beyond the primary and secondary language subtags. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createShipmentWithHttpInfo($body)
+    public function directPurchaseShipmentWithHttpInfo($body, $x_amzn_idempotency_key = null, $locale = null, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->createShipmentRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseResponse';
+        $request = $this->directPurchaseShipmentRequest($body, $x_amzn_idempotency_key, $locale, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, CreateShipmentResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation createShipmentAsync.
+     * Operation directPurchaseShipmentAsync
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $locale The IETF Language Tag. Note that this only supports the primary language subtag with one secondary language subtag (i.e. en-US, fr-CA). The secondary language subtag is almost always a regional designation. This does not support additional subtags beyond the primary and secondary language subtags. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createShipmentAsync($body)
+    public function directPurchaseShipmentAsync($body, $x_amzn_idempotency_key = null, $locale = null, $x_amzn_shipping_business_id = null)
     {
-        return $this->createShipmentAsyncWithHttpInfo($body)
+        return $this->directPurchaseShipmentAsyncWithHttpInfo($body, $x_amzn_idempotency_key, $locale, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -229,173 +223,932 @@ class ShippingApi
     }
 
     /**
-     * Operation createShipmentAsyncWithHttpInfo.
+     * Operation directPurchaseShipmentAsyncWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $locale The IETF Language Tag. Note that this only supports the primary language subtag with one secondary language subtag (i.e. en-US, fr-CA). The secondary language subtag is almost always a regional designation. This does not support additional subtags beyond the primary and secondary language subtags. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createShipmentAsyncWithHttpInfo($body)
+    public function directPurchaseShipmentAsyncWithHttpInfo($body, $x_amzn_idempotency_key = null, $locale = null, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->createShipmentRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseResponse';
+        $request = $this->directPurchaseShipmentRequest($body, $x_amzn_idempotency_key, $locale, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, CreateShipmentResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'createShipment'.
+     * Create request for operation 'directPurchaseShipment'
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\CreateShipmentRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\DirectPurchaseRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $locale The IETF Language Tag. Note that this only supports the primary language subtag with one secondary language subtag (i.e. en-US, fr-CA). The secondary language subtag is almost always a regional designation. This does not support additional subtags beyond the primary and secondary language subtags. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createShipmentRequest($body)
+    protected function directPurchaseShipmentRequest($body, $x_amzn_idempotency_key = null, $locale = null, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling createShipment');
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling directPurchaseShipment'
+            );
         }
 
-        $resourcePath = '/shipping/v1/shipments';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = $body;
-        $multipart = false;
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
-    }
-
-    /**
-     * Operation getAccount.
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse
-     */
-    public function getAccount()
-    {
-        list($response) = $this->getAccountWithHttpInfo();
-
-        return $response;
-    }
-
-    /**
-     * Operation getAccountWithHttpInfo.
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccountResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getAccountWithHttpInfo()
-    {
-        $request = $this->getAccountRequest();
-
-        return $this->sendRequest($request, GetAccountResponse::class);
-    }
-
-    /**
-     * Operation getAccountAsync.
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getAccountAsync()
-    {
-        return $this->getAccountAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getAccountAsyncWithHttpInfo.
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getAccountAsyncWithHttpInfo()
-    {
-        $request = $this->getAccountRequest();
-
-        return $this->sendRequestAsync($request, GetAccountResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getAccount'.
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getAccountRequest()
-    {
-        $resourcePath = '/shipping/v1/account';
+        $resourcePath = '/shipping/v2/shipments/directPurchase';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // header params
+        if ($x_amzn_idempotency_key !== null) {
+            $headerParams['x-amzn-IdempotencyKey'] = ObjectSerializer::toHeaderValue($x_amzn_idempotency_key);
+        }
+        // header params
+        if ($locale !== null) {
+            $headerParams['locale'] = ObjectSerializer::toHeaderValue($locale);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+    }
+
+    /**
+     * Operation generateCollectionForm
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormRequest $body body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormResponse
+     */
+    public function generateCollectionForm($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->generateCollectionFormWithHttpInfo($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation generateCollectionFormWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function generateCollectionFormWithHttpInfo($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormResponse';
+        $request = $this->generateCollectionFormRequest($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation generateCollectionFormAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function generateCollectionFormAsync($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
+    {
+        return $this->generateCollectionFormAsyncWithHttpInfo($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation generateCollectionFormAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function generateCollectionFormAsyncWithHttpInfo($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormResponse';
+        $request = $this->generateCollectionFormRequest($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'generateCollectionForm'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GenerateCollectionFormRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function generateCollectionFormRequest($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling generateCollectionForm'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/collectionForms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_idempotency_key !== null) {
+            $headerParams['x-amzn-IdempotencyKey'] = ObjectSerializer::toHeaderValue($x_amzn_idempotency_key);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+    }
+
+    /**
+     * Operation getAccessPoints
+     *
+     * @param  string[] $access_point_types access_point_types (required)
+     * @param  string $country_code country_code (required)
+     * @param  string $postal_code postal_code (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccessPointsResponse
+     */
+    public function getAccessPoints($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getAccessPointsWithHttpInfo($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAccessPointsWithHttpInfo
+     *
+     * @param  string[] $access_point_types (required)
+     * @param  string $country_code (required)
+     * @param  string $postal_code (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccessPointsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccessPointsWithHttpInfo($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccessPointsResponse';
+        $request = $this->getAccessPointsRequest($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getAccessPointsAsync
+     *
+     *
+     *
+     * @param  string[] $access_point_types (required)
+     * @param  string $country_code (required)
+     * @param  string $postal_code (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAccessPointsAsync($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getAccessPointsAsyncWithHttpInfo($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAccessPointsAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  string[] $access_point_types (required)
+     * @param  string $country_code (required)
+     * @param  string $postal_code (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAccessPointsAsyncWithHttpInfo($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAccessPointsResponse';
+        $request = $this->getAccessPointsRequest($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getAccessPoints'
+     *
+     * @param  string[] $access_point_types (required)
+     * @param  string $country_code (required)
+     * @param  string $postal_code (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAccessPointsRequest($access_point_types, $country_code, $postal_code, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'access_point_types' is set
+        if ($access_point_types === null || (is_array($access_point_types) && count($access_point_types) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $access_point_types when calling getAccessPoints'
+            );
+        }
+        // verify the required parameter 'country_code' is set
+        if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $country_code when calling getAccessPoints'
+            );
+        }
+        // verify the required parameter 'postal_code' is set
+        if ($postal_code === null || (is_array($postal_code) && count($postal_code) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $postal_code when calling getAccessPoints'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/accessPoints';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if (is_array($access_point_types)) {
+            $access_point_types = ObjectSerializer::serializeCollection($access_point_types, 'csv', true);
+        }
+        if ($access_point_types !== null) {
+            $queryParams['accessPointTypes'] = ObjectSerializer::toQueryValue($access_point_types, null);
+        }
+        // query params
+        if ($country_code !== null) {
+            $queryParams['countryCode'] = ObjectSerializer::toQueryValue($country_code, null);
+        }
+        // query params
+        if ($postal_code !== null) {
+            $queryParams['postalCode'] = ObjectSerializer::toQueryValue($postal_code, null);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
-     * Operation getRates.
+     * Operation getAdditionalInputs
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body body (required)
+     * @param  string $request_token The request token returned in the response to the getRates operation. (required)
+     * @param  string $rate_id The rate identifier for the shipping offering (rate) returned in the response to the getRates operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAdditionalInputsResponse
+     */
+    public function getAdditionalInputs($request_token, $rate_id, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getAdditionalInputsWithHttpInfo($request_token, $rate_id, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAdditionalInputsWithHttpInfo
+     *
+     * @param  string $request_token The request token returned in the response to the getRates operation. (required)
+     * @param  string $rate_id The rate identifier for the shipping offering (rate) returned in the response to the getRates operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAdditionalInputsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAdditionalInputsWithHttpInfo($request_token, $rate_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAdditionalInputsResponse';
+        $request = $this->getAdditionalInputsRequest($request_token, $rate_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getAdditionalInputsAsync
+     *
+     *
+     *
+     * @param  string $request_token The request token returned in the response to the getRates operation. (required)
+     * @param  string $rate_id The rate identifier for the shipping offering (rate) returned in the response to the getRates operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAdditionalInputsAsync($request_token, $rate_id, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getAdditionalInputsAsyncWithHttpInfo($request_token, $rate_id, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAdditionalInputsAsyncWithHttpInfo
      *
+     *
+     *
+     * @param  string $request_token The request token returned in the response to the getRates operation. (required)
+     * @param  string $rate_id The rate identifier for the shipping offering (rate) returned in the response to the getRates operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAdditionalInputsAsyncWithHttpInfo($request_token, $rate_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetAdditionalInputsResponse';
+        $request = $this->getAdditionalInputsRequest($request_token, $rate_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getAdditionalInputs'
+     *
+     * @param  string $request_token The request token returned in the response to the getRates operation. (required)
+     * @param  string $rate_id The rate identifier for the shipping offering (rate) returned in the response to the getRates operation. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAdditionalInputsRequest($request_token, $rate_id, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'request_token' is set
+        if ($request_token === null || (is_array($request_token) && count($request_token) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_token when calling getAdditionalInputs'
+            );
+        }
+        // verify the required parameter 'rate_id' is set
+        if ($rate_id === null || (is_array($rate_id) && count($rate_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $rate_id when calling getAdditionalInputs'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/shipments/additionalInputs/schema';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($request_token !== null) {
+            $queryParams['requestToken'] = ObjectSerializer::toQueryValue($request_token, null);
+        }
+        // query params
+        if ($rate_id !== null) {
+            $queryParams['rateId'] = ObjectSerializer::toQueryValue($rate_id, null);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+        
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+    }
+
+    /**
+     * Operation getCarrierAccountFormInputs
+     *
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountFormInputsResponse
+     */
+    public function getCarrierAccountFormInputs($x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getCarrierAccountFormInputsWithHttpInfo($x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCarrierAccountFormInputsWithHttpInfo
+     *
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountFormInputsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCarrierAccountFormInputsWithHttpInfo($x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountFormInputsResponse';
+        $request = $this->getCarrierAccountFormInputsRequest($x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getCarrierAccountFormInputsAsync
+     *
+     *
+     *
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCarrierAccountFormInputsAsync($x_amzn_shipping_business_id = null)
+    {
+        return $this->getCarrierAccountFormInputsAsyncWithHttpInfo($x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCarrierAccountFormInputsAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCarrierAccountFormInputsAsyncWithHttpInfo($x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountFormInputsResponse';
+        $request = $this->getCarrierAccountFormInputsRequest($x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getCarrierAccountFormInputs'
+     *
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCarrierAccountFormInputsRequest($x_amzn_shipping_business_id = null)
+    {
+
+        $resourcePath = '/shipping/v2/carrierAccountFormInputs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+    }
+
+    /**
+     * Operation getCarrierAccounts
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsRequest $body body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsResponse
+     */
+    public function getCarrierAccounts($body, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getCarrierAccountsWithHttpInfo($body, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCarrierAccountsWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCarrierAccountsWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsResponse';
+        $request = $this->getCarrierAccountsRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getCarrierAccountsAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCarrierAccountsAsync($body, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getCarrierAccountsAsyncWithHttpInfo($body, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCarrierAccountsAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCarrierAccountsAsyncWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsResponse';
+        $request = $this->getCarrierAccountsRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getCarrierAccounts'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCarrierAccountsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCarrierAccountsRequest($body, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getCarrierAccounts'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/carrierAccounts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
+    }
+
+    /**
+     * Operation getCollectionForm
+     *
+     * @param  string $collection_form_id collection form Id to reprint a collection. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormResponse
+     */
+    public function getCollectionForm($collection_form_id, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getCollectionFormWithHttpInfo($collection_form_id, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCollectionFormWithHttpInfo
+     *
+     * @param  string $collection_form_id collection form Id to reprint a collection. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCollectionFormWithHttpInfo($collection_form_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormResponse';
+        $request = $this->getCollectionFormRequest($collection_form_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getCollectionFormAsync
+     *
+     *
+     *
+     * @param  string $collection_form_id collection form Id to reprint a collection. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCollectionFormAsync($collection_form_id, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getCollectionFormAsyncWithHttpInfo($collection_form_id, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCollectionFormAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  string $collection_form_id collection form Id to reprint a collection. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCollectionFormAsyncWithHttpInfo($collection_form_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormResponse';
+        $request = $this->getCollectionFormRequest($collection_form_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getCollectionForm'
+     *
+     * @param  string $collection_form_id collection form Id to reprint a collection. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCollectionFormRequest($collection_form_id, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'collection_form_id' is set
+        if ($collection_form_id === null || (is_array($collection_form_id) && count($collection_form_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $collection_form_id when calling getCollectionForm'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/collectionForms/{collectionFormId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        // path params
+        if ($collection_form_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'collectionFormId' . '}',
+                ObjectSerializer::toPathValue($collection_form_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
+    }
+
+    /**
+     * Operation getCollectionFormHistory
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryRequest $body body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryResponse
+     */
+    public function getCollectionFormHistory($body, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getCollectionFormHistoryWithHttpInfo($body, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCollectionFormHistoryWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCollectionFormHistoryWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryResponse';
+        $request = $this->getCollectionFormHistoryRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getCollectionFormHistoryAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCollectionFormHistoryAsync($body, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getCollectionFormHistoryAsyncWithHttpInfo($body, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCollectionFormHistoryAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCollectionFormHistoryAsyncWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryResponse';
+        $request = $this->getCollectionFormHistoryRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getCollectionFormHistory'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetCollectionFormHistoryRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCollectionFormHistoryRequest($body, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getCollectionFormHistory'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/collectionForms/history';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
+    }
+
+    /**
+     * Operation getRates
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
      * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse
      */
-    public function getRates($body)
+    public function getRates($body, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->getRatesWithHttpInfo($body);
-
+        list($response) = $this->getRatesWithHttpInfo($body, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation getRatesWithHttpInfo.
+     * Operation getRatesWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
+     * @throws \InvalidArgumentException
      * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRatesWithHttpInfo($body)
+    public function getRatesWithHttpInfo($body, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->getRatesRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse';
+        $request = $this->getRatesRequest($body, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, GetRatesResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation getRatesAsync.
+     * Operation getRatesAsync
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRatesAsync($body)
+    public function getRatesAsync($body, $x_amzn_shipping_business_id = null)
     {
-        return $this->getRatesAsyncWithHttpInfo($body)
+        return $this->getRatesAsyncWithHttpInfo($body, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -404,143 +1157,199 @@ class ShippingApi
     }
 
     /**
-     * Operation getRatesAsyncWithHttpInfo.
+     * Operation getRatesAsyncWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRatesAsyncWithHttpInfo($body)
+    public function getRatesAsyncWithHttpInfo($body, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->getRatesRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesResponse';
+        $request = $this->getRatesRequest($body, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, GetRatesResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'getRates'.
+     * Create request for operation 'getRates'
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetRatesRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getRatesRequest($body)
+    protected function getRatesRequest($body, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling getRates');
-        }
-
-        $resourcePath = '/shipping/v1/rates';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = $body;
-        $multipart = false;
-
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
-    }
-
-    /**
-     * Operation getShipment.
-     *
-     * @param string $shipment_id shipment_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse
-     */
-    public function getShipment($shipment_id)
-    {
-        list($response) = $this->getShipmentWithHttpInfo($shipment_id);
-
-        return $response;
-    }
-
-    /**
-     * Operation getShipmentWithHttpInfo.
-     *
-     * @param string $shipment_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getShipmentWithHttpInfo($shipment_id)
-    {
-        $request = $this->getShipmentRequest($shipment_id);
-
-        return $this->sendRequest($request, GetShipmentsResponse::class);
-    }
-
-    /**
-     * Operation getShipmentAsync.
-     *
-     * @param string $shipment_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getShipmentAsync($shipment_id)
-    {
-        return $this->getShipmentAsyncWithHttpInfo($shipment_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getRates'
             );
-    }
-
-    /**
-     * Operation getShipmentAsyncWithHttpInfo.
-     *
-     * @param string $shipment_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getShipmentAsyncWithHttpInfo($shipment_id)
-    {
-        $request = $this->getShipmentRequest($shipment_id);
-
-        return $this->sendRequestAsync($request, GetShipmentsResponse::class);
-    }
-
-    /**
-     * Create request for operation 'getShipment'.
-     *
-     * @param string $shipment_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getShipmentRequest($shipment_id)
-    {
-        // verify the required parameter 'shipment_id' is set
-        if (null === $shipment_id || (is_array($shipment_id) && 0 === count($shipment_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $shipment_id when calling getShipment');
         }
 
-        $resourcePath = '/shipping/v1/shipments/{shipmentId}';
+        $resourcePath = '/shipping/v2/shipments/rates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+    }
+
+    /**
+     * Operation getShipmentDocuments
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $package_client_reference_id The package client reference identifier originally provided in the request body parameter for the getRates operation. (required)
+     * @param  string $format The file format of the document. Must be one of the supported formats returned by the getRates operation. (optional)
+     * @param  float $dpi The resolution of the document (for example, 300 means 300 dots per inch). Must be one of the supported resolutions returned in the response to the getRates operation. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentDocumentsResponse
+     */
+    public function getShipmentDocuments($shipment_id, $package_client_reference_id, $format = null, $dpi = null, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->getShipmentDocumentsWithHttpInfo($shipment_id, $package_client_reference_id, $format, $dpi, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation getShipmentDocumentsWithHttpInfo
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $package_client_reference_id The package client reference identifier originally provided in the request body parameter for the getRates operation. (required)
+     * @param  string $format The file format of the document. Must be one of the supported formats returned by the getRates operation. (optional)
+     * @param  float $dpi The resolution of the document (for example, 300 means 300 dots per inch). Must be one of the supported resolutions returned in the response to the getRates operation. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentDocumentsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getShipmentDocumentsWithHttpInfo($shipment_id, $package_client_reference_id, $format = null, $dpi = null, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentDocumentsResponse';
+        $request = $this->getShipmentDocumentsRequest($shipment_id, $package_client_reference_id, $format, $dpi, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation getShipmentDocumentsAsync
+     *
+     *
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $package_client_reference_id The package client reference identifier originally provided in the request body parameter for the getRates operation. (required)
+     * @param  string $format The file format of the document. Must be one of the supported formats returned by the getRates operation. (optional)
+     * @param  float $dpi The resolution of the document (for example, 300 means 300 dots per inch). Must be one of the supported resolutions returned in the response to the getRates operation. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getShipmentDocumentsAsync($shipment_id, $package_client_reference_id, $format = null, $dpi = null, $x_amzn_shipping_business_id = null)
+    {
+        return $this->getShipmentDocumentsAsyncWithHttpInfo($shipment_id, $package_client_reference_id, $format, $dpi, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getShipmentDocumentsAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $package_client_reference_id The package client reference identifier originally provided in the request body parameter for the getRates operation. (required)
+     * @param  string $format The file format of the document. Must be one of the supported formats returned by the getRates operation. (optional)
+     * @param  float $dpi The resolution of the document (for example, 300 means 300 dots per inch). Must be one of the supported resolutions returned in the response to the getRates operation. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getShipmentDocumentsAsyncWithHttpInfo($shipment_id, $package_client_reference_id, $format = null, $dpi = null, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetShipmentDocumentsResponse';
+        $request = $this->getShipmentDocumentsRequest($shipment_id, $package_client_reference_id, $format, $dpi, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'getShipmentDocuments'
+     *
+     * @param  string $shipment_id The shipment identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $package_client_reference_id The package client reference identifier originally provided in the request body parameter for the getRates operation. (required)
+     * @param  string $format The file format of the document. Must be one of the supported formats returned by the getRates operation. (optional)
+     * @param  float $dpi The resolution of the document (for example, 300 means 300 dots per inch). Must be one of the supported resolutions returned in the response to the getRates operation. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getShipmentDocumentsRequest($shipment_id, $package_client_reference_id, $format = null, $dpi = null, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'shipment_id' is set
+        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $shipment_id when calling getShipmentDocuments'
+            );
+        }
+        // verify the required parameter 'package_client_reference_id' is set
+        if ($package_client_reference_id === null || (is_array($package_client_reference_id) && count($package_client_reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $package_client_reference_id when calling getShipmentDocuments'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/shipments/{shipmentId}/documents';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($package_client_reference_id !== null) {
+            $queryParams['packageClientReferenceId'] = ObjectSerializer::toQueryValue($package_client_reference_id, null);
+        }
+        // query params
+        if ($format !== null) {
+            $queryParams['format'] = ObjectSerializer::toQueryValue($format, null);
+        }
+        // query params
+        if ($dpi !== null) {
+            $queryParams['dpi'] = ObjectSerializer::toQueryValue($dpi, null);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
         // path params
-        if (null !== $shipment_id) {
+        if ($shipment_id !== null) {
             $resourcePath = str_replace(
-                '{'.'shipmentId'.'}',
+                '{' . 'shipmentId' . '}',
                 ObjectSerializer::toPathValue($shipment_id),
                 $resourcePath
             );
@@ -550,51 +1359,56 @@ class ShippingApi
     }
 
     /**
-     * Operation getTrackingInformation.
+     * Operation getTracking
      *
-     * @param string $tracking_id tracking_id (required)
+     * @param  string $tracking_id A carrier-generated tracking identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $carrier_id A carrier identifier originally returned by the getRates operation for the selected rate. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingResponse
      */
-    public function getTrackingInformation($tracking_id)
+    public function getTracking($tracking_id, $carrier_id, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->getTrackingInformationWithHttpInfo($tracking_id);
-
+        list($response) = $this->getTrackingWithHttpInfo($tracking_id, $carrier_id, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation getTrackingInformationWithHttpInfo.
+     * Operation getTrackingWithHttpInfo
      *
-     * @param string $tracking_id (required)
+     * @param  string $tracking_id A carrier-generated tracking identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $carrier_id A carrier identifier originally returned by the getRates operation for the selected rate. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingInformationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTrackingInformationWithHttpInfo($tracking_id)
+    public function getTrackingWithHttpInfo($tracking_id, $carrier_id, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->getTrackingInformationRequest($tracking_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingResponse';
+        $request = $this->getTrackingRequest($tracking_id, $carrier_id, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, GetTrackingInformationResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation getTrackingInformationAsync.
+     * Operation getTrackingAsync
      *
-     * @param string $tracking_id (required)
+     *
+     *
+     * @param  string $tracking_id A carrier-generated tracking identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $carrier_id A carrier identifier originally returned by the getRates operation for the selected rate. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingInformationAsync($tracking_id)
+    public function getTrackingAsync($tracking_id, $carrier_id, $x_amzn_shipping_business_id = null)
     {
-        return $this->getTrackingInformationAsyncWithHttpInfo($tracking_id)
+        return $this->getTrackingAsyncWithHttpInfo($tracking_id, $carrier_id, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -603,105 +1417,121 @@ class ShippingApi
     }
 
     /**
-     * Operation getTrackingInformationAsyncWithHttpInfo.
+     * Operation getTrackingAsyncWithHttpInfo
      *
-     * @param string $tracking_id (required)
+     *
+     *
+     * @param  string $tracking_id A carrier-generated tracking identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $carrier_id A carrier identifier originally returned by the getRates operation for the selected rate. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingInformationAsyncWithHttpInfo($tracking_id)
+    public function getTrackingAsyncWithHttpInfo($tracking_id, $carrier_id, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->getTrackingInformationRequest($tracking_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetTrackingResponse';
+        $request = $this->getTrackingRequest($tracking_id, $carrier_id, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, GetTrackingInformationResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'getTrackingInformation'.
+     * Create request for operation 'getTracking'
      *
-     * @param string $tracking_id (required)
+     * @param  string $tracking_id A carrier-generated tracking identifier originally returned by the purchaseShipment operation. (required)
+     * @param  string $carrier_id A carrier identifier originally returned by the getRates operation for the selected rate. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTrackingInformationRequest($tracking_id)
+    protected function getTrackingRequest($tracking_id, $carrier_id, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'tracking_id' is set
-        if (null === $tracking_id || (is_array($tracking_id) && 0 === count($tracking_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $tracking_id when calling getTrackingInformation');
+        if ($tracking_id === null || (is_array($tracking_id) && count($tracking_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $tracking_id when calling getTracking'
+            );
+        }
+        // verify the required parameter 'carrier_id' is set
+        if ($carrier_id === null || (is_array($carrier_id) && count($carrier_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $carrier_id when calling getTracking'
+            );
         }
 
-        $resourcePath = '/shipping/v1/tracking/{trackingId}';
+        $resourcePath = '/shipping/v2/tracking';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // path params
-        if (null !== $tracking_id) {
-            $resourcePath = str_replace(
-                '{'.'trackingId'.'}',
-                ObjectSerializer::toPathValue($tracking_id),
-                $resourcePath
-            );
+        // query params
+        if ($tracking_id !== null) {
+            $queryParams['trackingId'] = ObjectSerializer::toQueryValue($tracking_id, null);
+        }
+        // query params
+        if ($carrier_id !== null) {
+            $queryParams['carrierId'] = ObjectSerializer::toQueryValue($carrier_id, null);
+        }
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
         }
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
-     * Operation purchaseLabels.
+     * Operation getUnmanifestedShipments
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        body (required)
-     * @param string                                                                  $shipment_id shipment_id (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsRequest $body body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsResponse
      */
-    public function purchaseLabels($body, $shipment_id)
+    public function getUnmanifestedShipments($body, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->purchaseLabelsWithHttpInfo($body, $shipment_id);
-
+        list($response) = $this->getUnmanifestedShipmentsWithHttpInfo($body, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation purchaseLabelsWithHttpInfo.
+     * Operation getUnmanifestedShipmentsWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
-     * @param string                                                                  $shipment_id (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purchaseLabelsWithHttpInfo($body, $shipment_id)
+    public function getUnmanifestedShipmentsWithHttpInfo($body, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->purchaseLabelsRequest($body, $shipment_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsResponse';
+        $request = $this->getUnmanifestedShipmentsRequest($body, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, PurchaseLabelsResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation purchaseLabelsAsync.
+     * Operation getUnmanifestedShipmentsAsync
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
-     * @param string                                                                  $shipment_id (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseLabelsAsync($body, $shipment_id)
+    public function getUnmanifestedShipmentsAsync($body, $x_amzn_shipping_business_id = null)
     {
-        return $this->purchaseLabelsAsyncWithHttpInfo($body, $shipment_id)
+        return $this->getUnmanifestedShipmentsAsyncWithHttpInfo($body, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -710,108 +1540,342 @@ class ShippingApi
     }
 
     /**
-     * Operation purchaseLabelsAsyncWithHttpInfo.
+     * Operation getUnmanifestedShipmentsAsyncWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
-     * @param string                                                                  $shipment_id (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseLabelsAsyncWithHttpInfo($body, $shipment_id)
+    public function getUnmanifestedShipmentsAsyncWithHttpInfo($body, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->purchaseLabelsRequest($body, $shipment_id);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsResponse';
+        $request = $this->getUnmanifestedShipmentsRequest($body, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, PurchaseLabelsResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'purchaseLabels'.
+     * Create request for operation 'getUnmanifestedShipments'
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseLabelsRequest $body        (required)
-     * @param string                                                                  $shipment_id (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\GetUnmanifestedShipmentsRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function purchaseLabelsRequest($body, $shipment_id)
+    protected function getUnmanifestedShipmentsRequest($body, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling purchaseLabels');
-        }
-        // verify the required parameter 'shipment_id' is set
-        if (null === $shipment_id || (is_array($shipment_id) && 0 === count($shipment_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $shipment_id when calling purchaseLabels');
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getUnmanifestedShipments'
+            );
         }
 
-        $resourcePath = '/shipping/v1/shipments/{shipmentId}/purchaseLabels';
+        $resourcePath = '/shipping/v2/unmanifestedShipments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
-        $httpBody = $body;
+        $httpBody = '';
         $multipart = false;
 
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
+    }
+
+    /**
+     * Operation linkCarrierAccount
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountRequest $body body (required)
+     * @param  string $carrier_id The unique identifier associated with the carrier account. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountResponse
+     */
+    public function linkCarrierAccount($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->linkCarrierAccountWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation linkCarrierAccountWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id The unique identifier associated with the carrier account. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function linkCarrierAccountWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountResponse';
+        $request = $this->linkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation linkCarrierAccountAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id The unique identifier associated with the carrier account. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function linkCarrierAccountAsync($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        return $this->linkCarrierAccountAsyncWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation linkCarrierAccountAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id The unique identifier associated with the carrier account. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function linkCarrierAccountAsyncWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountResponse';
+        $request = $this->linkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'linkCarrierAccount'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\LinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id The unique identifier associated with the carrier account. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function linkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling linkCarrierAccount'
+            );
+        }
+        // verify the required parameter 'carrier_id' is set
+        if ($carrier_id === null || (is_array($carrier_id) && count($carrier_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $carrier_id when calling linkCarrierAccount'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/carrierAccounts/{carrierId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
         // path params
-        if (null !== $shipment_id) {
+        if ($carrier_id !== null) {
             $resourcePath = str_replace(
-                '{'.'shipmentId'.'}',
-                ObjectSerializer::toPathValue($shipment_id),
+                '{' . 'carrierId' . '}',
+                ObjectSerializer::toPathValue($carrier_id),
                 $resourcePath
             );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
+    }
+
+    /**
+     * Operation oneClickShipment
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentRequest $body body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentResponse
+     */
+    public function oneClickShipment($body, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->oneClickShipmentWithHttpInfo($body, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation oneClickShipmentWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function oneClickShipmentWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentResponse';
+        $request = $this->oneClickShipmentRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation oneClickShipmentAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function oneClickShipmentAsync($body, $x_amzn_shipping_business_id = null)
+    {
+        return $this->oneClickShipmentAsyncWithHttpInfo($body, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation oneClickShipmentAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function oneClickShipmentAsyncWithHttpInfo($body, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentResponse';
+        $request = $this->oneClickShipmentRequest($body, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'oneClickShipment'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\OneClickShipmentRequest $body (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function oneClickShipmentRequest($body, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling oneClickShipment'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/oneClickShipment';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
         }
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
     }
 
     /**
-     * Operation purchaseShipment.
+     * Operation purchaseShipment
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
+     * @throws \InvalidArgumentException
      * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse
      */
-    public function purchaseShipment($body)
+    public function purchaseShipment($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
     {
-        list($response) = $this->purchaseShipmentWithHttpInfo($body);
-
+        list($response) = $this->purchaseShipmentWithHttpInfo($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
         return $response;
     }
 
     /**
-     * Operation purchaseShipmentWithHttpInfo.
+     * Operation purchaseShipmentWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
-     * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
+     * @throws \InvalidArgumentException
      * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purchaseShipmentWithHttpInfo($body)
+    public function purchaseShipmentWithHttpInfo($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->purchaseShipmentRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse';
+        $request = $this->purchaseShipmentRequest($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
 
-        return $this->sendRequest($request, PurchaseShipmentResponse::class);
+        return $this->sendRequest($request, $returnType);
     }
 
     /**
-     * Operation purchaseShipmentAsync.
+     * Operation purchaseShipmentAsync
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseShipmentAsync($body)
+    public function purchaseShipmentAsync($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
     {
-        return $this->purchaseShipmentAsyncWithHttpInfo($body)
+        return $this->purchaseShipmentAsyncWithHttpInfo($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -820,174 +1884,187 @@ class ShippingApi
     }
 
     /**
-     * Operation purchaseShipmentAsyncWithHttpInfo.
+     * Operation purchaseShipmentAsyncWithHttpInfo
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseShipmentAsyncWithHttpInfo($body)
+    public function purchaseShipmentAsyncWithHttpInfo($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
     {
-        $request = $this->purchaseShipmentRequest($body);
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentResponse';
+        $request = $this->purchaseShipmentRequest($body, $x_amzn_idempotency_key, $x_amzn_shipping_business_id);
 
-        return $this->sendRequestAsync($request, PurchaseShipmentResponse::class);
+        return $this->sendRequestAsync($request, $returnType);
     }
 
     /**
-     * Create request for operation 'purchaseShipment'.
+     * Create request for operation 'purchaseShipment'
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\PurchaseShipmentRequest $body (required)
+     * @param  string $x_amzn_idempotency_key A unique value which the server uses to recognize subsequent retries of the same request. (optional)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
      *
      * @throws \InvalidArgumentException
-     *
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function purchaseShipmentRequest($body)
+    protected function purchaseShipmentRequest($body, $x_amzn_idempotency_key = null, $x_amzn_shipping_business_id = null)
     {
         // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling purchaseShipment');
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling purchaseShipment'
+            );
         }
 
-        $resourcePath = '/shipping/v1/purchaseShipment';
+        $resourcePath = '/shipping/v2/shipments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
-        $httpBody = $body;
+        $httpBody = '';
         $multipart = false;
 
-        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
-    }
-
-    /**
-     * Operation retrieveShippingLabel.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        body (required)
-     * @param string                                                                         $shipment_id shipment_id (required)
-     * @param string                                                                         $tracking_id tracking_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse
-     */
-    public function retrieveShippingLabel($body, $shipment_id, $tracking_id)
-    {
-        list($response) = $this->retrieveShippingLabelWithHttpInfo($body, $shipment_id, $tracking_id);
-
-        return $response;
-    }
-
-    /**
-     * Operation retrieveShippingLabelWithHttpInfo.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
-     * @param string                                                                         $shipment_id (required)
-     * @param string                                                                         $tracking_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
-     *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function retrieveShippingLabelWithHttpInfo($body, $shipment_id, $tracking_id)
-    {
-        $request = $this->retrieveShippingLabelRequest($body, $shipment_id, $tracking_id);
-
-        return $this->sendRequest($request, RetrieveShippingLabelResponse::class);
-    }
-
-    /**
-     * Operation retrieveShippingLabelAsync.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
-     * @param string                                                                         $shipment_id (required)
-     * @param string                                                                         $tracking_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function retrieveShippingLabelAsync($body, $shipment_id, $tracking_id)
-    {
-        return $this->retrieveShippingLabelAsyncWithHttpInfo($body, $shipment_id, $tracking_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation retrieveShippingLabelAsyncWithHttpInfo.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
-     * @param string                                                                         $shipment_id (required)
-     * @param string                                                                         $tracking_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function retrieveShippingLabelAsyncWithHttpInfo($body, $shipment_id, $tracking_id)
-    {
-        $request = $this->retrieveShippingLabelRequest($body, $shipment_id, $tracking_id);
-
-        return $this->sendRequestAsync($request, RetrieveShippingLabelResponse::class);
-    }
-
-    /**
-     * Create request for operation 'retrieveShippingLabel'.
-     *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\Shipping\RetrieveShippingLabelRequest $body        (required)
-     * @param string                                                                         $shipment_id (required)
-     * @param string                                                                         $tracking_id (required)
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function retrieveShippingLabelRequest($body, $shipment_id, $tracking_id)
-    {
-        // verify the required parameter 'body' is set
-        if (null === $body || (is_array($body) && 0 === count($body))) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling retrieveShippingLabel');
+        // header params
+        if ($x_amzn_idempotency_key !== null) {
+            $headerParams['x-amzn-IdempotencyKey'] = ObjectSerializer::toHeaderValue($x_amzn_idempotency_key);
         }
-        // verify the required parameter 'shipment_id' is set
-        if (null === $shipment_id || (is_array($shipment_id) && 0 === count($shipment_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $shipment_id when calling retrieveShippingLabel');
-        }
-        // verify the required parameter 'tracking_id' is set
-        if (null === $tracking_id || (is_array($tracking_id) && 0 === count($tracking_id))) {
-            throw new \InvalidArgumentException('Missing the required parameter $tracking_id when calling retrieveShippingLabel');
-        }
-
-        $resourcePath = '/shipping/v1/shipments/{shipmentId}/containers/{trackingId}/label';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = $body;
-        $multipart = false;
-
-        // path params
-        if (null !== $shipment_id) {
-            $resourcePath = str_replace(
-                '{'.'shipmentId'.'}',
-                ObjectSerializer::toPathValue($shipment_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if (null !== $tracking_id) {
-            $resourcePath = str_replace(
-                '{'.'trackingId'.'}',
-                ObjectSerializer::toPathValue($tracking_id),
-                $resourcePath
-            );
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
         }
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+    }
+
+    /**
+     * Operation unlinkCarrierAccount
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountRequest $body body (required)
+     * @param  string $carrier_id carrier Id to unlink with merchant. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountResponse
+     */
+    public function unlinkCarrierAccount($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        list($response) = $this->unlinkCarrierAccountWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id);
+        return $response;
+    }
+
+    /**
+     * Operation unlinkCarrierAccountWithHttpInfo
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id carrier Id to unlink with merchant. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function unlinkCarrierAccountWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountResponse';
+        $request = $this->unlinkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequest($request, $returnType);
+    }
+
+    /**
+     * Operation unlinkCarrierAccountAsync
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id carrier Id to unlink with merchant. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function unlinkCarrierAccountAsync($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        return $this->unlinkCarrierAccountAsyncWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation unlinkCarrierAccountAsyncWithHttpInfo
+     *
+     *
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id carrier Id to unlink with merchant. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function unlinkCarrierAccountAsyncWithHttpInfo($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountResponse';
+        $request = $this->unlinkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id);
+
+        return $this->sendRequestAsync($request, $returnType);
+    }
+
+    /**
+     * Create request for operation 'unlinkCarrierAccount'
+     *
+     * @param  \Luigel\AmazonSellingPartnerAPI\Models\Shipping\UnlinkCarrierAccountRequest $body (required)
+     * @param  string $carrier_id carrier Id to unlink with merchant. (required)
+     * @param  string $x_amzn_shipping_business_id Amazon shipping business to assume for this request. The default is AmazonShipping_UK. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function unlinkCarrierAccountRequest($body, $carrier_id, $x_amzn_shipping_business_id = null)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling unlinkCarrierAccount'
+            );
+        }
+        // verify the required parameter 'carrier_id' is set
+        if ($carrier_id === null || (is_array($carrier_id) && count($carrier_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $carrier_id when calling unlinkCarrierAccount'
+            );
+        }
+
+        $resourcePath = '/shipping/v2/carrierAccounts/{carrierId}/unlink';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($x_amzn_shipping_business_id !== null) {
+            $headerParams['x-amzn-shipping-business-id'] = ObjectSerializer::toHeaderValue($x_amzn_shipping_business_id);
+        }
+
+        // path params
+        if ($carrier_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'carrierId' . '}',
+                ObjectSerializer::toPathValue($carrier_id),
+                $resourcePath
+            );
+        }
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'PUT', $httpBody);
     }
 }
