@@ -46,7 +46,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'tracking_id' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId',    ];
+        'tracking_id' => 'string',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -190,7 +190,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_id.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId
+     * @return string
      */
     public function getTrackingId()
     {
@@ -200,7 +200,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_id.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId $tracking_id tracking_id
+     * @param string $tracking_id tracking_id
      *
      * @return $this
      */

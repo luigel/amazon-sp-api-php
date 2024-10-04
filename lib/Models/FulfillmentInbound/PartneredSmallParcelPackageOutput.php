@@ -49,7 +49,7 @@ class PartneredSmallParcelPackageOutput implements ModelInterface, ArrayAccess
         'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions',
 'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
 'carrier_name' => 'string',
-'tracking_id' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId',
+'tracking_id' => 'string',
 'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PackageStatus',    ];
 
     /**
@@ -298,7 +298,7 @@ class PartneredSmallParcelPackageOutput implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_id.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId
+     * @return string
      */
     public function getTrackingId()
     {
@@ -308,7 +308,7 @@ class PartneredSmallParcelPackageOutput implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_id.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId $tracking_id tracking_id
+     * @param string $tracking_id tracking_id
      *
      * @return $this
      */

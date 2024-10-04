@@ -47,7 +47,7 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
      */
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
-'tracking_id' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId',
+'tracking_id' => 'string',
 'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PackageStatus',    ];
 
     /**
@@ -232,7 +232,7 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
     /**
      * Gets tracking_id.
      *
-     * @return \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId
+     * @return string
      */
     public function getTrackingId()
     {
@@ -242,7 +242,7 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
     /**
      * Sets tracking_id.
      *
-     * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TrackingId $tracking_id tracking_id
+     * @param string $tracking_id tracking_id
      *
      * @return $this
      */
