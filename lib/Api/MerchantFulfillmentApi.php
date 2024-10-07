@@ -19,7 +19,7 @@ use Luigel\AmazonSellingPartnerAPI\ApiException;
 use Luigel\AmazonSellingPartnerAPI\Configuration;
 use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
 use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse;
+use Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetShipmentsResponse;
 use Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetAdditionalSellerInputsResponse;
 use Luigel\AmazonSellingPartnerAPI\Models\MerchantFulfillment\GetEligibleShipmentServicesResponse;
 use Luigel\AmazonSellingPartnerAPI\Models\Shipping\CancelShipmentResponse;
