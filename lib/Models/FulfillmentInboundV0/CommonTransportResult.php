@@ -43,7 +43,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_result' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult',    ];
+        'transport_result' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportResult',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

@@ -44,7 +44,7 @@ class InvalidSKU implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
-'error_reason' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorReason',    ];
+'error_reason' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ErrorReason',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

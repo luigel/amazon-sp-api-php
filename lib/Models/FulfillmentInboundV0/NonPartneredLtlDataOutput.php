@@ -47,7 +47,7 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
-'pro_number' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ProNumber',    ];
+'pro_number' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ProNumber',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

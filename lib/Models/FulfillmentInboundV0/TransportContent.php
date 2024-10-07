@@ -46,9 +46,9 @@ class TransportContent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_header' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportHeader',
-'transport_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportDetailOutput',
-'transport_result' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportResult',    ];
+        'transport_header' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportHeader',
+'transport_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportDetailOutput',
+'transport_result' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportResult',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

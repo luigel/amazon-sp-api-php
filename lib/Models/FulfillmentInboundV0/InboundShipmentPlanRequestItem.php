@@ -48,10 +48,10 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'asin' => 'string',
-'condition' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Condition',
+'condition' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Condition',
 'quantity' => 'int',
 'quantity_in_case' => 'int',
-'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
+'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

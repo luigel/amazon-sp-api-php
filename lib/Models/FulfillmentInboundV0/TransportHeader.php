@@ -49,7 +49,7 @@ class TransportHeader implements ModelInterface, ArrayAccess
         'seller_id' => 'string',
 'shipment_id' => 'string',
 'is_partnered' => 'bool',
-'shipment_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType',    ];
+'shipment_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ShipmentType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

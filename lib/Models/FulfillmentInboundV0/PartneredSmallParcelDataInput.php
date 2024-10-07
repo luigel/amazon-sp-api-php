@@ -46,7 +46,7 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelPackageInputList',
+        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PartneredSmallParcelPackageInputList',
 'carrier_name' => 'string',    ];
 
     /**

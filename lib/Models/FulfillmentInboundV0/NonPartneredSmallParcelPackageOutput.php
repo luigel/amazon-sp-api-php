@@ -48,7 +48,7 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
 'tracking_id' => 'string',
-'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PackageStatus',    ];
+'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PackageStatus',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

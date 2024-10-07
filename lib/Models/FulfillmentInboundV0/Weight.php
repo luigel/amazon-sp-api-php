@@ -46,7 +46,7 @@ class Weight implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'value' => 'float',
-        'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',];
+        'unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\UnitOfWeight',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

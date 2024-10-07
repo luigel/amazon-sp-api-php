@@ -47,8 +47,8 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'is_partnered' => 'bool',
-'shipment_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentType',
-'transport_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportDetailInput',    ];
+'shipment_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ShipmentType',
+'transport_details' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportDetailInput',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

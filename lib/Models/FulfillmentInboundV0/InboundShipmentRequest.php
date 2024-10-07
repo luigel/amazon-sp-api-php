@@ -46,8 +46,8 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'inbound_shipment_header' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentHeader',
-'inbound_shipment_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList',
+        'inbound_shipment_header' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentHeader',
+'inbound_shipment_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentItemList',
 'marketplace_id' => 'string',    ];
 
     /**

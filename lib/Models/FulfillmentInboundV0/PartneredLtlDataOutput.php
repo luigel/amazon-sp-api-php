@@ -46,20 +46,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'contact' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Contact',
-'box_count' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnsignedIntType',
-'seller_freight_class' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass',
-'freight_ready_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'pallet_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PalletList',
-'total_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
-'seller_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',
-'amazon_calculated_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',
-'preview_pickup_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'preview_delivery_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'preview_freight_class' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SellerFreightClass',
+        'contact' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Contact',
+'box_count' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\UnsignedIntType',
+'seller_freight_class' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\SellerFreightClass',
+'freight_ready_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'pallet_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PalletList',
+'total_weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Weight',
+'seller_declared_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',
+'amazon_calculated_value' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',
+'preview_pickup_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'preview_delivery_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'preview_freight_class' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\SellerFreightClass',
 'amazon_reference_id' => 'string',
 'is_bill_of_lading_available' => 'bool',
-'partnered_estimate' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredEstimate',
+'partnered_estimate' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PartneredEstimate',
 'carrier_name' => 'string',    ];
 
     /**

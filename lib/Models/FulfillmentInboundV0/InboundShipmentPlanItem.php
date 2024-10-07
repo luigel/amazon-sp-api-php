@@ -49,7 +49,7 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess
         'seller_sku' => 'string',
 'fulfillment_network_sku' => 'string',
 'quantity' => 'int',
-'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
+'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

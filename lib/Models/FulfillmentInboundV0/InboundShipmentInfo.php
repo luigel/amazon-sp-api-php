@@ -48,14 +48,14 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipment_id' => 'string',
 'shipment_name' => 'string',
-'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
+'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Address',
 'destination_fulfillment_center_id' => 'string',
-'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentStatus',
-'label_prep_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType',
+'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ShipmentStatus',
+'label_prep_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\LabelPrepType',
 'are_cases_required' => 'bool',
-'confirmed_need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'box_contents_source' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsSource',
-'estimated_box_contents_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails',    ];
+'confirmed_need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'box_contents_source' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BoxContentsSource',
+'estimated_box_contents_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BoxContentsFeeDetails',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

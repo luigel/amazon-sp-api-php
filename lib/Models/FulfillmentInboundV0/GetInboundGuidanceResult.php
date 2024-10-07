@@ -43,10 +43,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'sku_inbound_guidance_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SKUInboundGuidanceList',
-'invalid_sku_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InvalidSKUList',
-'asin_inbound_guidance_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ASINInboundGuidanceList',
-'invalid_asin_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InvalidASINList',    ];
+        'sku_inbound_guidance_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\SKUInboundGuidanceList',
+'invalid_sku_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InvalidSKUList',
+'asin_inbound_guidance_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ASINInboundGuidanceList',
+'invalid_asin_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InvalidASINList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

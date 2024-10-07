@@ -46,8 +46,8 @@ class GetBillOfLadingResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BillOfLadingDownloadURL',
-'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ErrorList',    ];
+        'payload' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BillOfLadingDownloadURL',
+'errors' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

@@ -43,10 +43,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'sku_prep_instructions_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\SKUPrepInstructionsList',
-'invalid_sku_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InvalidSKUList',
-'asin_prep_instructions_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ASINPrepInstructionsList',
-'invalid_asin_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InvalidASINList',    ];
+        'sku_prep_instructions_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\SKUPrepInstructionsList',
+'invalid_sku_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InvalidSKUList',
+'asin_prep_instructions_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ASINPrepInstructionsList',
+'invalid_asin_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InvalidASINList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

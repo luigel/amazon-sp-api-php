@@ -103,7 +103,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ConfirmPreorderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ConfirmPreorderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function confirmPreorderWithHttpInfo($shipment_id, $need_by_date, $marketplace_id)
     {
@@ -146,7 +146,7 @@ class FbaInboundApiV0
      */
     public function confirmPreorderAsyncWithHttpInfo($shipment_id, $need_by_date, $marketplace_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ConfirmPreorderResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ConfirmPreorderResponse';
         $request = $this->confirmPreorderRequest($shipment_id, $need_by_date, $marketplace_id);
 
         return $this->sendRequestAsync($request, ConfirmPreorderResponse::class);
@@ -231,7 +231,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ConfirmTransportResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ConfirmTransportResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function confirmTransportWithHttpInfo($shipment_id)
     {
@@ -270,7 +270,7 @@ class FbaInboundApiV0
      */
     public function confirmTransportAsyncWithHttpInfo($shipment_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ConfirmTransportResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ConfirmTransportResponse';
         $request = $this->confirmTransportRequest($shipment_id);
 
         return $this->sendRequestAsync($request, ConfirmTransportResponse::class);
@@ -335,14 +335,14 @@ class FbaInboundApiV0
      * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentRequest $body        (required)
      * @param string                                                                             $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
      * @throws \InvalidArgumentException
      */
     public function createInboundShipmentWithHttpInfo($body, $shipment_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentResponse';
         $request = $this->createInboundShipmentRequest($body, $shipment_id);
 
         return $this->sendRequest($request, InboundShipmentResponse::class);
@@ -380,7 +380,7 @@ class FbaInboundApiV0
      */
     public function createInboundShipmentAsyncWithHttpInfo($body, $shipment_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentResponse';
         $request = $this->createInboundShipmentRequest($body, $shipment_id);
 
         return $this->sendRequestAsync($request, InboundShipmentResponse::class);
@@ -448,7 +448,7 @@ class FbaInboundApiV0
      *
      * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\CreateInboundShipmentPlanRequest $body (required)
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CreateInboundShipmentPlanResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\CreateInboundShipmentPlanResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
      * @throws \InvalidArgumentException
@@ -546,11 +546,11 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\EstimateTransportResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\EstimateTransportResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function estimateTransportWithHttpInfo($shipment_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\EstimateTransportResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\EstimateTransportResponse';
         $request = $this->estimateTransportRequest($shipment_id);
 
         return $this->sendRequest($request, EstimateTransportResponse::class);
@@ -651,7 +651,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetBillOfLadingResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetBillOfLadingResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillOfLadingWithHttpInfo($shipment_id)
     {
@@ -690,7 +690,7 @@ class FbaInboundApiV0
      */
     public function getBillOfLadingAsyncWithHttpInfo($shipment_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetBillOfLadingResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetBillOfLadingResponse';
         $request = $this->getBillOfLadingRequest($shipment_id);
 
         return $this->sendRequestAsync($request, GetBillOfLadingResponse::class);
@@ -760,7 +760,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetInboundGuidanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetInboundGuidanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInboundGuidanceWithHttpInfo($marketplace_id, $seller_sku_list = null, $asin_list = null)
     {
@@ -890,7 +890,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetLabelsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetLabelsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLabelsWithHttpInfo($shipment_id, $page_type, $label_type, $number_of_packages = null, $package_labels_to_print = null, $number_of_pallets = null)
     {
@@ -1043,7 +1043,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetPreorderInfoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetPreorderInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPreorderInfoWithHttpInfo($shipment_id, $marketplace_id)
     {
@@ -1084,7 +1084,7 @@ class FbaInboundApiV0
      */
     public function getPreorderInfoAsyncWithHttpInfo($shipment_id, $marketplace_id)
     {
-        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetPreorderInfoResponse';
+        $returnType = '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetPreorderInfoResponse';
         $request = $this->getPreorderInfoRequest($shipment_id, $marketplace_id);
 
         return $this->sendRequestAsync($request, GetPreorderInfoResponse::class);
@@ -1164,7 +1164,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetPrepInstructionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetPrepInstructionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPrepInstructionsWithHttpInfo($ship_to_country_code, $seller_sku_list = null, $asin_list = null)
     {
@@ -1292,7 +1292,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentItemsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetShipmentItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShipmentItemsWithHttpInfo($query_type, $marketplace_id, $last_updated_after = null, $last_updated_before = null, $next_token = null)
     {
@@ -1426,7 +1426,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentItemsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetShipmentItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShipmentItemsByShipmentIdWithHttpInfo($shipment_id, $marketplace_id)
     {
@@ -1554,7 +1554,7 @@ class FbaInboundApiV0
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetShipmentsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetShipmentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShipmentsWithHttpInfo($query_type, $marketplace_id, $shipment_status_list = null, $shipment_id_list = null, $last_updated_after = null, $last_updated_before = null, $next_token = null)
     {
@@ -1706,7 +1706,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GetTransportDetailsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GetTransportDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransportDetailsWithHttpInfo($shipment_id)
     {
@@ -1809,7 +1809,7 @@ class FbaInboundApiV0
      * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PutTransportDetailsRequest $body        (required)
      * @param string                                                                                 $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PutTransportDetailsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PutTransportDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
      * @throws \InvalidArgumentException
@@ -1922,7 +1922,7 @@ class FbaInboundApiV0
      * @param \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentRequest $body        (required)
      * @param string                                                                             $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
      * @throws \InvalidArgumentException
@@ -2036,7 +2036,7 @@ class FbaInboundApiV0
      * @throws \InvalidArgumentException
      * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
      *
-     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\VoidTransportResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\VoidTransportResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function voidTransportWithHttpInfo($shipment_id)
     {

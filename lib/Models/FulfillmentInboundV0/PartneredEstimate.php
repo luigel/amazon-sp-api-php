@@ -46,9 +46,9 @@ class PartneredEstimate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'amount' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',
-'confirm_deadline' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TimeStampStringType',
-'void_deadline' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TimeStampStringType',    ];
+        'amount' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',
+'confirm_deadline' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TimeStampStringType',
+'void_deadline' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TimeStampStringType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

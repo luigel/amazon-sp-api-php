@@ -47,12 +47,12 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'shipment_name' => 'string',
-'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
+'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Address',
 'destination_fulfillment_center_id' => 'string',
 'are_cases_required' => 'bool',
-'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\ShipmentStatus',
-'label_prep_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference',
-'intended_box_contents_source' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\IntendedBoxContentsSource',    ];
+'shipment_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\ShipmentStatus',
+'label_prep_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\LabelPrepPreference',
+'intended_box_contents_source' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\IntendedBoxContentsSource',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

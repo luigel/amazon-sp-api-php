@@ -52,8 +52,8 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess
 'quantity_shipped' => 'int',
 'quantity_received' => 'int',
 'quantity_in_case' => 'int',
-'release_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepDetailsList',    ];
+'release_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'prep_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

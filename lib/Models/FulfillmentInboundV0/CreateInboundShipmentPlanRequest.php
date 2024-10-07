@@ -46,11 +46,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
-'label_prep_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepPreference',
+        'ship_from_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Address',
+'label_prep_preference' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\LabelPrepPreference',
 'ship_to_country_code' => 'string',
 'ship_to_country_subdivision_code' => 'string',
-'inbound_shipment_plan_request_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanRequestItemList',    ];
+'inbound_shipment_plan_request_items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentPlanRequestItemList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

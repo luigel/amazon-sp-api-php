@@ -46,8 +46,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'prep_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstruction',
-'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
+        'prep_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepInstruction',
+'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

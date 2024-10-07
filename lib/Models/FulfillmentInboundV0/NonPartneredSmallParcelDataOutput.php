@@ -46,7 +46,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageOutputList',    ];
+        'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\NonPartneredSmallParcelPackageOutputList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

@@ -47,8 +47,8 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'total_units' => 'int',
-'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',
-'total_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Amount',    ];
+'fee_per_unit' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',
+'total_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Amount',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

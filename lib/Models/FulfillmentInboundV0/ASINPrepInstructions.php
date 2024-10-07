@@ -47,9 +47,9 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'asin' => 'string',
-'barcode_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction',
-'prep_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance',
-'prep_instruction_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList',    ];
+'barcode_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BarcodeInstruction',
+'prep_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepGuidance',
+'prep_instruction_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepInstructionList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

@@ -43,7 +43,7 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'item_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentItemList',
+        'item_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentItemList',
 'next_token' => 'string',    ];
 
     /**

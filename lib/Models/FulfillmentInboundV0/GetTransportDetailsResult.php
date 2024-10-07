@@ -43,7 +43,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'transport_content' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\TransportContent',    ];
+        'transport_content' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\TransportContent',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

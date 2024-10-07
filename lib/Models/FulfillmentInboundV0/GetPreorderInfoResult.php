@@ -45,8 +45,8 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipment_contains_preorderable_items' => 'bool',
 'shipment_confirmed_for_preorder' => 'bool',
-'need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'confirmed_fulfillable_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',    ];
+'need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'confirmed_fulfillable_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

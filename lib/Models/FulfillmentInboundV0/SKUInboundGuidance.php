@@ -48,8 +48,8 @@ class SKUInboundGuidance implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'asin' => 'string',
-'inbound_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundGuidance',
-'guidance_reason_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\GuidanceReasonList',    ];
+'inbound_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundGuidance',
+'guidance_reason_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\GuidanceReasonList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

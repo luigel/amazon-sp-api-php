@@ -47,7 +47,7 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'carrier_name' => 'string',
-'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelPackageInputList',    ];
+'package_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\NonPartneredSmallParcelPackageInputList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

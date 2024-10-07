@@ -43,7 +43,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'inbound_shipment_plans' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanList',    ];
+        'inbound_shipment_plans' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentPlanList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

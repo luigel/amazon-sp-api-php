@@ -43,8 +43,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'confirmed_need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',
-'confirmed_fulfillable_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\DateStringType',    ];
+        'confirmed_need_by_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',
+'confirmed_fulfillable_date' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\DateStringType',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

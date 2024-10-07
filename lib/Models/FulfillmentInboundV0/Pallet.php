@@ -46,8 +46,8 @@ class Pallet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions',
-'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
+        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Dimensions',
+'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Weight',
 'is_stacked' => 'bool',    ];
 
     /**

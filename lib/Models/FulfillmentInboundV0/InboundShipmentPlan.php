@@ -48,10 +48,10 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'shipment_id' => 'string',
 'destination_fulfillment_center_id' => 'string',
-'ship_to_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Address',
-'label_prep_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\LabelPrepType',
-'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\InboundShipmentPlanItemList',
-'estimated_box_contents_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BoxContentsFeeDetails',    ];
+'ship_to_address' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Address',
+'label_prep_type' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\LabelPrepType',
+'items' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\InboundShipmentPlanItemList',
+'estimated_box_contents_fee' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BoxContentsFeeDetails',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

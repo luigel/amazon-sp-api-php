@@ -46,11 +46,11 @@ class PartneredSmallParcelPackageOutput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Dimensions',
-'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\Weight',
+        'dimensions' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Dimensions',
+'weight' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\Weight',
 'carrier_name' => 'string',
 'tracking_id' => 'string',
-'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PackageStatus',    ];
+'package_status' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PackageStatus',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

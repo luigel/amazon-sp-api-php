@@ -46,10 +46,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'partnered_small_parcel_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredSmallParcelDataOutput',
-'non_partnered_small_parcel_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredSmallParcelDataOutput',
-'partnered_ltl_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PartneredLtlDataOutput',
-'non_partnered_ltl_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\NonPartneredLtlDataOutput',    ];
+        'partnered_small_parcel_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PartneredSmallParcelDataOutput',
+'non_partnered_small_parcel_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\NonPartneredSmallParcelDataOutput',
+'partnered_ltl_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PartneredLtlDataOutput',
+'non_partnered_ltl_data' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\NonPartneredLtlDataOutput',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

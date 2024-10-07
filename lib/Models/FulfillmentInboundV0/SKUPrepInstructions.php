@@ -48,10 +48,10 @@ class SKUPrepInstructions implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'seller_sku' => 'string',
 'asin' => 'string',
-'barcode_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BarcodeInstruction',
-'prep_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepGuidance',
-'prep_instruction_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\PrepInstructionList',
-'amazon_prep_fees_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInbound\AmazonPrepFeesDetailsList',    ];
+'barcode_instruction' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\BarcodeInstruction',
+'prep_guidance' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepGuidance',
+'prep_instruction_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\PrepInstructionList',
+'amazon_prep_fees_details_list' => '\Luigel\AmazonSellingPartnerAPI\Models\FulfillmentInboundV0\AmazonPrepFeesDetailsList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
