@@ -18,6 +18,7 @@ namespace Luigel\AmazonSellingPartnerAPI\Api;
 use Luigel\AmazonSellingPartnerAPI\Configuration;
 use Luigel\AmazonSellingPartnerAPI\HeaderSelector;
 use Luigel\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use Luigel\AmazonSellingPartnerAPI\Models\Sellers\GetAccountResponse;
 use Luigel\AmazonSellingPartnerAPI\Models\Sellers\GetMarketplaceParticipationsResponse;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -59,6 +60,86 @@ class SellersApi
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation getAccount.
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     *
+     * @return \Luigel\AmazonSellingPartnerAPI\Models\Sellers\GetAccountResponse
+     */
+    public function getAccount()
+    {
+        list($response) = $this->getAccountWithHttpInfo();
+
+        return $response;
+    }
+
+    /**
+     * Operation getAccountWithHttpInfo.
+     *
+     * @throws \Luigel\AmazonSellingPartnerAPI\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     *
+     * @return array of \Luigel\AmazonSellingPartnerAPI\Models\Sellers\GetAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountWithHttpInfo()
+    {
+        $request = $this->getAccountRequest();
+
+        return $this->sendRequest($request, GetAccountResponse::class);
+    }
+
+    /**
+     * Operation getAccountAsync.
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAccountAsync()
+    {
+        return $this->getAccountAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAccountAsyncWithHttpInfo.
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAccountAsyncWithHttpInfo()
+    {
+        $request = $this->getAccountRequest();
+
+        return $this->sendRequest($request, GetAccountResponse::class);
+    }
+
+    /**
+     * Create request for operation 'getAccount'.
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAccountRequest()
+    {
+        $resourcePath = '/sellers/v1/account';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
 
     /**
