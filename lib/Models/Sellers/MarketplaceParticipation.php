@@ -44,7 +44,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'marketplace' => '\Luigel\AmazonSellingPartnerAPI\Models\Sellers\Marketplace',
-'participation' => '\Luigel\AmazonSellingPartnerAPI\Models\Sellers\Participation',    ];
+'participation' => '\Luigel\AmazonSellingPartnerAPI\Models\Sellers\Participation',
+'store_name' => 'string',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -53,7 +54,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'marketplace' => null,
-'participation' => null,    ];
+'participation' => null,
+'store_name' => null,    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -83,7 +85,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'marketplace' => 'marketplace',
-'participation' => 'participation',    ];
+'participation' => 'participation',
+'store_name' => 'storeName',    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -92,7 +95,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'marketplace' => 'setMarketplace',
-'participation' => 'setParticipation',    ];
+'participation' => 'setParticipation',
+'store_name' => 'setStoreName',    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -101,7 +105,8 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'marketplace' => 'getMarketplace',
-'participation' => 'getParticipation',    ];
+'participation' => 'getParticipation',
+'store_name' => 'getStoreName',    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -161,6 +166,7 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     {
         $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
         $this->container['participation'] = isset($data['participation']) ? $data['participation'] : null;
+        $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
     }
 
     /**
@@ -237,6 +243,30 @@ class MarketplaceParticipation implements ModelInterface, ArrayAccess
     public function setParticipation($participation)
     {
         $this->container['participation'] = $participation;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_name.
+     *
+     * @return string
+     */
+    public function getStoreName()
+    {
+        return $this->container['store_name'];
+    }
+
+    /**
+     * Sets store_name.
+     *
+     * @param string $store_name The name of the seller's store as displayed in the marketplace.
+     *
+     * @return $this
+     */
+    public function setStoreName($store_name)
+    {
+        $this->container['store_name'] = $store_name;
 
         return $this;
     }
